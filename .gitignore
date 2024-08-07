@@ -1,0 +1,11 @@
+*.log
+*.toc
+*.png
+*.aux
+*.jpg
+*.pdf
+*.snm
+*.bbl
+*.blg
+*.nav
+*.idx
