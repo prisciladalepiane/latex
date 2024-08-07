@@ -1,0 +1,704 @@
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage{comment}
+\usetheme{Darmstadt}
+\usepackage[brazil]{babel} 
+\usecolortheme{default}
+\usepackage{multirow}
+%------------------------------------------------------------
+%This block of code defines the information to appear in the
+%Title page
+\title[TRI] %optional
+{Análise de Desempenho em um Simulado utilizando a Teoria de Resposta ao Item}
+
+\subtitle{Trabalho de Conclusão do Curso 1}
+
+\author[Priscila] % (optional)
+{Priscila Dalepiane}
+
+\institute[UFMT] % (optional)
+{
+	
+	Bacharelado em Estatística\\
+	Universidade Federal de Mato Grosso
+	
+}
+
+\date[2023] % (optional)
+{Outubro 2023}
+
+%\logo{\includegraphics[height=1cm]{overleaf-logo}}
+
+%End of title page configuration block
+%------------------------------------------------------------
+
+
+
+%------------------------------------------------------------
+%The next block of commands puts the table of contents at the 
+%beginning of each section and highlights the current section:
+
+\AtBeginSection[]
+{
+	\begin{frame}
+		\frametitle{Sumário}
+		\tableofcontents[currentsection]
+	\end{frame}
+}
+%------------------------------------------------------------
+
+
+\begin{document}
+	
+	%The next statement creates the title page.
+	\frame{\titlepage}
+	
+	
+	%---------------------------------------------------------
+	%This block of code is for the table of contents after
+	%the title page
+	
+	%\begin{frame}
+	%	\frametitle{Sumário}
+	%	\tableofcontents
+	%\end{frame}
+	
+	%---------------------------------------------------------
+	
+	
+	\section{Introdução}
+	
+		\begin{frame}
+		
+		\frametitle{Introdução}
+		\begin{columns}
+			
+			\column{0.6\textwidth}
+			
+			\begin{center}
+				\textbf{Variável Latente}
+			\end{center}
+			
+			Em muitas situações de medição na psicometria, existe uma variável de interesse que não pode ser medida diretamente. Esta variável é denominada \textbf{latente}. \newline  Por exemplo, como medir a inteligência?
+			
+	
+
+			
+			\column{0.4\textwidth}
+			
+			\begin{figure}
+				\includegraphics[width=5cm,height=5cm]{medida.jpg}
+			\end{figure}
+			
+			
+		\end{columns}
+
+		
+		
+	\end{frame}
+	%---------------------------------------------------------
+	\begin{frame}
+		
+		\frametitle{Introdução}
+		\begin{columns}
+		
+		\column{0.6\textwidth}
+		
+		Na educação, em geral, precisamos avaliar o conhecimento do alunos, por isso a variável latente pode ser chamada de \textbf{habilidade} ou \textbf{proeficiência}.
+		A habilidade é uma representação abstrata e não observável do conhecimento.	\newline\newline
+		Pode ser estimada por meio de avaliações, chamadas também de instrumentos.
+
+		\column{0.4\textwidth}
+		
+		\begin{figure}
+			\includegraphics[width=5cm,height=5cm]{medida.jpg}
+		\end{figure}	
+		
+		\end{columns}
+			
+	\end{frame}
+	%---------------------------------------------------------
+\begin{frame}
+	
+	\frametitle{Introdução}
+	\begin{columns}
+		
+		\column{0.6\textwidth}
+		
+		Um \textbf{instrumento} se refere ao teste ou conjunto de itens que são usados para medir uma habilidade ou traço específico dos respondentes. Cada \textbf{item} nesse instrumento é projetado para medir algo específico e contribui para a avaliação geral da proficiência do indivíduo nesse traço ou habilidade. \newline
+		
+		A estimação precisa da habilidade depende da qualidade do instrumento.
+		
+		\column{0.4\textwidth}
+		
+		\begin{figure}
+			\includegraphics[width=4.4cm,height=7cm]{inst.jpg}
+		\end{figure}	
+		
+	\end{columns}
+	
+\end{frame}
+
+
+	
+	%---------------------------------------------------------
+	\begin{frame}
+		\frametitle{Introdução}
+		\begin{center}
+		\textbf{Objetivo Geral}	
+		\end{center}
+		
+		\begin{itemize}
+			\item<1-> Analisar a qualidade dos itens que compõe um simulado e 
+			estimar a habilidade dos respondentes.
+			%	\item<2-> Text visible on slide 2
+			%	\item<3> Text visible on slides 3
+			%	\item<4-> Text visible on slide 4
+		\end{itemize}
+	\end{frame}
+	%---------------------------------------------------------
+	\begin{frame}
+		\frametitle{Objetivos Específicos}
+		\begin{center}
+			\textbf{Objetivos Específicos}	
+		\end{center}
+		
+		\begin{itemize}
+			\item<1-> Selecionar o melhor modelo para estimação da habilidade e estimar os parâmetros dos Itens.
+			\item<2-> Avaliar Dimensionalidade.
+			\item<3-> Usar o modelo escolhido para estimar a habilidade.
+			\item<4-> Definir Escalas de habilidades e identificar Itens âncoras.
+			\item<5-> Avaliar a informação do teste.
+			%	\item<3> Text visible on slides 3
+			%	\item<4-> Text visible on slide 4
+		\end{itemize}
+	\end{frame}
+	
+	%--------------------------------------------------
+	
+	\section{Referencial Teórico}
+	
+	%---------------------------------------------------------
+		\begin{comment}
+	\begin{frame}
+		
+	
+			conteúdo...
+		
+		\frametitle{Teoria do Traço Latente}
+
+		\begin{block}{Teoria do Traço Latente}
+			O conceito de "Teoria do Traço Latente" engloba uma classe de modelos matemáticos e traços subjacentes não diretamente observáveis. A Teoria de Resposta ao Item (TRI) é uma das maneira pela quais a Teoria do Traço latente é aplicado, especificamente no contexto de avaliações e testes, para estimar desempenho e habilidade. (PASQUALI, 2018)
+		\end{block}
+		
+		
+	\end{frame}
+\end{comment}
+	
+    %---------------------------------------------------------
+	\begin{frame}
+		
+		\frametitle{Teoria de Resposta ao Item}
+		
+		\begin{block}{Definição}
+			A TRI é um \textbf{conjunto de modelos} matemáticos que procuram representar a probabilidade de um indivíduo dar uma certa resposta a um item, como função dos parâmetros dos itens.
+			(ANDRADE, 2000)
+		\end{block}
+		
+	\end{frame}
+	
+	%--------------------------------------------------
+	\begin{frame}
+		
+		\frametitle{Teoria de Resposta ao Item}
+		
+		A escolha do modelo depende: \newline
+		
+	
+		\begin{itemize}
+			\item<1-> Quantas variáveis latentes se pretende medir;
+			\item<1-> Formato dos Itens (Dicotômicos, Múltipla escolha);
+			\item<1-> Número de parâmetros a serem estimados.
+		    
+		\end{itemize}
+	\end{frame}
+	
+	%--------------------------------------------------
+	
+	\begin{frame}
+		
+		\frametitle{Modelos Unidimensionais para Itens dicotômicos}
+		
+		Os principais modelos unidimensionais para itens dicotômicos são:\newline
+		
+		\begin{itemize}
+			\item<1-> Modelo de Rasch ou 1PL;
+			\item<1-> Modelo de Birnbaum ou 2PL;
+			\item<1-> Modelo Logístico de 3 Parâmetros (3PL).
+			
+		\end{itemize}
+	\end{frame}
+	
+		%--------------------------------------------------
+		\begin{frame}
+		
+		\frametitle{Modelos Unidimensionais para Itens dicotômicos }
+		
+		\begin{center}
+			Denotações:
+		\end{center}
+		
+		$ \boldsymbol{\theta} = (\theta_1, \cdots, \theta_n) \rightarrow $  vetor de habilidades dos $n$ indivíduos; \newline
+		
+		$ \boldsymbol{\zeta} = (\boldsymbol{\zeta}_1, \cdots, \boldsymbol{\zeta}_I) \rightarrow $ conjunto de parâmetros dos itens.\newline
+		
+		$ \textbf{U}_{n\times I} =  
+		\begin{bmatrix}
+			u_{11} & u_{12} & \cdots & u_{1I} \\
+			u_{21} & u_{22} & \cdots & u_{2I} \\
+			\vdots & \vdots & \ddots & \vdots\\
+			u_{n1} & u_{n2} & \cdots & u_{nI}
+		\end{bmatrix} \rightarrow
+		$ Matriz de respostas
+		
+		
+		
+	\end{frame}
+	
+	\begin{frame}
+		
+		\frametitle{Modelos Unidimensionais para Itens dicotômicos}
+		
+		\[
+				P({U_i}_j = 1|{\theta}_j, b_i) = 
+				\frac{1}{1+e^{-D(\theta_j - b_i)}}
+		\]
+		\begin{figure}
+		\includegraphics[width=10cm,height=6cm]{rasch.png}
+		\end{figure}
+
+	\end{frame}
+	
+	%--------------------------------------------------
+	
+	\begin{frame}
+		
+		\frametitle{Modelos Unidimensionais para Itens dicotômicos}
+		
+		\[
+			P({U_i}_j = 1|{\theta}_j, a_i, b_i) =
+			\frac{1}{1+e^{-Da_i(\theta_j- b_i)}}
+		\]
+		
+		\begin{figure}
+			\includegraphics[width=10cm,height=6cm]{2pl.png}
+		\end{figure}
+
+		
+	\end{frame}
+	
+	%--------------------------------------------------
+	
+	\begin{frame}
+		
+		\frametitle{Modelos Unidimensionais para Itens dicotômicos}
+		\[
+			P({U_i}_j = 1|{\theta}_j, a_i, b_i, c_i) =
+			c_i+(1-c_i)\frac{1}{1+e^{-Da_i(\theta_j- b_i)}}
+		\]
+		\begin{figure}
+			\includegraphics[width=10cm,height=6cm]{3pl.png}
+		\end{figure}
+
+		
+	\end{frame}
+
+	%--------------------------------------------------
+	
+	\begin{frame}
+		
+		\frametitle{Função de Informação do Item}
+		
+			\begin{center}
+			Função de Informação do Item
+		\end{center}
+		
+		$I_i(\theta)$ representa a quantidade de informação que o item $i$ trás sobre a
+		habilidade $\theta$.
+		
+		\[
+		I_i(\theta) = \dfrac{[\frac{d}{d\theta}P_i(\theta)]^2}{P_i(\theta)Q_i(\theta)}
+		\]	
+		
+		$P_i(\theta) = P(U_{ij} = 1| \theta) $ e\\ $ Q_i(\theta) = 1 - P_i(\theta) $
+
+	\end{frame}
+	
+	\begin{frame}
+		
+		\frametitle{Função de Informação do Item}
+
+		\begin{figure}
+			\includegraphics[width=10cm,height=8cm]{fii.png}
+		\end{figure}
+		
+	\end{frame}
+		
+	\begin{frame}
+			
+			\frametitle{Função de Informação do Teste}
+		
+		Obtida pela soma das informações fornecidas pelos itens que compõem a prova.	
+			\[
+			I(\theta) = \sum_{i=1}^{I}I_i(\theta)
+			\]
+	
+		o erro padrão de estimação é dado por:
+			
+			\[
+			EP(\theta) = \dfrac{1}{\sqrt{I(\theta)}}
+			\]
+			
+	\end{frame}	
+		
+		
+	\begin{frame}
+		
+		\frametitle{Função de Informação do Teste}
+
+		\begin{figure}
+			\includegraphics[width=10cm,height=8cm]{fft.png}
+		\end{figure}
+		
+	
+	
+		
+		
+		
+	\end{frame}
+	
+	\begin{frame}
+		
+		\frametitle{Pressupostos dos Modelos Unidimensionais}
+		\begin{center}
+			Pressupostos dos Modelos Unidimensionais:
+		\end{center}
+		\begin{itemize}
+			\item<1-> \textbf{Unidimensionalidade:} Pressupões que o teste mede a mesma variável latente.
+			
+			\item<1-> \textbf{Independência:} Respostas entre itens e indivíduos deve ser independentes.
+	
+		\end{itemize}
+		
+	\end{frame}
+	
+	\begin{frame}
+		
+		\frametitle{Estimação dos Parâmetros}
+		\begin{center}
+			Para estimação dos itens, existem 3 situações:
+		\end{center}
+		\begin{enumerate}
+			\item<1-> Habilidade $\theta_j$ é conhecida e deseja-se estimar os parâmetros dos itens
+			$ (a_i, b_i, c_i) $ .
+			
+			\item<1-> Os Parâmetros dos itens são conhecidos e deseja-se estimar a habilidade.
+			
+			\item<1-> Tanto as habilidades quantos os parâmetros dos Itens são desconhecidos.
+		\end{enumerate}
+		
+	\end{frame}
+	
+	
+
+	\begin{frame}
+		
+		\frametitle{Estimação dos Parâmetros }
+		
+		A variável $U_{ji}$ é uma variável dicotômica com distribuição Bernoulli, sendo:
+		
+		\[U_{ji} =    \begin{cases}
+			
+			1, & \mbox{resposta correta;}  \\
+			
+			0, & \mbox{resposta incorreta.}
+			
+		\end{cases}
+		\]
+		
+		portanto,  
+		
+		$ \label{eq:bern}
+			P(U_{ji} = u_{ji}|\theta_j, \zeta_i) = P(U_{ji} = 1|\theta_j, \zeta_i)^{u_{ji}}
+			P(U_{ji} = 0|\theta_j, \zeta_i)^{1 - u_{ji}} = P_{ji}^{u_{ji}}Q_{ji}^{1-u_{ji}}
+		$
+	
+	\end{frame}
+	
+	\begin{frame}
+		
+		\frametitle{Estimação dos Parâmetros }
+		
+		Considerando a 1ª Situação, onde $ \boldsymbol{\theta} $ é conhecido, dados os pressupostos de independência e unidimensionalidade. A verossimilhança de  $ \boldsymbol{\zeta} $ pode ser escrita como:
+		\[
+		L(\boldsymbol{\zeta}) =  \prod_{j=1}^{n}\prod_{i=1}^{I}P(U_{ij} = u_{ji}|\theta_j) = \prod_{j=1}^{n}\prod_{i=1}^{I}P_{ji}^{u_{ji}}Q_{ji}^{1-u_{ji}}
+		\]
+		
+		
+	\end{frame}
+	
+	\begin{frame}
+		
+		\frametitle{Estimação dos Parâmetros }
+		
+		Após calcular os valores que maximizam a verossimilhança, ou seja, a solução de: $\dfrac{\partial~log~ L(\boldsymbol{\zeta})}{\partial \boldsymbol{\zeta_i}} = 0$ , são encontrados os EMV para $ \boldsymbol{\zeta}_i = (a_i, b_i , c_i )$:\newline
+		
+		$
+		a_i: D(1 - c_i)\sum_{j=1}^{n}(u_{ji} - P_{ji})(\theta_j - b_i)W_{ij} = 0
+		$\newline
+		
+		$
+		b_i: -Da_i(1 - c_i)\sum_{j=1}^{n}(u_{ji} - P_{ji})W_{ij} = 0
+		$\newline
+		
+		$ 
+		c_i: \sum_{j=1}^{n}(u_{ji} - P_{ji})\frac{W_{ij}}{P^*_{ij}} = 0
+		$  \newline
+		
+		\begin{center} onde: \space
+			$ W_{ji} = \dfrac{P_{ji}^*Q_{ji}^*}{P_{ji}Q_{ji}} ~$ e $ ~ 
+			P^*_{ij} = \{1 + e^{-Da_i(\theta_j - b_j)}\}^{-1} $
+		\end{center}
+
+			
+	\end{frame}
+	
+	\begin{frame}
+		
+		\frametitle{Estimação dos Parâmetros }
+		
+		Na situação inversa,  onde $\boldsymbol{\zeta}$ é conhecido e deseja-se estimar $ \theta_j $, o EMV de $\theta_j$, é equivalente a solução da equação
+		$\dfrac{\partial~log~ L(\boldsymbol{\theta})}{\partial \theta_j} = 0$ .
+		A equação de estimação é dada por:\newline \newline
+		
+		
+		$ \theta_j : D\sum_{i=1}^{I}{a_i(1-c_i)(u_{ji}-P_{ji})W_{ji}} = 0 $ \newline \newline
+		
+		Os EMV para $ \boldsymbol{\zeta}_i$ e $\theta_j$ não possuem soluções explicitas, por isso é necessário o uso de métodos interativos,  como o algoritmo Newton-Raphson e o método de ``Scoring" de Fisher.
+		
+	\end{frame}
+	
+	\begin{frame}
+		
+		\frametitle{Estimação dos Parâmetros }
+		
+		Estimação Conjunta: Birnbaum (1968), propôs um processo vai e volta.\newline
+		
+		\begin{enumerate}
+			\item Inicia com uma estimativa grosseira de $\boldsymbol{\theta}$ considerando que $\boldsymbol{\zeta}$ é conhecido.
+			\item Estima-se $\boldsymbol{\zeta}$ com $\boldsymbol{\theta}$ conhecido (estimado na primeira etapa).\newline 
+		\end{enumerate} 
+		
+		O Processo é repetido até a convergência dos parâmetros.
+		
+	\end{frame}
+	
+	\begin{frame}
+		
+		\frametitle{Estimação dos Parâmetros }
+		
+		Além do método de EMV, existem outros, como:
+		
+		\begin{itemize}
+			
+			\item Estimação de Máxima Verossimilhança Marginal (EMVM)
+			
+			\item Estimação Bayesiana
+			
+		\end{itemize}
+		
+	
+		
+	\end{frame}
+	\begin{comment}
+		conteúdo...\begin{frame}
+			
+			\frametitle{Estimação dos Parâmetros }
+			
+			
+			\begin{block}{Estimação Bayesiana}
+				
+				A abordagem bayesiana é usada para estimar os parâmetros da TRI com base na distribuição \textit{a priori} dos parâmetros. Ela incorpora informações prévias sobre os parâmetros e atualiza essas informações com base nas respostas dos participantes.\\ 
+				%O ENEM e utiliza o método EAP (\textit{Expected a Posteriori}) para estimar as habilidades dos participantes (INEP, 2021).
+				
+			\end{block}
+			
+		\end{frame}
+	\end{comment}
+	
+	\begin{frame}
+		
+		\frametitle{Teoria Clássica dos Testes}
+		
+		A \textbf{Teoria clássica dos testes} é a teoria que antecede o TRI, 
+		com cálculos mais simples, onde é o foco é o teste como um todo.
+		
+	\end{frame}		
+	
+	\begin{frame}
+		
+		\frametitle{Teoria Clássica dos Testes}
+		\begin{center}
+			\textbf{Coeficiente Ponto Bisserial}
+		\end{center}
+		O coeficiente ponto bisserial representa uma métrica que avalia a relação entre o desempenho em um item e o desempenho geral na prova.
+		Auxiliando na identificação de questões que podem apresentar problemas, como respostas incorretas no gabarito.
+		
+		\[
+			r_{bis} = \frac{\bar{X}_p - \bar{X}_t}{S_t}
+			\sqrt{\frac{p_i}{1 - p_i}}
+		\]
+			
+	
+		onde:
+		
+		
+		$ \bar{X}_p :$ média dos escores dos examinados que responderam ao item corretamente;
+		
+		$ \bar{X}_t :$  média global dos escores;
+		
+		$ S_t :$  desvio padrão do teste;
+		\end{frame}
+	
+	
+	\begin{frame}
+	
+	\frametitle{Teoria Clássica dos Testes}
+	\begin{center}
+		\textbf{\textit{Alpha} de Cronbach}
+	\end{center}
+		Para avaliar a unidimensionalidade.
+	
+	
+	\[
+		\alpha = \frac{k}{k-1}(1 - \frac{\sum_{i=1}^{k}{s^2_i}}{s_T^2})
+	\]
+	
+	
+	$k$ é o numero de itens do teste;
+	
+	${s_i^2}$ a variância do item;
+	
+	${s_T^2}$ a variância total do teste.
+	
+
+	\end{frame}
+
+	
+	
+	
+	\begin{frame}
+	
+	\frametitle{Teoria Clássica dos Testes}
+	
+		\begin{center}
+		\textbf{\textit{Alpha} de Cronbach}
+		\end{center}
+	
+		O coeficiente calcula consistência no intervalo de 0 a 1, sendo quanto mais próximo de 1 maior a consistência, para Pasquali (2003), valores em torno de 0,8 são considerados razoáveis.
+		
+	\end{frame}
+		
+	\begin{frame}
+		
+		\frametitle{Escalas de habilidade}
+		
+		\begin{figure}
+			\includegraphics[width=10cm,height=7cm]{escala.jpg}
+		\end{figure}	
+	
+	\end{frame}
+	
+
+	\begin{frame}
+		\frametitle{Itens Âncoras}
+		\begin{enumerate}
+			\item Ser respondido corretamente por pelo menos 65\% dos respondentes com aquele nível de habilidade.
+			
+			\[
+			P(U = 1| \theta = Z ) \geq 0,65
+			\]
+			
+			\item Ser respondido corretamente por no máximo 50\% dos respondentes que estão em um nível abaixo.
+			
+			\[
+			P(U = 1| \theta = Y ) < 0,50
+			\]
+			
+			\item A diferença entre a proporção de respondentes de diferentes níveis deve ser de pelo menos 30\%.
+			
+			\[
+			P(U = 1| \theta = Z ) - P(U = 1| \theta = Y ) \geq  0,30
+			\]
+			
+			
+		\end{enumerate}
+	\end{frame}
+	%---------------------------------------------------------
+	\section{Metodologia}
+	
+	\begin{frame}
+		
+		\frametitle{Metodologia}
+		
+		\begin{center}	Dados:	\end{center}
+		
+		Os dados utilizados serão de uma aplicação de um simulado realizado pela empresa TRIeduc	Inteligência Educacional, o simulado abrange as áreas de conhecimento:\\ 
+		Linguagens, Ciências Humanas,
+		Matemática e Ciências da Natureza, onde cada prova conta com 45 questões. \pause
+		
+		\begin{center}	Valores Faltantes:	\end{center}
+		
+		Serão analisadas apenas as provas com todas as respostas, excluindo as com questões em branco.
+
+	\end{frame}
+	
+	\begin{frame}
+		
+		\frametitle{Metodologia}
+		\begin{center}	Programas e pacotes: \end{center}
+		Software R (R Core Team, 2022) com auxílio dos pacotes: \\
+		- \textbf{mirt} (CHALMERS, 2012)\\
+		- \textbf{ltm} (RIZOPOULOS, 2006).\\ \pause
+		
+		\begin{center}	Critério de avaliação:	\end{center}
+		Será avaliado o Akaike Information Criterion (AIC) e o Deviance Information Criterion (DIC)	para selecionar o melhor modelo. Segundo esses critérios, o modelo com o menor valores de AIC e DIC
+		se ajustam melhor aos dados.
+		
+	\end{frame}
+	
+
+	
+	\section{Referências}
+	
+	%---------------------------------------------------------
+	\begin{frame}
+		\frametitle{Referências}
+	ANDRADE, D. F. de; TAVARES, H. R.; VALLE, R. da C. Teoria da resposta ao item: conceitos e	aplicações. ABE, Sao Paulo, 2000. \newline	
+	
+		
+	PASQUALI, L. Teoria e Método de Medida em Ciências do Comportamento. Brasília,DF: INEP, 1996.\newline
+	
+	PASQUALI, L. Psicometria: teoria dos testes na psicologia e na educação. Petropolis, RJ: Editora Vozes, 2003.\newline
+	
+	PASQUALI, L. TRI, Procedimentos e aplicaçães. Curitiba, PR: Appris editora, 2018.
+
+
+	\end{frame}
+	
+	
+	%--------------------------------------------------
+	
+
+	
+\end{document}

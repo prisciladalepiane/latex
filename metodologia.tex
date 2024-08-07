@@ -1,0 +1,68 @@
+\chapter{METODOLOGIA}
+
+\section{Avaliação do Modelo}
+
+Na avaliação de ajuste de modelos TRI, um aspecto a ser considerado é a adequação do modelo aos dados observados. \citeonline{cai2013limited} destacaram a importância desse processo, ressaltando a necessidade de métodos adequados para avaliar a adequação dos modelos aos dados observados. Recentemente, os testes de adequação de informações limitadas têm recebido maior atenção na literatura de psicometria. Esses testes utilizam tabelas marginais de ordem inferior em vez da tabela de contingência completa, tornando-os mais eficientes computacionalmente e menos sensíveis a problemas de convergência \cite{maydeu2014assessing}.
+
+Para avaliar a qualidade do modelo, são consideradas as hipóteses:
+\[
+\begin{cases}
+H_0: \boldsymbol{\pi} = \boldsymbol{\pi}(\boldsymbol{\theta}) \\
+
+H_1: \boldsymbol{\pi} \neq \boldsymbol{\pi}(\boldsymbol{\theta})
+\end{cases}
+\]
+
+Ou seja, avalia-se se o vetor de probabilidade populacional $\boldsymbol{\pi}$ surge do modelo paramétrico $\boldsymbol{\pi}(\boldsymbol{\theta})$ contra a alternativa de que o modelo está incorreto \cite{maydeu2006limited}.
+
+Neste trabalho, utilizaremos a estatística $M_2$ proposta por \citeonline{maydeu2005limited} para avaliar o ajuste do modelo. Essa estatística é parte de uma família de estatísticas de informação limitada, denominada $M_r$, desenvolvida para avaliar modelos TRI. A estatística $M_2$ é particularmente útil porque utiliza momentos de ordem 2 em vez da tabela de contingência completa, o que a torna mais adequada para modelos TRI. \citeonline{maydeu2006limited} demonstraram que, especialmente quando $r=2$, a estatística $M_2$ apresenta desempenho superior em comparação com estatísticas de informação completa. 
+
+
+
+O RMSEA (índice de raiz quadrada média do erro de aproximação) é um índice de ajuste absoluto que mede a discrepância média entre o modelo especificado e os dados observados. O valor do RMSEA varia de 0 a 1, sendo que quanto mais próximo a 0, melhor o modelo \cite{kline2016principles}. \citeonline{maydeu2014assessing} propôs a estatística de informação limitada RMSEA$_{2}$ para aplicações em modelos TRI, na qual utiliza momentos bivariados e é estimado através do $M_2$. O RMSEA$_2$ pode ser estimado por:
+
+\[
+	\hat{\epsilon}_2 = \sqrt{Max\left(\frac{\hat{M_{2}} - df_{2}}
+		{N \times df_{2}}, 0 \right) } ,
+\]
+
+\noindent onde $df_2$ equivale ao grau de liberdade para o momento $r = 2$.
+
+
+
+\begin{comment}
+	Outro método método para avaliar o modelo são os índices TLI  (\textit{Tucker–Lewis Index}) e CFI (\textit{Comparative Fit Index}), TLI significa Índice Tucker-Lewis e CFI significa Índice de Ajuste Comparativo. O TLI  compara o modelo estimado com um modelo teórico nulo e visa determinar se todos os indicadores são
+	associados a um único fator latente, o CFI é um indicador adicional que serve para comparar modelos alternativos \cite{boruchovitch2017dark}. Ambos os indicadores indicam modelos com bom ajustes quando seu valor próximos de 1 \cite{hair2009multivariada}). 
+\end{comment}
+
+
+Outro método para avaliar o modelo são os índices TLI (\textit{Tucker–Lewis Index}) e CFI (\textit{Comparative Fit Index}). O TLI, ou Índice Tucker-Lewis, compara o modelo estimado com um modelo teórico nulo e visa determinar se todos os indicadores estão associados a um único fator latente. Já o CFI, ou Índice de Ajuste Comparativo, é um indicador adicional utilizado para comparar modelos alternativos. Ambos os índices sugerem um bom ajuste quando seus valores se aproximam de 1 \cite{hair2009multivariada}.
+
+\begin{comment}
+---------------------------
+
+Para verificar a adequação do melhor modelo, TLI e CFI são dois índices de ajuste usados na teoria de resposta ao item para avaliar o ajuste do modelo aos dados \cite{alvarenga2020item}.
+
+ TLI significa Índice Tucker-Lewis e CFI significa Índice de Ajuste Comparativo. Esses índices de ajuste fornecem informações sobre o quão bem o modelo se ajusta às respostas dos itens observados. O TLI compara o ajuste do modelo especificado com um modelo nulo, enquanto o CFI compara o ajuste do modelo especificado com um modelo de linha de base. Valores mais altos de TLI e CFI indicam melhor ajuste entre o modelo e os dados. Esses índices de ajuste são aplicados no IRT para avaliar a adequação do modelo em representar a relação entre a característica latente e as respostas dos itens observados. 
+
+
+RMSEA: O índice de raiz quadrada média do erro de aproximação (RMSEA) é um índice de ajuste absoluto que mede a discrepância média entre o modelo especificado e os dados observados. O valor do RMSEA varia de 0 a 1, e valores abaixo de 0,05 indicam um bom ajuste do modelo. Valores entre 0,05 e 0,08 indicam um ajuste razoável, enquanto valores acima de 0,10 indicam um ajuste pobre. O RMSEA é calculado como a diferença entre a discrepância média observada e a discrepância média esperada, dividida pelo número de graus de liberdade do modelo.
+
+SRMR: O Índice Raiz Quadrada Média Residual Padronizada (SRMR) é uma medida de ajuste global que avalia a diferença entre as correlações observadas e as correlações estimadas pelo modelo. Em outras palavras, ele mede a discrepância entre as correlações amostrais e as correlações que o modelo estima. É uma medida padronizada, o que significa que ele é independente da escala de medida das variáveis do modelo. Ele é calculado dividindo o erro médio quadrático (EMQ) pelo erro médio quadrático residual (EMQr), que é a diferença entre o EMQ e o EMQ dos resíduos. O valor do SRMR varia de 0 a 1, sendo que valores menores indicam um melhor ajuste do modelo. Uma regra geral é que um valor de SRMR menor que 0,08 indica um bom ajuste do modelo, enquanto valores acima de 0,1 indicam um ajuste pobre. Valores entre 0,08 e 0,1 indicam um ajuste razoável.
+
+(buscar referencias)
+\end{comment}
+Além disso, foram = avaliado o Akaike Information Criterion (AIC), criado por Akaike (1974) e o Deviance Information Criterion (DIC). Segundo esses critérios, o modelo com o menor valores de AIC e DIC se ajustam melhor aos dados \cite{raftery2006}.
+
+
+
+
+\section{Dados}
+
+Os dados utilizados serão de uma aplicação de um simulado realizado pela empresa Trieduc avaliações educacionais,  o simulado abrange duas áreas de conhecimento: X. O simulado é realizado online e gratuitamente pela plataforma da empresa.
+As provas em que os respondentes deixaram de responder uma ou mais questões foram excluídas da análise. A prova teve um total de 1055 respondentes, sendo que desses, foram analisados 664 responderam a prova inteira.
+
+Para análises, será utilizado o R \cite{r} com auxílio dos pacotes \textit{mirt} \cite{mirt} e \textit{ltm} \cite{ltm}.
+
+
+

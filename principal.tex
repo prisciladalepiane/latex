@@ -1,0 +1,144 @@
+\documentclass[11pt,openright,a4paper,chapter=TITLE,oneside,english,french,spanish,brazil,sumario=abnt-14725-2023]{abntex2}
+
+\usepackage[brazil]{babel}   % Para hifenar em português
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amscd}
+\usepackage{t1enc}
+\usepackage[T1]{fontenc}		% Selecao de codigos de fonte.
+\usepackage{lastpage}			% Usado pela Ficha catalogrÃ¡fica
+\usepackage{indentfirst}		% Indenta o primeiro parÃ¡grafo de cada seÃ§Ã£o.
+\usepackage{color}				% Controle das cores
+\usepackage{graphicx}			% InclusÃ£o de grÃ¡ficos
+\usepackage{microtype} 			% para melhorias de justificaÃ§Ã£o
+\usepackage{times}          % Para que o documento aceite a fonte Times Roman
+\usepackage{lipsum}				% para geraÃ§Ã£o de dummy text
+
+\usepackage{array, multicol, multirow, makecell} 
+\usepackage{graphicx, wrapfig, lscape, rotating, float, booktabs} 
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor} 
+\usepackage{tabularx} 
+\usepackage{tabulary} 
+\usepackage[T1]{fontenc}
+
+
+
+% Pacotes de citações
+\usepackage[brazilian,hyperpageref]{backref}	 % Paginas com as citações na bibl
+\usepackage[alf]{abntex2cite}	% Citações padrão ABNT
+% Configurações do pacote backref
+% Usado sem a opção hyperpageref de backref
+\renewcommand{\backrefpagesname}{Citado na(s) pagina(s):}
+% Texto padrão antes do número das páginas
+\renewcommand{\backref}{}
+% Define os textos da citação
+\renewcommand*{\backrefalt}[4]{
+	\ifcase #1 %
+		Nenhuma citação no texto.%
+	\or
+		Citado na página #2.%
+	\else
+		Citado #1 vezes nas páginas #2.%
+	\fi}%
+% ---
+
+% Recuo da primeira linha de cada parágrafo
+\setlength{\parindent}{1.25cm}
+
+\setlength\afterchapskip{\lineskip}
+
+
+\makeatletter
+\hypersetup{
+     	%pagebackref=true,
+		colorlinks=true,       		% false: boxed links; true: colored links
+    	linkcolor=black,          	% color of internal links
+    	citecolor=black,        		% color of links to bibliography
+    	filecolor=magenta,      		% color of file links
+		urlcolor=blue,
+		bookmarksdepth=4
+}
+
+
+
+\setlength\cftpartnumwidth{\cftparagraphnumwidth}
+\setlength\cftchapternumwidth{\cftparagraphnumwidth}
+\setlength\cftsectionnumwidth{\cftparagraphnumwidth}
+\setlength\cftsubsectionnumwidth{\cftparagraphnumwidth}
+\setlength\cftsubsubsectionnumwidth{\cftparagraphnumwidth}
+\setlength\cftsectionindent{0pt}
+\setlength\cftsubsectionindent{0pt}
+\setlength\cftsubsubsectionindent{0pt}
+\setlength\cftparagraphindent{0pt}
+\renewcommand*{\cftsectionfont}{\bfseries}
+\renewcommand*{\cftsubsectionfont}{\bfseries}
+\renewcommand*{\cftsubsubsectionfont}{\bfseries}
+\renewcommand*{\cftparagraphfont}{\bfseries}
+
+\makeatother
+
+\renewcommand{\ABNTEXchapterfont}{\fontseries{b}\selectfont}
+\renewcommand{\ABNTEXchapterfontsize}{\normalsize}
+\renewcommand{\ABNTEXsectionfontsize}{\normalsize}
+\renewcommand{\contentsname}{\centering{SUMÁRIO}}
+\renewcommand{\cftchaptername}{\hspace{0em}}
+\makeindex
+
+\input{info_tcc.tex}
+
+\begin{document}
+%Estilo dos titulos dos capitulos
+\chapterstyle{article}
+% ----------------------------------------------------------
+% ELEMENTOS PRÉ-TEXTO
+% ----------------------------------------------------------
+\include{capa}
+\include{contra}
+\include{aprova}
+%\include{dedicatoria}
+%\include{agradecimentos}
+%\include{epigrafe}
+\include{resumo}
+% inserir lista de ilustrações
+%\pdfbookmark[0]{\listfigurename}{lof}
+%\renewcommand{\listfigurename}{Lista de Figuras}
+%\listoffigures*
+\cleardoublepage
+% inserir lista de tabelas
+\newpage
+\pdfbookmark[0]{\listtablename}{lot}
+\renewcommand{\listtablename}{Lista de Tabelas}
+\listoftables*
+\cleardoublepage
+% inserir o sumario
+\newpage
+\pdfbookmark[0]{\contentsname}{toc}
+\tableofcontents*
+\cleardoublepage
+% ----------------------------------------------------------
+% ELEMENTOS TEXTUAIS
+% ----------------------------------------------------------
+\textual
+\include{cap1}
+\include{cap2_ref_teorico}
+\include{metodologia}
+\include{resultados}
+\include{conclusao}
+%\include{cronograma}
+%\include{referencias}
+%\include{ajuda_latex}
+
+% ----------------------------------------------------------
+% ELEMENTOS POS-TEXTUAIS
+% ----------------------------------------------------------
+\postextual
+\addtocontents{toc}{\protect\vspace{-22pt}}
+
+\renewcommand{\bibname}{REFERÊNCIAS}
+\bibliography{referencias}
+%Apendices
+%\renewcommand{\apendicesname}{APÊNDICE}
+%\include{apendices}
+%\renewcommand{\anexosname}{ANEXOS}
+%\include{anexos}
+\end{document} 

@@ -10,3 +10,6 @@
 *.nav
 *.idx
 *.out
+*.lof
+*.lot
+*.brf
