@@ -125,7 +125,111 @@ Os índices de dificuldade do teste estão distribuídos conforme ilustrado na f
 
 \section{Análise TRI}
 
+Para avaliar a adequação de diferentes modelos da Teoria de Resposta ao Item (TRI) aos dados coletados, foram testados três modelos distintos: o modelo de um parâmetro logístico (1PL), o modelo de dois parâmetros logísticos (2PL) e o modelo de três parâmetros logísticos (3PL). A escolha do modelo mais apropriado é fundamental para garantir a precisão das estimativas das habilidades latentes dos respondentes e a qualidade dos itens do teste.
+
+A análise foi conduzida em duas etapas principais. Primeiro, foram comparados os modelos usando critérios de informação (AIC, SABIC, HQ, BIC) para avaliar a parcimônia e o ajuste relativo de cada modelo. Em seguida, o teste de adequação M2 foi aplicado para verificar se o modelo selecionado se ajusta bem aos dados observados, complementado por outros índices de ajuste, como RMSEA, TLI, e CFI.
+
+A seguir, são apresentados os resultados das comparações entre os modelos, seguido pela avaliação do ajuste absoluto através do teste M2 e índices complementares. Essas análises conduzem à seleção do modelo mais adequado para interpretação e uso posterior nas análises do teste.
 
 
+\begin{table}[!htb]
+	\IBGEtab{%
+		\caption{Comparação dos modelos de TRI.}
+		\label{tabela-anova}
+	}{%
+		\begin{tabular}{ccccccccc}
+			\toprule
+			Modelo & AIC & SABIC & HQ & BIC & logLik & $X^2$ & df & p \\ 
+			\midrule \midrule
+			1PL & 22045.13 & 22086.15 & 22099.17 & 22184.58 & -10991.57 &  &  &  \\ 
+			\midrule
+			2PL & 21657.12 & 21736.51 & 21761.70 & 21927.02 & -10768.56 & 446.01 & 29 & 0.000 \\ 
+			\midrule
+			3PL & 21663.83 & 21782.92 & 21820.70 & 22068.67 & -10741.91 & 53.29 & 30 & 0.006 \\ 
+			\bottomrule
+		\end{tabular}
+	}{%
+		\fonte{Produzido pelos autores.}
+	}
+\end{table}
+
+A Tabela \ref{tabela-anova} apresenta uma comparação entre modelos de Teoria de Resposta ao Item de um, dois e três parâmetros (1PL, 2PL e 3PL). O modelo 2PL apresenta o menor valor de AIC (21657.12) e o maior valor de log-verossimilhança ($-10768.56$), sugerindo que ele é o modelo mais adequado para os dados entre os modelos testados. O valor significativo de $X^2$
+com $p = 0,000$ para a comparação entre os modelos de 1PL e 2PL indica que o 2PL oferece um ajuste significativamente melhor do que o 1PL. No entanto, a comparação entre o 2PL e o 3PL também apresenta um valor significativo de $X^2$ com $p=0,006$, mas com um aumento marginal nos critérios de informação (SABIC, HQ, BIC), indicando que o 3PL não proporciona uma melhoria substancial em relação ao 2PL. 
+
+%A comparação entre o 1PL e o 2PL (X2 = 446,01, df = 29, p < 0,001) mostra que o modelo %2PL se ajusta significativamente melhor do que o modelo 1PL.
+
+\begin{table}[!htb]
+	\IBGEtab{%
+		\caption{Teste de adequação dos modelos. }
+		\label{tabela-m2}
+	}{%
+		\begin{tabular}{ccccccccc}
+			\toprule
+			Modelo & M2 & df & p & RMSEA & RMSEA\_5 & RMSEA\_95 & TLI & CFI \\ 
+			\midrule \midrule
+			1PL & 1167 & 434 & 0.0000 & 0.0504 & 0.0469 & 0.0539 & 0.81 & 0.81 \\ 
+			\midrule
+			2PL & 485 & 405 & 0.0036 & 0.0173 & 0.0104 & 0.0228 & 0.98 & 0.98 \\ 
+			\midrule
+			3PL & 371 & 375 & 0.5502 & 0.0000 & 0.0000 & 0.0134 & 1.00 & 1.00 \\ 
+			\bottomrule
+		\end{tabular}
+	}{%
+		\fonte{Produzido pelos autores.}
+	}
+\end{table}
+
+Embora a análise inicial dos critérios de informação (AIC, SABIC, HQ, BIC) tenha sugerido que o modelo de 2PL seria o mais adequado, uma análise mais aprofundada utilizando o teste M2, conforme a \ref{tabela-m2} revelou que este modelo rejeita a hipótese nula de ajuste adequado aos dados, com um valor p significativo ($p = 0,0036$). Isso indica que o modelo de 2PL não se ajusta bem aos dados observados.
+
+Por outro lado, o modelo de 1PL, apesar de apresentar valores de AIC, SABIC, HQ, e BIC menos favoráveis, também não apresenta um ajuste ideal segundo o teste M2, com p < 0,0001 e índices TLI e CFI de 0,81, abaixo do limiar de 0.90 considerado para bom ajuste.
+
+O modelo de 3PL, porém, demonstra um excelente ajuste aos dados, com um p-valor não significativo (p = 0,5502), RMSEA próximo de zero, e altos índices de ajuste (TLI = 1,00, CFI = 1,00). Isso sugere que o modelo de 3PL é o mais apropriado para os dados em questão, fornecendo a melhor representação das relações entre os itens do teste e a habilidade latente dos respondentes. Portanto, as análises subsequentes serão baseadas no modelo de 3PL, apesar das indicações iniciais favorecendo o modelo de 2PL.
+
+
+\begin{table}[H]
+	\IBGEtab{%
+		\caption{Parâmetros do modelo 3PL}
+		\label{tabela-coef3}
+	}{%
+		\begin{tabular*}{.5\textwidth}{@{\extracolsep{\fill}}cccc@{}}
+			\toprule
+			Item  & a & b & g \\ 
+			\midrule \midrule
+			1 & 1.93 & -0.17 & 0.27 \\ 
+			2 & 3.08 & 1.17 & 0.34 \\ 
+			3 & 1.47 & 0.30 & 0.14 \\ 
+			4 & 1.50 & -1.16 & 0.02 \\ 
+			5 & 1.12 & 0.77 & 0.08 \\ 
+			6 & 0.60 & 1.23 & 0.04 \\ 
+			7 & 0.92 & 0.06 & 0.05 \\ 
+			8 & 0.62 & -0.60 & 0.00 \\ 
+			9 & 0.98 & 2.00 & 0.12 \\ 
+			10 & 1.44 & -0.44 & 0.40 \\ 
+			11 & 2.16 & -1.52 & 0.00 \\ 
+			12 & 1.34 & -0.70 & 0.00 \\ 
+			13 & 1.80 & 0.61 & 0.19 \\ 
+			14 & 0.49 & 1.01 & 0.01 \\ 
+			15 & 0.54 & 3.63 & 0.01 \\ 
+			16 & 1.19 & -0.91 & 0.18 \\ 
+			17 & 1.00 & -1.31 & 0.00 \\ 
+			18 & 1.20 & -1.30 & 0.01 \\ 
+			19 & 1.36 & -1.38 & 0.00 \\ 
+			20 & 0.68 & -2.14 & 0.01 \\ 
+			21 & 2.46 & -1.74 & 0.00 \\ 
+			22 & 0.32 & 2.20 & 0.01 \\ 
+			23 & 0.68 & -0.04 & 0.00 \\ 
+			24 & 0.73 & -1.91 & 0.00 \\ 
+			25 & 1.83 & 1.15 & 0.23 \\ 
+			26 & 0.51 & 0.10 & 0.00 \\ 
+			27 & -1.16 & -3.45 & 0.11 \\ 
+			28 & -0.46 & -2.76 & 0.00 \\ 
+			29 & 0.87 & 0.93 & 0.14 \\ 
+			30 & 3.21 & 2.22 & 0.10 \\ 
+			\bottomrule
+		\end{tabular*}
+	}{%
+		\fonte{Produzido pelos autores.}
+	}
+\end{table}
 
 
