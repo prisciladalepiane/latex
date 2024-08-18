@@ -300,6 +300,7 @@ Este postulado implica que os itens são respondidos de forma independente. Em o
 \section{Estimação dos Parâmetros}
 
 
+
 Um dos desafios do TRI é a estimação dos parâmetros, no geral, temos 3 situações:  (i) Habilidade é conhecida e deseja-se estimar os parâmetros dos itens; (ii) Os parâmetros dos itens são desconhecidos e deseja-se estimar a habilidade; (iii) Ambos os parâmetros são desconhecidos \cite{de2000teoria}.  Nesse contexto, as notações utilizadas para representar os parâmetros a serem estimados são as seguintes:\\
 
 
@@ -398,10 +399,50 @@ Além do método de Estimação de Máxima Verossimilhança (EMV), existem outro
 
 A abordagem bayesiana, proposta por \citeonline{mislevy1986} é usada para estimar os parâmetros da TRI com base na distribuição \textit{a priori} dos parâmetros. Ela incorpora informações prévias sobre os parâmetros e atualiza essas informações com base nas respostas dos participantes. O ENEM e utiliza o método EAP (\textit{Expected a Posteriori}) para estimar as habilidades dos participantes \cite{inep2021}.
 
+\section{Escala}
 
 
+Na Teoria de Resposta ao Item (TRI), os resultados da habilidade ($\theta$) e dos parâmetros dos itens são geralmente reportados na escala normal padrão, $\theta_z \sim N(0, 1)$. No entanto, para algumas aplicações, como no Exame Nacional do Ensino Médio (ENEM), esses valores são transformados para uma escala com média 500 e desvio padrão 100, $\theta_{\text{ENEM}} \sim N(500, 100)$ \cite{inep2021procedimento}.
+
+As transformações dos parâmetros de uma escala padrão para a escala ENEM é dada por:
+\begin{itemize}
+	
+\item Habilidade
+
+\[
+	\theta_{\text{ENEM}} = 500 + 100 \times \theta_z
+\]
+
+
+
+%Onde $ \theta_{\text{ENEM}} $ é o valor de $\theta$ na escala do enem e $ \theta_z $ na escala normal padrão.
+
+\item Dificuldade
+
  
+ \[
+ b_{\text{ENEM}} = 500 + 100 \times b_z 
+ \]
  
+ \item Discriminação
+ 
+ \[
+ 	a_{\text{ENEM}} = \frac{a_z}{100}
+ \]
+ 
+ \item Chute
+ 
+ \[
+ c_{\text{ENEM}} = c_z
+ \]
+\end{itemize}
+
+
+A escala utilizada para os parâmetros de habilidade ($\theta$) e dos itens é flexível, pois o que realmente importa é a ordem relativa entre esses parâmetros. Essa ordenação determina as relações entre as habilidades dos indivíduos e as características dos itens, e se mantém consistente independentemente da escala adotada. Ao transformar a escala padrão normal  para a escala utilizada pelo ENEM, a hierarquia dos indivíduos em termos de habilidade e a dificuldade dos itens permanecem as mesmas, facilitando a interpretação sem alterar as conclusões essenciais da análise.
+ 
+
+
+
 
 \section{Itens Âncoras}
 
