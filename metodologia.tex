@@ -1,5 +1,23 @@
 \chapter{METODOLOGIA}
 
+\section{Dados}
+
+Os dados utilizados são  de uma aplicação realizada na plataforma digital est.s de um simulado de ciências humanas. O simulado é realizado online e gratuitamente pela plataforma da empresa. 
+A prova contém um total de 30 itens, sendo que 16 deles são provenientes de instituições de ensino públicas (UEA, UFPR, UNICENTRO, UFMS, IFPR, ESPCEX, UFSCAR, UFAL, UFMS, UPE e UNCISAL) , 9 de instituições de ensino particulares (FAAP, PUC-PR, FGV-RJ, EMESCAM, PUC-RIO, UNIFESO, FASM e FAMECA), e 5 itens do ENEM.
+
+
+As provas em que os respondentes deixaram de responder uma ou mais questões foram excluídas da análise. A prova teve um total de 1055 respondentes, sendo que desses, foram analisados 664 responderam a prova inteira.
+
+%Para análises, será utilizado o R \cite{r} com auxílio dos %pacotes \textit{mirt} \cite{mirt} e \textit{ltm} \cite{ltm}.
+
+
+\section{Análise TCT}
+
+Na Teoria Clássica dos Testes (TCT), foram avaliados o alfa de Cronbach para medir a consistência interna do teste, além de analisar a variação desse coeficiente ao excluir cada item, com o objetivo de avaliar a contribuição individual dos itens para a consistência geral. Foram também calculadas a correlação bisserial ($r_{bis}$), que relaciona o desempenho no item com a pontuação total, a discriminação clássica, que mede a capacidade do item de diferenciar entre indivíduos de diferentes níveis de habilidade, e a porcentagem de acertos, que indica a dificuldade do item. As análises foram realizadas utilizando o pacote \textit{ltm} \cite{ltm} do R \cite{r}.
+
+
+
+
 \section{Avaliação do Modelo}
 
 Na avaliação de ajuste de modelos TRI, um aspecto a ser considerado é a adequação do modelo aos dados observados. \citeonline{cai2013limited} destacaram a importância desse processo, ressaltando a necessidade de métodos adequados para avaliar a adequação dos modelos aos dados observados. Recentemente, os testes de adequação de informações limitadas têm recebido maior atenção na literatura de psicometria. Esses testes utilizam tabelas marginais de ordem inferior em vez da tabela de contingência completa, tornando-os mais eficientes computacionalmente e menos sensíveis a problemas de convergência \cite{maydeu2014assessing}.
@@ -38,6 +56,8 @@ O RMSEA (índice de raiz quadrada média do erro de aproximação) é um índice
 
 Outro método para avaliar o modelo são os índices TLI (\textit{Tucker–Lewis Index}) e CFI (\textit{Comparative Fit Index}). O TLI, ou Índice Tucker-Lewis, compara o modelo estimado com um modelo teórico nulo e visa determinar se todos os indicadores estão associados a um único fator latente. Já o CFI, ou Índice de Ajuste Comparativo, é um indicador adicional utilizado para comparar modelos alternativos. Ambos os índices sugerem um bom ajuste quando seus valores se aproximam de 1 \cite{hair2009multivariada}.
 
+\citeonline{timothy2015} considera o ajuste adequado quando o RMSEA é menor que 0,05. Quanto ao CFI e TLI, os onde valores acima de 0,90 sugerem um ajuste aceitável, e valores acima de 0,95 são considerados indicativos de um excelente ajuste.
+
 \begin{comment}
 ---------------------------
 
@@ -57,12 +77,6 @@ Além disso, foram = avaliado o Akaike Information Criterion (AIC), criado por A
 
 
 
-\section{Dados}
-
-Os dados utilizados serão de uma aplicação de um simulado realizado pela empresa Trieduc avaliações educacionais,  o simulado abrange duas áreas de conhecimento: X. O simulado é realizado online e gratuitamente pela plataforma da empresa.
-As provas em que os respondentes deixaram de responder uma ou mais questões foram excluídas da análise. A prova teve um total de 1055 respondentes, sendo que desses, foram analisados 664 responderam a prova inteira.
-
-Para análises, será utilizado o R \cite{r} com auxílio dos pacotes \textit{mirt} \cite{mirt} e \textit{ltm} \cite{ltm}.
 
 
 
