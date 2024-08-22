@@ -3,7 +3,7 @@
 \section{Dados}
 
 Os dados utilizados são  de uma aplicação realizada na plataforma digital est.s de um simulado de ciências humanas. O simulado é realizado online e gratuitamente pela plataforma da empresa. 
-A prova contém um total de 30 itens, sendo que 16 deles são provenientes de instituições de ensino públicas (UEA, UFPR, UNICENTRO, UFMS, IFPR, ESPCEX, UFSCAR, UFAL, UFMS, UPE e UNCISAL) , 9 de instituições de ensino particulares (FAAP, PUC-PR, FGV-RJ, EMESCAM, PUC-RIO, UNIFESO, FASM e FAMECA), e 5 itens do ENEM.
+A prova contém um total de 30 itens, sendo que 16 deles são provenientes de instituições de ensino públicas (UEA, UFPR, UNICENTRO, UFMS, IFPR, ESPCEX, UFSCAR, UFAL, UFMS, UPE e UNCISAL) , 9 de instituições de ensino particulares (FAAP, PUC-PR, FGV-RJ, EMESCAM, PUC-RIO, UNIFESO, FASM e FAMECA), e 5 itens são do ENEM.
 
 
 As provas em que os respondentes deixaram de responder uma ou mais questões foram excluídas da análise. A prova teve um total de 1055 respondentes, sendo que desses, foram analisados 664 responderam a prova inteira.
@@ -19,6 +19,16 @@ Na Teoria Clássica dos Testes (TCT), foram avaliados o alfa de Cronbach para me
 
 
 \section{Avaliação do Modelo}
+
+O teste de razão de verossimilhança foi usado para verificar se a adição de parâmetros melhora o modelo. A razão de verossimilhança é calculada como a diferença entre os logaritimos das verossimilhanças dos dois modelos
+
+\[
+	\lambda = -2 (\text{log} L_0 - \text{log} L_1)
+\]
+
+onde $L_0$ representa a Verossimilhança do modelo restrito e
+$L_1$ verossimilhança do modelo completo, Este teste segue uma distribuição qui-quadrado $(\chi^2$
+) com graus de liberdade iguais à diferença no número de parâmetros entre os dois modelos..
 
 Na avaliação de ajuste de modelos TRI, um aspecto a ser considerado é a adequação do modelo aos dados observados. \citeonline{cai2013limited} destacaram a importância desse processo, ressaltando a necessidade de métodos adequados para avaliar a adequação dos modelos aos dados observados. Recentemente, os testes de adequação de informações limitadas têm recebido maior atenção na literatura de psicometria. Esses testes utilizam tabelas marginais de ordem inferior em vez da tabela de contingência completa, tornando-os mais eficientes computacionalmente e menos sensíveis a problemas de convergência \cite{maydeu2014assessing}.
 
@@ -75,6 +85,30 @@ SRMR: O Índice Raiz Quadrada Média Residual Padronizada (SRMR) é uma medida d
 Além disso, foram = avaliado o Akaike Information Criterion (AIC), criado por Akaike (1974) e o Deviance Information Criterion (DIC). Segundo esses critérios, o modelo com o menor valores de AIC e DIC se ajustam melhor aos dados \cite{raftery2006}.
 
 
+\begin{table}[!htb]
+	\IBGEtab{%
+		\caption{Classificação da questão de acordo com parâmetro de dificuldade.}
+		\label{tabela-class-b}
+	}{%
+		\begin{tabular}{ccc}
+			\toprule
+		Intervalo de Dificuldade \\ Escala ENEM &	Classificação & Distribuição Esperada   \\ 
+			\midrule \midrule
+			Até 372 & Muito Fácil & 10\%   \\ 
+			\midrule
+			Entre a e c & Fácil & 20\%   \\ 
+			\midrule
+			Entre a e c & Mediano & 40\%   \\ 
+						\midrule
+			Entre a e c & Difícil & 20\%   \\ 
+						\midrule
+			Entre a e c & Muito Difícil & 10\%   \\ 
+			\bottomrule
+		\end{tabular}
+	}{%
+		\fonte{\citeonline{rabelo2013}, p.134}
+	}
+\end{table}
 
 
 
