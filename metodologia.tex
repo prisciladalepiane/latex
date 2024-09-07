@@ -27,8 +27,7 @@ O teste de razão de verossimilhança foi usado para verificar se a adição de 
 \]
 
 onde $L_0$ representa a Verossimilhança do modelo restrito e
-$L_1$ verossimilhança do modelo completo, Este teste segue uma distribuição qui-quadrado $(\chi^2$
-) com graus de liberdade iguais à diferença no número de parâmetros entre os dois modelos..
+$L_1$ verossimilhança do modelo completo, Este teste segue uma distribuição qui-quadrado $(\chi^2$) com graus de liberdade iguais à diferença no número de parâmetros entre os dois modelos. O teste avalia duas hipóteses: a hipótese nula ($H_0$) de que o modelo restrito é suficiente para explicar os dados, e a hipótese alternativa ($H_1$) de que o modelo completo, com mais parâmetros, proporciona um ajuste significativamente melhor. Se o valor de $\lambda$ for grande o suficiente, rejeita-se a hipótese nula em favor do modelo completo.
 
 Na avaliação de ajuste de modelos TRI, um aspecto a ser considerado é a adequação do modelo aos dados observados. \citeonline{cai2013limited} destacaram a importância desse processo, ressaltando a necessidade de métodos adequados para avaliar a adequação dos modelos aos dados observados. Recentemente, os testes de adequação de informações limitadas têm recebido maior atenção na literatura de psicometria. Esses testes utilizam tabelas marginais de ordem inferior em vez da tabela de contingência completa, tornando-os mais eficientes computacionalmente e menos sensíveis a problemas de convergência \cite{maydeu2014assessing}.
 
@@ -66,9 +65,11 @@ O RMSEA (índice de raiz quadrada média do erro de aproximação) é um índice
 
 Outro método para avaliar o modelo são os índices TLI (\textit{Tucker–Lewis Index}) e CFI (\textit{Comparative Fit Index}). O TLI, ou Índice Tucker-Lewis, compara o modelo estimado com um modelo teórico nulo e visa determinar se todos os indicadores estão associados a um único fator latente. Já o CFI, ou Índice de Ajuste Comparativo, é um indicador adicional utilizado para comparar modelos alternativos. Ambos os índices sugerem um bom ajuste quando seus valores se aproximam de 1 \cite{hair2009multivariada}.
 
+\begin{comment}
+
 \citeonline{timothy2015} considera o ajuste adequado quando o RMSEA é menor que 0,05. Quanto ao CFI e TLI, os onde valores acima de 0,90 sugerem um ajuste aceitável, e valores acima de 0,95 são considerados indicativos de um excelente ajuste.
 
-\begin{comment}
+
 ---------------------------
 
 Para verificar a adequação do melhor modelo, TLI e CFI são dois índices de ajuste usados na teoria de resposta ao item para avaliar o ajuste do modelo aos dados \cite{alvarenga2020item}.

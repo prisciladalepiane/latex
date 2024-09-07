@@ -105,27 +105,26 @@ Os índices de dificuldade do teste estão distribuídos conforme ilustrado na f
 
 \section{Análise TRI}
 
-Para avaliar a adequação dos modelos unidimensionais de TRI aos dados do simulado, foram testados os três modelos distintos: o modelo de um parâmetro logístico (1PL), o modelo de dois parâmetros logísticos (2PL) e o modelo de três parâmetros logísticos (3PL). A escolha do modelo mais apropriado é necessária para garantir a precisão das estimativas das habilidades latentes dos respondentes e a qualidade dos itens do teste.
+Para avaliar a adequação dos modelos unidimensionais de TRI aos dados do simulado, foram
+testados os três modelos distintos: o modelo de um parâmetro logístico (1PL), o modelo de dois parâmetros logísticos (2PL) e o modelo de três parâmetros logísticos (3PL).
 
-Para a análise, primeiro foram comparados os modelos usando critérios de informação (AIC, SABIC, HQ, BIC) para avaliar a parcimônia e o ajuste relativo de cada modelo. Em seguida, o teste de adequação M2 foi aplicado para verificar se o modelo selecionado se ajusta bem aos dados observados, complementado por outros índices de ajuste, como RMSEA, TLI, e CFI.
-
-A seguir, são apresentados os resultados das comparações entre os modelos, seguido pela avaliação do ajuste absoluto através do teste M2 e índices complementares. Essas análises conduzem à seleção do modelo mais adequado para interpretação e uso posterior nas análises do teste.
+Os resultados do teste de razão de verossimilhança, apresentados na \ref{tabela-anova}, indicam que a inclusão de parâmetros adicionais melhora significativamente o ajuste do modelo. O modelo de 2PL mostrou uma melhoria significativa em relação ao modelo de 1PL ($p < 0,001$), e o modelo de 3PL também apresentou um ajuste superior ao 2PL ($p = 0,006$). Esses resultados sugerem que, entre os modelos testados, o 3PL é o mais adequado para representar os dados do simulado, capturando de forma mais precisa as variáveis latentes relacionadas ao desempenho dos respondentes.
 
 
 \begin{table}[!htb]
 	\IBGEtab{%
-		\caption{Comparação dos modelos de TRI.}
+		\caption{Teste Razão de verossimilhança.}
 		\label{tabela-anova}
 	}{%
-		\begin{tabular}{ccccccccc}
+		\begin{tabular}{cccccc}
 			\toprule
-			Modelo & AIC & SABIC & HQ & BIC & logLik & $X^2$ & df & p \\ 
+			Modelo &   log-verossimilhança & $X^2$ & df & p \\ 
 			\midrule \midrule
-			1PL & 22045.13 & 22086.15 & 22099.17 & 22184.58 & -10991.57 &  &  &  \\ 
+			1PL &  -10991.57 &  &  &  \\ 
 			\midrule
-			2PL & 21657.12 & 21736.51 & 21761.70 & 21927.02 & -10768.56 & 446.01 & 29 & 0.000 \\ 
+			2PL &  -10768.56 & 446.01 & 29 & 0.000 \\ 
 			\midrule
-			3PL & 21663.83 & 21782.92 & 21820.70 & 22068.67 & -10741.91 & 53.29 & 30 & 0.006 \\ 
+			3PL & -10741.91 & 53.29 & 30 & 0.006 \\ 
 			\bottomrule
 		\end{tabular}
 	}{%
@@ -133,10 +132,9 @@ A seguir, são apresentados os resultados das comparações entre os modelos, se
 	}
 \end{table}
 
-A Tabela \ref{tabela-anova} apresenta uma comparação entre modelos de Teoria de Resposta ao Item de um, dois e três parâmetros (1PL, 2PL e 3PL). O modelo 2PL apresenta o menor valor de AIC (21657.12) e o maior valor de log-verossimilhança ($-10768.56$), sugerindo que ele é o modelo mais adequado para os dados entre os modelos testados. O valor significativo de $X^2$
-com $p = 0,000$ para a comparação entre os modelos de 1PL e 2PL indica que o 2PL oferece um ajuste significativamente melhor do que o 1PL. No entanto, a comparação entre o 2PL e o 3PL também apresenta um valor significativo de $X^2$ com $p=0,006$, mas com um aumento marginal nos critérios de informação (SABIC, HQ, BIC), indicando que o 3PL não proporciona uma melhoria substancial em relação ao 2PL. 
+A \ref{tabela-m2} apresenta os resultados do teste de adequação dos modelos. O teste M2 mostra que o modelo de 1PL não se ajusta bem, com um valor de p < 0,001 indicando rejeição da hipótese nula de bom ajuste e índices de TLI e CFI de 0,81, abaixo do valor de referência de 0,90. O modelo de 2PL apresenta valores altos para TLI e CFI (0,98), porém, também não passa no teste de adequação,com um p-valor de 0,0036, sugerindo que ele não se ajusta bem aos dados.
 
-%A comparação entre o 1PL e o 2PL (X2 = 446,01, df = 29, p < 0,001) mostra que o modelo %2PL se ajusta significativamente melhor do que o modelo 1PL.
+O modelo de 3PL demonstra o melhor ajuste entre os três modelos testados. Com um p-valor de 0,5502, que não rejeita a hipótese nula de bom ajuste, os índices TLI e CFI perfeitos(1,00), além de um RMSEA próximo de zero. Esses resultados indicam que o modelo de 3PL tem a melhor representação das relações entre os itens do teste e a habilidade latente dos respondentes.
 
 \begin{table}[!htb]
 	\IBGEtab{%
@@ -159,9 +157,6 @@ com $p = 0,000$ para a comparação entre os modelos de 1PL e 2PL indica que o 2
 	}
 \end{table}
 
-Embora a análise inicial dos critérios de informação (AIC, SABIC, HQ, BIC) tenha sugerido que o modelo de 2PL seria o mais adequado, uma análise mais aprofundada utilizando a estatística M2, conforme a \ref{tabela-m2} revelou que este modelo rejeita a hipótese nula de ajuste adequado aos dados, com um valor p significativo ($p = 0,0036$). Isso indica que o modelo de 2PL não se ajusta bem aos dados observados, assim como o modelo de 1PL, além de apresentar valores de AIC, SABIC, HQ, e BIC menos favoráveis, também não apresenta um ajuste ideal segundo o teste M2, com p < 0,0001 e índices TLI e CFI de 0,81, abaixo do limiar de 0,90 considerado para bom ajuste.
-
-O modelo de 3PL, porém, demonstra um bom ajuste aos dados, com um p-valor não significativo (p = 0,5502), RMSEA próximo de zero, e altos índices de ajuste (TLI = 1,00, CFI = 1,00). Isso sugere que o modelo de 3PL é o mais apropriado para os dados em questão, fornecendo a melhor representação das relações entre os itens do teste e a habilidade latente dos respondentes. Portanto, as análises subsequentes serão baseadas no modelo de 3PL.
 
 
 \begin{table}[H]
@@ -209,5 +204,49 @@ O modelo de 3PL, porém, demonstra um bom ajuste aos dados, com um p-valor não 
 		\fonte{Produzido pelos autores.}
 	}
 \end{table}
+
+A figura \ref{fig:curva_itens} apresenta as curvas características dos itens com os parâmetros listados na Tabela \ref{tabela-coef3}. Observa-se que os itens 27 e 28 possuem inclinações contrárias, indicativas de valores de discriminação negativos, o que é problemático em avaliações. Esses itens sugerem que participantes com maior habilidade têm menor probabilidade de acertá-los, o que não é esperado em um teste bem construído. Conforme apontado por Becker, itens com discriminação negativa indicam que há algum problema no item, seja por estar mal formulado ou por gerar desinformação entre os alunos de maior capacidade. Ayla, por sua vez, reforça que um valor negativo de discriminação é um indicativo de que o item deve ser descartado, uma vez que seu comportamento é inconsistente com o modelo. Portanto, a presença de discriminação negativa nesses itens requer atenção imediata, sendo recomendada a revisão ou a exclusão, já que tais inconsistências comprometem a validade da avaliação e dificultam a mensuração precisa da habilidade dos participantes.
+
+Ayala, R. J. 2009. The theory and practice of item response theory. The Guildford Press, New York, NY, Estados Unidos.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=16cm]{../TCCfigura01.png}
+	\caption{Curva característica dos itens.}
+	\label{fig:curva_itens}
+\end{figure}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
