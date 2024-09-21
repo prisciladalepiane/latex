@@ -227,9 +227,9 @@ O Modelo de 3PL é especialmente útil em testes de múltipla escolha, nos quais
 A função de informação do item descreve o poder informativo de um item. Essa função fornece informações sobre a precisão com que um item pode estimar a habilidade latente de um respondente. \cite{de2000teoria} 
 A função de informação do item é dada por:
 
- \[
+\begin{equation}\label{eq:info_item}
 		I_i(\theta) = \dfrac{[\frac{d}{d\theta}P_i(\theta)]^2}{P_i(\theta)Q_i(\theta)}
-\]
+\end{equation}
 onde:
 
 \noindent $I_i(\theta) $ representa a informação fornecida pelo item $i$ no nível de habilidade $\theta$;\\
@@ -249,9 +249,9 @@ A figura \ref{fig:fii} ilustra a função de informação de um item que informa
 
 A informação do teste é obtida pela soma das informações fornecidas pelos itens que compõem a prova \cite{de2000teoria}. Ou seja:
 
-\[
+\begin{equation}\label{eq:info_teste}
 I(\theta) = \sum_{i=1}^{I}I_i(\theta)
-\]
+\end{equation}
 
  O erro-padrão de estimação é calculado como o inverso da raiz quadrada da informação (I) sobre a variável latente ($\theta$), conforme a seguinte fórmula:
 
