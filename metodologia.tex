@@ -15,8 +15,11 @@ As provas em que os respondentes deixaram de responder uma ou mais questões for
 
 Na Teoria Clássica dos Testes (TCT), foram avaliados o alfa de Cronbach para medir a consistência interna do teste, além de analisar a variação desse coeficiente ao excluir cada item, com o objetivo de avaliar a contribuição individual dos itens para a consistência geral. Foram também calculadas a correlação bisserial ($r_{bis}$), que relaciona o desempenho no item com a pontuação total, a discriminação clássica, que mede a capacidade do item de diferenciar entre indivíduos de diferentes níveis de habilidade, e a porcentagem de acertos, que indica a dificuldade do item. As análises foram realizadas utilizando o pacote \textit{ltm} \cite{ltm} do R \cite{r}.
 
+\section{Análise TRI}
 
+Na análise da Teoria de Resposta ao Item (TRI), foi utilizado o software R, especificamente o pacote mirt \cite{mirt} versão 1.42, que implementa métodos para estimar parâmetros de modelos logísticos de um, dois e três parâmetros (1PL, 2PL e 3PL). O processo de estimação dos parâmetros foi realizado por meio do método de máxima verossimilhança marginal \cite{mirt2024}.
 
+Inicialmente, foram ajustados modelos de 1, 2 e 3 parâmetros logísticos para os itens do teste, visando avaliar a qualidade dos itens e a adequação dos modelos aos dados. O modelo de 1 parâmetro (1PL) estima apenas a dificuldade dos itens, enquanto o modelo de 2 parâmetros (2PL) incorpora a discriminação, e o modelo de 3 parâmetros (3PL) adiciona o parâmetro de acerto casual.
 
 \section{Avaliação do Modelo}
 
@@ -65,6 +68,7 @@ O RMSEA (índice de raiz quadrada média do erro de aproximação) é um índice
 
 Outro método para avaliar o modelo são os índices TLI (\textit{Tucker–Lewis Index}) e CFI (\textit{Comparative Fit Index}). O TLI, ou Índice Tucker-Lewis, compara o modelo estimado com um modelo teórico nulo e visa determinar se todos os indicadores estão associados a um único fator latente. Já o CFI, ou Índice de Ajuste Comparativo, é um indicador adicional utilizado para comparar modelos alternativos. Ambos os índices sugerem um bom ajuste quando seus valores se aproximam de 1 \cite{hair2009multivariada}.
 
+
 \begin{comment}
 
 \citeonline{timothy2015} considera o ajuste adequado quando o RMSEA é menor que 0,05. Quanto ao CFI e TLI, os onde valores acima de 0,90 sugerem um ajuste aceitável, e valores acima de 0,95 são considerados indicativos de um excelente ajuste.
@@ -82,7 +86,7 @@ RMSEA: O índice de raiz quadrada média do erro de aproximação (RMSEA) é um 
 SRMR: O Índice Raiz Quadrada Média Residual Padronizada (SRMR) é uma medida de ajuste global que avalia a diferença entre as correlações observadas e as correlações estimadas pelo modelo. Em outras palavras, ele mede a discrepância entre as correlações amostrais e as correlações que o modelo estima. É uma medida padronizada, o que significa que ele é independente da escala de medida das variáveis do modelo. Ele é calculado dividindo o erro médio quadrático (EMQ) pelo erro médio quadrático residual (EMQr), que é a diferença entre o EMQ e o EMQ dos resíduos. O valor do SRMR varia de 0 a 1, sendo que valores menores indicam um melhor ajuste do modelo. Uma regra geral é que um valor de SRMR menor que 0,08 indica um bom ajuste do modelo, enquanto valores acima de 0,1 indicam um ajuste pobre. Valores entre 0,08 e 0,1 indicam um ajuste razoável.
 
 (buscar referencias)
-\end{comment}
+
 Além disso, foram = avaliado o Akaike Information Criterion (AIC), criado por Akaike (1974) e o Deviance Information Criterion (DIC). Segundo esses critérios, o modelo com o menor valores de AIC e DIC se ajustam melhor aos dados \cite{raftery2006}.
 
 
@@ -110,6 +114,26 @@ Além disso, foram = avaliado o Akaike Information Criterion (AIC), criado por A
 		\fonte{\citeonline{rabelo2013}, p.134}
 	}
 \end{table}
+
+
+\end{comment}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

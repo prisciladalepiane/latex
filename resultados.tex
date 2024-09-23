@@ -2,7 +2,7 @@
 
 \section{Análise TCT}
 
-Segundo a ótica TCT, que analisa o escore bruto, ou seja, a soma de todos os acertos, o simulado apresentou notas que variam entre 2 e 26 pontos em um total de 30 questões. A média geral foi de 16 pontos, com desvio padrão de 4,6 pontos. A figura \ref{fig:hist_acertos} a distribuição de frequência de acertos no teste.
+Segundo a ótica TCT, que analisa o escore bruto, ou seja, a soma de todos os acertos, o simulado apresentou notas que variam entre 2 e 26 pontos em um total de 30 questões. A média geral foi de 16 pontos, com desvio padrão de 4,6 pontos. A figura \ref{fig:hist_acertos} a distribuição de frequência de acertos no teste. A mediana é de 16, indicando que o número de acertos dos participantes está bastante concentrado em torno dessa faixa. O primeiro quartil para os acertos é de 13 e o terceiro quartil é de 19, o que demonstra que a maioria dos respondentes acertou entre 13 e 19 itens, com variação moderada.
 
 \begin{figure}[H]
 	\centering
@@ -115,7 +115,7 @@ testados os três modelos distintos: o modelo de um parâmetro logístico (1PL),
 		\caption{Teste Razão de verossimilhança.}
 		\label{tabela-anova}
 	}{%
-		\begin{tabular}{cccccc}
+		\begin{tabular}{ccccc}
 			\toprule
 			Modelo &   log-verossimilhança & $X^2$ & df & p \\ 
 			\midrule \midrule
@@ -317,21 +317,12 @@ A maior concentração de informação ocorre no intervalo de aproximadamente -2
 	\label{fig:info}
 \end{figure}
 
-\subsection{Análise dos Itens}
-
-
 
 \subsection{Estimativa das habilidades}
 
-Com base no segundo ajuste do modelo logístico de 3 parâmetros (3PL), as habilidades dos respondentes foram estimadas. Esse modelo, após a exclusão de itens problemáticos. A Teoria de Resposta ao Item (TRI) permite que a habilidade  de cada respondente seja estimada em uma escala contínua, considerando o padrão de respostas e os parâmetros dos itens. A estimativa das habilidades leva em conta tanto a dificuldade dos itens (parâmetro b) quanto a discriminação (parâmetro a) e a probabilidade de acerto ao acaso (parâmetro c). Com isso, cada respondente recebe uma estimativa de habilidade, que reflete seu nível de proficiência em relação aos itens aplicados.
+Com base no segundo ajuste do modelo logístico de 3 parâmetros (3PL), as habilidades dos respondentes foram estimadas. Esse modelo, após a exclusão de itens problemáticos. A Teoria de Resposta ao Item (TRI) permite que a habilidade  de cada respondente seja estimada em uma escala contínua, considerando o padrão de respostas e os parâmetros dos itens. A estimativa das habilidades leva em conta tanto a dificuldade dos itens quanto a discriminação e a probabilidade de acerto ao acaso (parâmetro c). Com isso, cada respondente recebe uma estimativa de habilidade, que reflete seu nível de proficiência em relação aos itens aplicados.
 
-A Tabela \ref{summary-habilidade} apresenta a distribuição das habilidades estimadas ($\hat{\theta}$) juntamente com o total de acertos dos participantes. Observa-se que a habilidade mínima estimada é de -2.75, associada a um total de acertos de 2 itens, enquanto a habilidade máxima estimada é de 2.26, correspondente a 26 acertos, sugerindo uma forte relação entre o número de acertos e a habilidade.
 
-A mediana da habilidade é próxima de 0 (0.03), o que indica que metade dos participantes têm habilidades abaixo e metade acima desse valor, sendo um ponto de referência útil por estar no centro da escala normalizada, com média 0 e desvio padrão 1. Já a média da habilidade também é próxima de 0 (-0.00), sugerindo que, em geral, a distribuição das habilidades dos participantes é simétrica ao redor da média.
-
-Para os acertos, a mediana é de 16, e a média de 15,69, indicando que o número de acertos dos participantes está bastante concentrado em torno dessa faixa. O primeiro quartil (1st Qu.) para os acertos é de 13 e o terceiro quartil (3rd Qu.) é de 19, o que demonstra que a maioria dos respondentes acertou entre 13 e 19 itens, com variação moderada.
-
-Além disso, na simulação de um respondente que errou toda a prova, a habilidade estimada foi mínima (-2.77), enquanto para um participante que acertou todos os itens, a habilidade máxima foi de 2.72. Vale lembrar que essas habilidades são expressas em uma escala com média 0 e desvio padrão 1. Caso fosse necessário aproximar os resultados dessa escala ao padrão utilizado no ENEM, seria preciso transformá-la para uma escala com média 500 e desvio padrão 100, conforme o procedimento descrito por \citeonline{inep2021procedimento}.
 
 \begin{table}[!hbt]
 	\IBGEtab{%
@@ -340,10 +331,10 @@ Além disso, na simulação de um respondente que errou toda a prova, a habilida
 	}{%
 		\begin{tabular*}{.8\textwidth}{@{\extracolsep{\fill}}rrrrrrr@{}}
 			\toprule
-		 & Mínimo & $Q_1$ & Mediana & Média & $Q_3$ & Máximo \\ 
+			& Mínimo & $Q_1$ & Mediana & Média & $Q_3$ & Máximo \\ 
 			\midrule \midrule
-		Habilidade & -2.75 & -0.56 & 0.03 & -0.00 & 0.62 & 2.26 \\ 
-		Acertos & 2 & 13 & 16 & 15.69 & 19 & 26 \\ 
+			Habilidade & -2.75 & -0.56 & 0.03 & -0.00 & 0.62 & 2.26 \\ 
+			Acertos & 2 & 13 & 16 & 16.1 & 19 & 26 \\ 
 			\bottomrule
 		\end{tabular*}
 	}{%
@@ -351,12 +342,77 @@ Além disso, na simulação de um respondente que errou toda a prova, a habilida
 	}
 \end{table}
 
+A Tabela \ref{summary-habilidade} apresenta a distribuição das habilidades estimadas ($\hat{\theta}$) juntamente com o total de acertos dos participantes. Observa-se que a habilidade mínima estimada é de -2.75, associada a um total de acertos de 2 itens, enquanto a habilidade máxima estimada é de 2.26, correspondente a 26 acertos, sugerindo uma forte relação entre o número de acertos e a habilidade.
+
+A mediana da habilidade é próxima de 0 (0.03), o que indica que metade dos participantes têm habilidades abaixo e metade acima desse valor, sendo um ponto de referência útil por estar no centro da escala normalizada, com média 0 e desvio padrão 1. Já a média da habilidade também é próxima de 0, sugerindo que, em geral, a distribuição das habilidades dos participantes é simétrica ao redor da média.
 
 
+Além disso, na simulação de um respondente que errou toda a prova, a habilidade estimada foi de -2.77, enquanto para um participante que acertou todos os itens, a habilidade máxima foi de 2.72. Vale lembrar que essas habilidades são expressas em uma escala com média 0 e desvio padrão 1. Caso fosse necessário aproximar os resultados dessa escala ao padrão utilizado no ENEM, seria preciso transformá-la para uma escala com média 500 e desvio padrão 100, conforme o procedimento descrito por \citeonline{inep2021procedimento}.
 
 \begin{figure}[H]
+	\centering
+	\includegraphics[width=16cm]{../habilidade_info.png}
+	\caption{Distribuição da habilidade e curva de informação do teste.}
+	\label{fig:info_habilidade}
+\end{figure}
+
+Podemos observar pela figura \ref{fig:info_habilidade} que a distribuição das habilidades estimadas dos participantes está concentrada majoritariamente na região central, entre $\theta = -1$ e $\theta = 1$, o que reflete uma maior frequência de respondentes com habilidades intermediárias. No entanto, a curva de informação do teste atinge seu pico em valores de $\theta$ um pouco mais baixos, sugerindo que o teste está melhor ajustado para discriminar habilidades abaixo da média, especialmente entre -2 e -1.
+
+Este descompasso entre a concentração das habilidades estimadas e a área de maior informação indica uma lacuna no teste. Embora a curva de informação esteja fornecendo uma boa precisão para participantes com habilidades mais baixas, há um decréscimo visível na informação na região central do gráfico, onde está a maior parte dos respondentes. Isso significa que, para as habilidades em torno de 0, o teste não está fornecendo a quantidade de informação ideal.
+
+Para melhorar a precisão do teste, seria recomendável a adição de itens que aumentem a informação nessa faixa central. Dessa forma, o teste poderá discriminar melhor entre os participantes que têm habilidades próximas à média, melhorando a precisão das estimativas nessa região. Além disso, a diminuição da informação nas extremidades também sugere que o teste não está oferecendo muita precisão para participantes com habilidades extremamente altas ou baixas, mas essa questão pode ser menos preocupante dependendo do objetivo do teste e da população-alvo.
+
+\begin{figure}[!hbt]
 	\centering
 	\includegraphics[width=16cm]{../acertos_habilidade.png}
 	\caption{Relação entre o número de acertos e a habilidade estimada pela TRI}
 	\label{fig:acertos_habilidade}
 \end{figure}
+
+O gráfico da figura\ref{fig:acertos_habilidade} mostra a relação entre o número total de acertos e a habilidade estimada pelo modelo, para verificar a distribuição total dois pontos representados pelo círculo com o "x" foram adicionados: um para o respondente que errou e outro que acertou todas as questões. Apesar da habilidade aumentar conforme aumenta a quantidade de acertos, indivíduos na qual acertam a mesma quantidade de itens geralmente recebem uma nota (estimativa para habilidade) diferente, porque na TRI não estima-se a habilidade conforme o todo da prova como na TCT, e sim com base na informação de cada item e na coerência dos acertos do respondente. 
+
+Essa variabilidade no mesmo número de acertos é observada no gráfico, onde, para um mesmo número de acertos, há uma dispersão de valores da habilidade estimada, podendo um indivíduo que acertou mais itens receber uma nota menor do que um que acertou menos itens. A tabela \ref{exemplo-10acertos} exemplifica diferentes habilidades estimadas para respondentes com 10 acertos na prova, com o vetor de respostas ordenado do item com menor para o maior valor do parâmetro de dificuldade (b).
+
+
+\begin{table}[!hbt]
+	\IBGEtab{%
+		\caption{Vetor de resposta e habilidade estimada para respondentes com 10 acertos}
+		\label{exemplo-10acertos}
+	}{%
+		\begin{tabular*}{0.5\textwidth}{@{\extracolsep{\fill}}llc@{}}
+			\toprule
+			   & Vetor de Respostas & $\hat{\theta}$ \\ 
+			\midrule \midrule
+				1 & 0000000010110001110001011010 & -2.09 \\ 
+				2 & 1010000011010000010001001110 & -1.52 \\ 
+				3 & 1110000010010100010100001100 & -1.45 \\ 
+				4 & 1010110111000000010001100000 & -1.09 \\ 
+				5 & 1011000100010101000110000100 & -1.08 \\ 
+				6 & 1011011010110000000001100000 & -1.07 \\ 
+				7 & 1001011110001011010000000000 & -1.07 \\ 
+				8 & 1011001100101000000000101100 & -1.06 \\ 
+				9 & 1110011110010000010010000000 & -1.05 \\ 
+				10 & 1110101110000001000100000100 & -1.04 \\ 
+				11 & 1011100010101000001100100000 & -1.02 \\ 
+				12 & 0011001110110000000000100101 & -1.01 \\ 
+				13 & 0111110000000010100100001100 & -1.01 \\ 
+				14 & 0011110001110000011000100000 & -0.94 \\ 
+				15 & 1011011010101010000000010000 & -0.87 \\ 
+				16 & 1111011010011000000100000000 & -0.85 \\ 
+				17 & 0111110001110101000000000000 & -0.84 \\ 
+				18 & 0011101101100000000001010001 & -0.82 \\ 
+				19 & 0011111100101000000101000000 & -0.78 \\ 
+				20 & 1111110011000000100100000000 & -0.77 \\ 
+				21 & 0011011101110000101000000000 & -0.68 \\ 
+				22 & 1011111110110000000000000000 & -0.67 \\ 
+		\bottomrule
+		\end{tabular*}
+	}{%
+		\fonte{Produzido pelos autores.}
+	}
+\end{table}
+
+
+A tabela \ref{exemplo-10acertos} demonstra que, com o mesmo número de acertos (10), há uma diferença na variabilidade das habilidades estimadas. Indivíduos com maior coerência nas resposta, ou seja, aqueles que acertam itens de dificuldade progressiva, recebem uma pontuação maior, enquanto aqueles com menos coerência, que acertam itens mais difíceis e erram os mais fáceis, tendem a receber uma nota inferior. Esse comportamento pode ser interpretado como uma indicação de chute, uma vez que o participante acerta itens que exigem maior habilidade, mas erra itens de menor dificuldade, o que foge do esperado.
+
+
