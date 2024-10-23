@@ -1,4 +1,4 @@
-\documentclass[11pt,openright,a4paper,chapter=TITLE,oneside,english,french,spanish,brazil,sumario=abnt-14725-2023]{abntex2}
+\documentclass[11pt,openright,a4paper,chapter=TITLE,oneside,english,french,spanish,brazil,sumario=tradicional]{abntex2}
 
 \usepackage[brazil]{babel}   % Para hifenar em português
 \usepackage{amssymb}
@@ -26,6 +26,7 @@
 \FloatBarrier  % Isso força as figuras a não passarem para a próxima seção
 
 
+
 % Pacotes de citações
 \usepackage[brazilian,hyperpageref]{backref}	 % Paginas com as citações na bibl
 \usepackage[alf]{abntex2cite}	% Citações padrão ABNT
@@ -48,7 +49,7 @@
 % Recuo da primeira linha de cada parágrafo
 \setlength{\parindent}{1.25cm}
 
-\setlength\afterchapskip{\lineskip}
+\setlength\afterchapskip{1.5\baselineskip}
 
 
 \makeatletter
@@ -61,11 +62,24 @@
 		urlcolor=blue,
 		bookmarksdepth=4
 }
-
+\makeatother
 
 
 \setlength\cftpartnumwidth{\cftparagraphnumwidth}
 \setlength\cftchapternumwidth{\cftparagraphnumwidth}
+
+% Pontinhos em negrito
+\renewcommand{\cftchapterleader}{\bfseries\cftdotfill{\cftchapterdotsep}} % Pontinhos em negrito para cap�tulos
+\renewcommand{\cftsectionleader}{\bfseries\cftdotfill{\cftsectiondotsep}} % Pontinhos em negrito para se��es
+\renewcommand{\cftsubsectionleader}{\bfseries\cftdotfill{\cftsubsectiondotsep}} % Pontinhos em negrito para subse��es
+\renewcommand{\cftsubsubsectionleader}{\bfseries\cftdotfill{\cftsubsectiondotsep}}
+
+% Numera��o de p�ginas em negrito
+\renewcommand{\cftchapterpagefont}{\bfseries} % Negrito para n�meros de p�ginas de cap�tulos
+\renewcommand{\cftsectionpagefont}{\bfseries} % Negrito para n�meros de p�ginas de se��es
+\renewcommand{\cftsubsectionpagefont}{\bfseries} % Negrito para n�meros de p�ginas de subse��es
+\renewcommand{\cftsubsubsectionpagefont}{\bfseries} % Negrito para n�meros de p�ginas de subse��es
+
 \setlength\cftsectionnumwidth{\cftparagraphnumwidth}
 \setlength\cftsubsectionnumwidth{\cftparagraphnumwidth}
 \setlength\cftsubsubsectionnumwidth{\cftparagraphnumwidth}
@@ -84,14 +98,18 @@
 \renewcommand{\ABNTEXchapterfontsize}{\normalsize}
 \renewcommand{\ABNTEXsectionfontsize}{\normalsize}
 \renewcommand{\contentsname}{\centering{SUMÁRIO}}
+\pdfbookmark[0]{\contentsname}{toc}
 \renewcommand{\cftchaptername}{\hspace{0em}}
 \makeindex
+
+\nobibintoc
+\pagestyle{plain}
 
 \input{info_tcc.tex}
 
 \begin{document}
 %Estilo dos titulos dos capitulos
-\chapterstyle{article}
+\chapterstyle{book}
 % ----------------------------------------------------------
 % ELEMENTOS PRÉ-TEXTO
 % ----------------------------------------------------------
@@ -103,14 +121,15 @@
 %\include{epigrafe}
 \include{resumo}
 % inserir lista de ilustrações
-%\pdfbookmark[0]{\listfigurename}{lof}
-%\renewcommand{\listfigurename}{Lista de Figuras}
-%\listoffigures*
+\pdfbookmark[0]{\listfigurename}{lof}
+\renewcommand{\listfigurename}{\centering\textbf{LISTA DE FIGURAS}}
+\listoffigures*
 \cleardoublepage
 % inserir lista de tabelas
 \newpage
 \pdfbookmark[0]{\listtablename}{lot}
-\renewcommand{\listtablename}{Lista de Tabelas}
+\renewcommand{\listtablename}{\centering\textbf{LISTA DE TABELAS}}
+
 \listoftables*
 \cleardoublepage
 % inserir o sumario
