@@ -2,7 +2,7 @@
 
 \section{Análise TCT}
 
-Segundo a ótica TCT, que analisa o escore bruto, ou seja, a soma de todos os acertos, o simulado apresentou notas que variam entre 2 e 26 pontos em um total de 30 questões. A média geral foi de 16 pontos, com desvio padrão de 4,6 pontos. A figura \ref{fig:hist_acertos} a distribuição de frequência de acertos no teste. A mediana é de 16, indicando que o número de acertos dos participantes está bastante concentrado em torno dessa faixa. O primeiro quartil para os acertos é de 13 e o terceiro quartil é de 19, o que demonstra que a maioria dos respondentes acertou entre 13 e 19 itens, com variação moderada.
+Segundo a ótica TCT, que analisa o escore bruto, ou seja, a soma de todos os acertos, o simulado apresentou notas que variam entre 2 e 26 pontos em um total de 30 questões. A média geral foi de 16 pontos, com desvio padrão de 4,6 pontos. A figura \ref{fig:hist_acertos} apresenta distribuição de frequência de acertos no teste. A mediana é de 16, indicando que o número de acertos dos participantes está bastante concentrado em torno dessa faixa. O primeiro quartil para os acertos é de 13 e o terceiro quartil é de 19, o que demonstra que a maioria dos respondentes acertou entre 13 e 19 itens.
 
 \begin{figure}[H]
 	\centering
@@ -18,51 +18,51 @@ Segundo a ótica TCT, que analisa o escore bruto, ou seja, a soma de todos os ac
 	}{%
 		\begin{tabular*}{.8\textwidth}{@{\extracolsep{\fill}}clccccc@{}}
 			\toprule
-			Item & Origem & \% Erro & \% Acerto & Discriminação & Bisserial & Cronbach* \\ 
-			\midrule \midrule
-			1 & FAAP & 32,2\% & 67,8\% & 0,552 & 0,468 & 0,730 \\ 
-			2 & PUC & 56,0\% & 44,0\% & 0,394 & 0,319 & 0,741 \\ 
-			3 & FGV-RJ & 49,4\% & 50,6\% & 0,551 & 0,468 & 0,730 \\ 
-			4 & UEA & 21,5\% & 78,5\% & 0,464 & 0,486 & 0,729 \\ 
-			5 & UFPR & 61,0\% & 39,0\% & 0,507 & 0,415 & 0,734 \\ 
-			6 & UNICENTRO & 63,7\% & 36,3\% & 0,367 & 0,317 & 0,740 \\
-			7 & ENEM & 48,6\% & 51,4\% & 0,523 & 0,431 & 0,733 \\ 
-			8 & UFMS & 41,4\% & 58,6\% & 0,402 & 0,358 & 0,738 \\ 
-			9 & UEA & 73,9\% & 26,1\% & 0,307 & 0,290 & 0,741 \\ 
-			10 & EMESCAM & 23,0\% & 77,0\% & 0,390 & 0,402 & 0,734 \\ 
-			11 & UFMS & 11,9\% & 88,1\% & 0,366 & 0,488 & 0,731 \\ 
-			12 & PUC-RIO & 32,8\% & 67,2\% & 0,564 & 0,507 & 0,727 \\ 
-			13 & ENEM-Digital & 54,1\% & 45,9\% & 0,541 & 0,449 & 0,731 \\ 
-			14 & IFPR & 61,0\% & 39,0\% & 0,358 & 0,299 & 0,742 \\ 
-			15 & ESPCEX & 86,1\% & 13,9\% & 0,155 & 0,205 & 0,744 \\ 
-			16 & UNIFESO & 24,4\% & 75,6\% & 0,441 & 0,431 & 0,733 \\ 
-			17 & FASM & 25,0\% & 75,0\% & 0,399 & 0,399 & 0,735 \\ 
-			18 & ENEM & 22,4\% & 77,6\% & 0,423 & 0,439 & 0,732 \\ 
-			19 & UFSCAR & 19,4\% & 80,6\% & 0,391 & 0,431 & 0,733 \\ 
-			20 & ENEM & 20,8\% & 79,2\% & 0,297 & 0,306 & 0,740 \\ 
-			21 & UFSCAR & 8,1\% & 91,9\% & 0,242 & 0,450 & 0,734 \\ 
-			22 & UNICENTRO & 65,7\% & 34,3\% & 0,241 & 0,235 & 0,745 \\ 
-			23 & UNICENTRO & 49,2\% & 50,8\% & 0,429 & 0,357 & 0,738 \\ 
-			24 & UFAL & 22,1\% & 77,9\% & 0,307 & 0,336 & 0,738 \\ 
-			25 & ENEM & 61,1\% & 38,9\% & 0,399 & 0,350 & 0,738 \\ 
-			26 & FAMECA & 51,1\% & 48,9\% & 0,390 & 0,305 & 0,742 \\ 
-			27 & UFMS & 85,8\% & 14,2\% & -0,0004 & 0,006 & 0,753 \\ 
-			28 & UPE & 77,0\% & 23,0\% & -0,068 & -0,061 & 0,760 \\ 
-			29 & FAMECA & 57,5\% & 42,5\% & 0,389 & 0,324 & 0,740 \\ 
-			30 & UNCISAL & 87,5\% & 12,5\% & 0,078 & 0,119 & 0,747 \\ 
+			Item & Origem & \makecell{\% Erro \\ $(ID_i)$ } & \% Acerto & \makecell{Discriminação \\ ($D_i$)} & \makecell{Ponto \\ Bisserial} & \makecell{Cronbach \\ Excluindo item} \\ 
+			\midrule
+		\midrule 1 & FAAP & 32,2\% & 67,8\% & 0,552 & 0,468 & 0,730 \\ 
+		\midrule 2 & PUC & 56,0\% & 44,0\% & 0,394 & 0,319 & 0,741 \\ 
+		\midrule 3 & FGV-RJ & 49,4\% & 50,6\% & 0,551 & 0,468 & 0,730 \\ 
+		\midrule 4 & UEA & 21,5\% & 78,5\% & 0,464 & 0,486 & 0,729 \\ 
+		\midrule 5 & UFPR & 61,0\% & 39,0\% & 0,507 & 0,415 & 0,734 \\ 
+		\midrule 6 & UNICENTRO & 63,7\% & 36,3\% & 0,367 & 0,317 & 0,740 \\
+		\midrule 7 & ENEM & 48,6\% & 51,4\% & 0,523 & 0,431 & 0,733 \\ 
+		\midrule 8 & UFMS & 41,4\% & 58,6\% & 0,402 & 0,358 & 0,738 \\ 
+		\midrule 9 & UEA & 73,9\% & 26,1\% & 0,307 & \textbf{0,290} & 0,741 \\ 
+		\midrule 10 & EMESCAM & 23,0\% & 77,0\% & 0,390 & 0,402 & 0,734 \\ 
+		\midrule 11 & UFMS & 11,9\% & 88,1\% & 0,366 & 0,488 & 0,731 \\ 
+		\midrule 12 & PUC-RIO & 32,8\% & 67,2\% & 0,564 & 0,507 & 0,727 \\ 
+		\midrule 13 & ENEM-Digital & 54,1\% & 45,9\% & 0,541 & 0,449 & 0,731 \\ 
+		\midrule 14 & IFPR & 61,0\% & 39,0\% & 0,358 & \textbf{0,299} & 0,742 \\ 
+		\midrule 15 & ESPCEX & 86,1\% & 13,9\% & 0,155 & \textbf{0,205} & 0,744 \\ 
+		\midrule 16 & UNIFESO & 24,4\% & 75,6\% & 0,441 & 0,431 & 0,733 \\ 
+		\midrule 17 & FASM & 25,0\% & 75,0\% & 0,399 & 0,399 & 0,735 \\ 
+		\midrule 18 & ENEM & 22,4\% & 77,6\% & 0,423 & 0,439 & 0,732 \\ 
+		\midrule 19 & UFSCAR & 19,4\% & 80,6\% & 0,391 & 0,431 & 0,733 \\ 
+		\midrule 20 & ENEM & 20,8\% & 79,2\% & 0,297 & 0,306 & 0,740 \\ 
+		\midrule 21 & UFSCAR & 8,1\% & 91,9\% & 0,242 & 0,450 & 0,734 \\ 
+		\midrule 22 & UNICENTRO & 65,7\% & 34,3\% & 0,241 & \textbf{0,235} & 0,745 \\ 
+		\midrule 23 & UNICENTRO & 49,2\% & 50,8\% & 0,429 & 0,357 & 0,738 \\ 
+		\midrule 24 & UFAL & 22,1\% & 77,9\% & 0,307 & 0,336 & 0,738 \\ 
+		\midrule 25 & ENEM & 61,1\% & 38,9\% & 0,399 & 0,350 & 0,738 \\ 
+		\midrule 26 & FAMECA & 51,1\% & 48,9\% & 0,390 & 0,305 & 0,742 \\ 
+		\midrule 27 & UFMS & 85,8\% & 14,2\% & 0,000 & \textbf{0,006} & 0,753 \\ 
+		\midrule 28 & UPE & 77,0\% & 23,0\% & -0,068 & \textbf{-0,061} & 0,760 \\ 
+		\midrule 29 & FAMECA & 57,5\% & 42,5\% & 0,389 & 0,324 & 0,740 \\ 
+		\midrule 30 & UNCISAL & 87,5\% & 12,5\% & 0,078 & \textbf{0,119} & 0,747 \\
+		\midrule  Total &&&&&& 0,744 \\
 			\bottomrule
 		\end{tabular*}
 	}{%
 		\fonte{Produzido pelos autores.}
-		\nota{* Excluindo o item.}
 	}
 \end{table}
 
 
-A Tabela \ref{tabela-tct} apresenta os principais índices da Teoria Clássica dos Testes (TCT) para os itens. Inicialmente, observa-se que os itens 27 e 28 possuem índices de discriminação negativos, indicando que esses itens foram mais acertados por indivíduos de menor habilidade. Além disso, esses itens apresentam coeficientes bisserial muito baixos, sugerindo que ambos necessitam de revisão. Também se nota que esses itens são difíceis, pois têm uma proporção de acertos (DIFI) muito baixa.
+A Tabela \ref{tabela-tct} apresenta os principais índices da Teoria Clássica dos Testes (TCT) para os itens. Inicialmente, observa-se que o item 28 possui índices de discriminação negativo, indicando que esses item foi mais acertados por indivíduos de menor habilidade.
 
 
-O alfa de Cronbach obtido foi de 0,744, um valor próximo ao recomendado, sendo considerado adequado para a análise. No entanto, foi observado um aumento no alfa de Cronbach ao excluir os itens 21, 27, 28 e 30, o que sugere que esses itens /podem estar impactando negativamente a consistência interna da prova.
+O alfa de Cronbach obtido foi de 0,744, um valor próximo ao recomendado, sendo considerado adequado para a análise. No entanto, foi observado um aumento no alfa de Cronbach ao excluir os itens 21, 27, 28 e 30, o que sugere que esses itens podem estar impactando negativamente a consistência interna da prova.
 
 
 Os índices de dificuldade do teste estão distribuídos conforme ilustrado na figura \ref{fig:hist_difi}. O item mais fácil é o 21, com 91,9\% de acertos, enquanto o item mais difícil é o 30, com apenas 12,5\% de acertos. Além disso, o item mais difícil apresenta um valor bisserial abaixo do recomendado. A média do índice de dificuldade (DIFI) foi de 50,6\%, com um desvio padrão de 23,4\%.
@@ -75,7 +75,33 @@ Os índices de dificuldade do teste estão distribuídos conforme ilustrado na f
 \end{figure}
 
 
-Observa-se pela figura \ref{fig:hist_difi} que a distribuição dos índices de dificuldade dos itens não segue o padrão recomendado por \citeonline{pasquali2003}, que sugere que uma prova deve ter uma maior concentração de itens de dificuldade média, complementada por uma menor quantidade de itens fáceis e difíceis, de forma a se aproximar de uma distribuição normal. Segundo essa recomendação, o ideal seria que a maioria dos itens tivesse uma dificuldade intermediária, o que aumentaria a capacidade da prova de discriminar entre os participantes com habilidades diferentes. No entanto, a análise da distribuição dos itens revela um desvio desse padrão.
+Observa-se pela figura \ref{fig:hist_difi} que a distribuição dos índices de dificuldade dos itens não segue uma distribuição normal, que sugere que uma prova deve ter uma maior concentração de itens de dificuldade média, complementada por uma menor quantidade de itens fáceis e difíceis, de forma a se aproximar de uma distribuição normal. Segundo essa recomendação, o ideal seria que a maioria dos itens tivesse uma dificuldade intermediária. A tabela \ref{tabela-dificuldade-obtida} mostra uma comparação entre o recomendado na tabela \ref{tabela-class-ID} o que indica que faltam itens na faixa de 40\% a 60\%.
+
+\begin{table}[H]
+	\IBGEtab{%
+		\caption{Distribuição ideal dos itens por ID.}
+		\label{tabela-dificuldade-obtida}
+	}{%
+		\begin{tabular}{cccc}
+			\toprule
+				Faixa & Total Itens & Distribuição Esperada & Distribuição Obtida   \\ 
+			\midrule \midrule
+			 I & 3 & 10\% &  10,0\% \\ 
+			\midrule
+			 II & 7 & 20\% & 23,3\% \\
+			\midrule
+			 III & 8 & 40\% & 26,7\% \\ 
+			\midrule
+			 IV & 9 & 20\% & 30,0\% \\ 
+			\midrule
+			 V & 3 & 10\% & 10,0\% \\ 
+			\bottomrule
+		\end{tabular}
+	}{%
+		\fonte{Produzido pelos autores.}
+	}
+\end{table}
+
 
 \newpage
 \section{Análise TRI}
@@ -92,13 +118,13 @@ testados os três modelos distintos: o modelo de um parâmetro logístico (1PL),
 	}{%
 		\begin{tabular}{ccccc}
 			\toprule
-			Modelo &   log-verossimilhança & $X^2$ & df & p \\ 
+			Modelo &   log-verossimilhança & $X^2$ & df & p-valor \\ 
 			\midrule \midrule
-			1PL &  -10991.57 &  &  &  \\ 
+			1PL &  -10991,57 &  &  &  \\ 
 			\midrule
-			2PL &  -10768.56 & 446.01 & 29 & 0.000 \\ 
+			2PL &  -10768,56 & 446,01 & 29 & 0,000 \\ 
 			\midrule
-			3PL & -10741.91 & 53.29 & 30 & 0.006 \\ 
+			3PL & -10741,91 & 53,29 & 30 & 0,006 \\ 
 			\bottomrule
 		\end{tabular}
 	}{%
@@ -117,13 +143,13 @@ Os resultados do teste de razão de verossimilhança, apresentados na \ref{tabel
 	}{%
 		\begin{tabular}{ccccccccc}
 			\toprule
-			Modelo & M2 & df & p & RMSEA & RMSEA\_5 & RMSEA\_95 & TLI & CFI \\ 
+			Modelo & M2 & df & p-valor & RMSEA & RMSEA$_5$ & RMSEA$_{95}$ & TLI & CFI \\ 
 			\midrule \midrule
-			1PL & 1167 & 434 & 0.0000 & 0.0504 & 0.0469 & 0.0539 & 0.81 & 0.81 \\ 
+			1PL & 1167 & 434 & 0,0000 & 0,0504 & 0,0469 & 0,0539 & 0,81 & 0,81 \\ 
 			\midrule
-			2PL & 485 & 405 & 0.0036 & 0.0173 & 0.0104 & 0.0228 & 0.98 & 0.98 \\ 
+			2PL & 485 & 405 & 0,0036 & 0,0173 & 0,0104 & 0,0228 & 0,98 & 0,98 \\ 
 			\midrule
-			3PL & 371 & 375 & 0.5502 & 0.0000 & 0.0000 & 0.0134 & 1.00 & 1.00 \\ 
+			3PL & 371 & 375 & 0,5502 & 0,0000 & 0,0000 & 0,0134 & 1,00 & 1,00 \\ 
 			\bottomrule
 		\end{tabular}
 	}{%
@@ -139,7 +165,7 @@ O modelo de 3PL demonstra o melhor ajuste entre os três modelos testados. Com u
 
 \subsection{Modelo de 3 Parâmetros}
 
-Os resultados dos parâmetros estimados para o modelo de 3 parâmetros logísticos (3PL) estão detalhados na Tabela \ref{tabela-coef3} os 3 parâmetros: discriminação (a), dificuldade (b) e chute (c), permitindo avaliar a qualidade dos itens em relação à diferenciação entre participantes com diferentes níveis de habilidade, o nível de dificuldade de cada item, e a probabilidade de acerto ao acaso. Além disso, a tabela apresenta o ponto máximo de informação para cada item, que é o ponto máximo da curva de informação do item  dada pela equação \ref{eq:info_item}.
+Os resultados dos parâmetros estimados para o modelo de 3 parâmetros logísticos (3PL) estão detalhados na Tabela \ref{tabela-coef3} os 3 parâmetros: discriminação (a), dificuldade (b) e chute (c), permitindo construir a curva característica de cada item. 
 
 \begin{table}[!htb]
 	\IBGEtab{%
@@ -153,37 +179,37 @@ Os resultados dos parâmetros estimados para o modelo de 3 parâmetros logístic
 			\makecell{Dificuldade \\ (b)} &
 			 \makecell{Acerto Casual \\(c)} 
 			   \\ 
-			\midrule \midrule
-			1 & FAAP & 1.94 & -0.17 & 0.27 \\ 
-			2 & PUC & 3.08 & 1.17 & 0.34 \\ 
-			3 & FGV-RJ & 1.47 & 0.30 & 0.14  \\ 
-			4 & UEA & 1.50 & -1.16 & 0.02  \\ 
-			5 & UFPR & 1.12 & 0.77 & 0.08 \\ 
-			6 & UNICENTRO & 0.60 & 1.23 & 0.04  \\ 
-			7 & ENEM & 0.92 & 0.06 & 0.04 \\ 
-			8 & UFMS & 0.62 & -0.60 & 0.00 \\ 
-			9 & UEA & 0.98 & 2.00 & 0.12  \\ 
-			10 & UMESCAM & 1.44 & -0.44 & 0.40 \\ 
-			11 & UFMS & 2.16 & -1.52 & 0.00  \\ 
-			12 & PUC-RIO & 1.34 & -0.70 & 0.00 \\ 
-			13 & ENEM-Digital & 1.80 & 0.61 & 0.19 \\ 
-			14 & IFPR & 0.48 & 1.01 & 0.01  \\ 
-			15 & ESPECEX & 0.54 & 3.63 & 0.01 \\ 
-			16 & UNIFESO & 1.19 & -0.91 & 0.18  \\ 
-			17 & FASM & 1.00 & -1.31 & 0.00  \\ 
-			18 & ENEM & 1.20 & -1.29 & 0.01 \\ 
-			19 & UFSCAR & 1.36 & -1.38 & 0.00 \\ 
-			20 & ENEM & 0.68 & -2.14 & 0.01 \\ 
-			21 & UFSCAR & 2.46 & -1.74 & 0.00  \\ 
-			22 & UNICENTRO & 0.32 & 2.20 & 0.01 \\ 
-			23 & UNICENTRO & 0.68 & -0.04 & 0.00  \\ 
-			24 & UFAL & 0.73 & -1.91 & 0.00 \\ 
-			25 & ENEM & 1.83 & 1.15 & 0.23  \\ 
-			26 & FAMECA & 0.51 & 0.10 & 0.00 \\ 
-			27 & UFMS & -1.16 & -3.45 & 0.11  \\ 
-			28 & UPE & -0.46 & -2.76 & 0.00  \\ 
-			29 & FAMECA & 0.87 & 0.93 & 0.14  \\ 
-			30 & UNCISAL & 3.21 & 2.22 & 0.10 \\ 
+			\midrule
+		\midrule 1 & FAAP & 1,94 & -0,17 & 0,27 \\ 
+\midrule 2 & PUC & 3,08 & 1,17 & 0,34 \\ 
+\midrule 3 & FGV-RJ & 1,47 & 0,30 & 0,14  \\ 
+\midrule 4 & UEA & 1,50 & -1,16 & 0,02  \\ 
+\midrule 5 & UFPR & 1,12 & 0,77 & 0,08 \\ 
+\midrule 6 & UNICENTRO & 0,60 & 1,23 & 0,04  \\ 
+\midrule 7 & ENEM & 0,92 & 0,06 & 0,04 \\ 
+\midrule 8 & UFMS & 0,62 & -0,60 & 0,00 \\ 
+\midrule 9 & UEA & 0,98 & 2,00 & 0,12  \\ 
+\midrule 10 & UMESCAM & 1,44 & -0,44 & 0,40 \\ 
+\midrule 11 & UFMS & 2,16 & -1,52 & 0,00  \\ 
+\midrule 12 & PUC-RIO & 1,34 & -0,70 & 0,00 \\ 
+\midrule 13 & ENEM-Digital & 1,80 & 0,61 & 0,19 \\ 
+\midrule 14 & IFPR & 0,48 & 1,01 & 0,01  \\ 
+\midrule 15 & ESPECEX & 0,54 & 3,63 & 0,01 \\ 
+\midrule 16 & UNIFESO & 1,19 & -0,91 & 0,18  \\ 
+\midrule 17 & FASM & 1,00 & -1,31 & 0,00  \\ 
+\midrule 18 & ENEM & 1,20 & -1,29 & 0,01 \\ 
+\midrule 19 & UFSCAR & 1,36 & -1,38 & 0,00 \\ 
+\midrule 20 & ENEM & 0,68 & -2,14 & 0,01 \\ 
+\midrule 21 & UFSCAR & 2,46 & -1,74 & 0,00  \\ 
+\midrule 22 & UNICENTRO & 0,32 & 2,20 & 0,01 \\ 
+\midrule 23 & UNICENTRO & 0,68 & -0,04 & 0,00  \\ 
+\midrule 24 & UFAL & 0,73 & -1,91 & 0,00 \\ 
+\midrule 25 & ENEM & 1,83 & 1,15 & 0,23  \\ 
+\midrule 26 & FAMECA & 0,51 & 0,10 & 0,00 \\ 
+\midrule 27 & UFMS & \textbf{-1,16} & -3,45 & 0,11  \\ 
+\midrule 28 & UPE & \textbf{-0,46} & -2,76 & 0,00  \\ 
+\midrule 29 & FAMECA & 0,87 & 0,93 & 0,14  \\ 
+\midrule 30 & UNCISAL & 3,21 & 2,22 & 0,10 \\ 
 			\bottomrule
 		\end{tabular*}
 	}{%
@@ -201,7 +227,12 @@ Os resultados dos parâmetros estimados para o modelo de 3 parâmetros logístic
 A figura \ref{fig:curva_itens} apresenta as curvas características dos itens com os parâmetros listados na Tabela \ref{tabela-coef3}. Observa-se que os itens 27 e 28 possuem inclinações contrárias, indicativas de valores de discriminação negativos, o que é problemático em avaliações. Esses itens sugerem que participantes com maior habilidade têm menor probabilidade de acertá-los, o que não é esperado em um teste bem construído. Conforme apontado por \citeonline{baker2001}, itens com discriminação negativa indicam que há algum problema no item, seja por estar mal formulado ou por gerar desinformação entre os alunos de maior capacidade. \citeonline{ayala2013theory} reforça que um valor negativo de discriminação é um indicativo de que o item deve ser descartado, uma vez que seu comportamento é inconsistente com o modelo. Portanto, a presença de discriminação negativa nesses itens requer atenção imediata, sendo recomendada a revisão ou a exclusão, já que tais inconsistências comprometem a validade da avaliação e dificultam a mensuração precisa da habilidade dos participantes.
 
 
-\begin{figure}[hb]
+\subsubsection{Análise dos itens com discriminação negativa}
+
+Itens com discriminação negativa, como os analisados, não conseguem medir adequadamente a habilidade e podem gerar resultados incoerentes. Portanto, é recomendável revisá-los ou descartá-los para garantir a validade da avaliação.
+
+
+\begin{figure}[!htb]
 	\centering
 	\includegraphics[width=16cm]{../itens_disc_negativa.png}
 	\caption{Curva característica dos itens com discriminação negativa.}
@@ -209,58 +240,95 @@ A figura \ref{fig:curva_itens} apresenta as curvas características dos itens co
 \end{figure}
 
 
-Embora os itens 27 e 28 apresentem valores baixos de dificuldade (b), o que sugeriria que seriam itens fáceis, isso não é verdade devido à discriminação negativa (a). Conforme mostrado na Figura \ref{fig:itens_disc_negativa}, a probabilidade de acerto dos participantes diminui à medida que a habilidade aumenta, ou seja, funciona de mandeira contra-intuitiva. No contexto da TRI, o parâmetro b representa o nível de habilidade necessário para que um participante tenha $(c+1)/2$ de probabilidade de acertar o item. Entretanto, a presença de discriminação negativa faz com que o item funcione de maneira inversa: participantes com maior habilidade têm menor probabilidade de acerto.
+Conforme mostrado na Figura \ref{fig:itens_disc_negativa}, a probabilidade de acerto dos participantes diminui à medida que a habilidade aumenta, ou seja, funciona de maneira contra-intuitiva. No contexto da TRI, o parâmetro b representa o nível de habilidade necessário para que um participante tenha $(c+1)/2$ de probabilidade de acertar o item. Entretanto, a presença de discriminação negativa faz com que o item funcione de maneira inversa: participantes com maior habilidade têm menor probabilidade de acerto.
 
-Essa situação sugere que o item está mal formulado ou gera confusão entre os participantes mais habilidosos, resultando em uma baixa proporção de acertos. Isso compromete a interpretação do valor de b, já que o item não está medindo corretamente a habilidade. Assim, os itens com discriminação negativa não devem ser interpretados como fáceis, mas sim como problemáticos, pois apresentam uma falha fundamental na avaliação da habilidade dos participantes.
+As figuras \ref{fig:item_27} e \ref{fig:item_28} exibem a proporção de respostas marcadas para cada alternativa em função do total de acertos, com os resultados agrupados em intervalos de 5 acertos.
 
-Itens com discriminação negativa, como os analisados, não conseguem medir adequadamente a habilidade e podem gerar resultados incoerentes. Portanto, é recomendável revisá-los ou descartá-los para garantir a validade da avaliação. Com base nessas análises, o modelo foi ajustado novamente, removendo-se os itens problemáticos. A tabela \ref{tabela-coef3-excl} apresenta os resultados dos parâmetros para o 2ª ajuste, além disso, foi acrescentado o ponto máximo de informação para cada item, que é o ponto máximo da curva de informação do item  dada pela equação \ref{eq:info_item}, além disso foram verificados itens âncoras, os itens estão ordenados do menos informativo para o mais informativo.
+Analisando o item 27, observa-se que respondentes com mais acertos tenderam a marcar a alternativa D, as alternativas da questão apresentam interpretações que, em alguns casos, são excessivamente simplificadas ou, ao contrário, exageradas, o que pode confundir o estudante. A alternativa D, por exemplo, sugere que o narrador se torna um "reprodutor do sistema opressor", o que está incorreto mas pode ser uma leitura possível se o aluno fizer a interpretação do texto. Isso cria uma ambiguidade que pode desviar o foco da análise sociológica adequada, levando o aluno a acreditar que o item está correto. Por fim, a questão abre espaço para múltiplas interpretações, o que pode ser visto como uma falha em um contexto de avaliação, onde se espera que haja uma resposta claramente correta.
+	
+No caso do item 28, verificou-se que ele foi corrigido com o gabarito incorreto, quando a alternativa correta deveria ser a letra C. Quando um item é corrigido com o gabarito incorreto, a TRI pode evidenciar que o comportamento esperado para um item de boa qualidade não está ocorrendo. Nesse contexto, a TRI auxilia na identificação de itens que estão mal formulados ou corrigidos erroneamente.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=16cm]{../alternativas2_item27.png}
+	\caption{Proporção de alternativas marcadas total de acertos do item 27.}
+	\label{fig:item_27}
+\end{figure}
+
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=16cm]{../alternativas2_item28.png}
+	\caption{Proporção de alternativas marcadas total de acertos do item 28.}
+	\label{fig:item_28}
+\end{figure}
 
 
 
-\begin{table}[!hbt]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsubsection{Modelo de 3 Parâmetros - 2º Ajuste}
+
+ Com base nessas análises, o modelo foi ajustado novamente, removendo-se os itens problemáticos. Para a avaliação do modelo o resultados do teste $M_2$ indicam um bom ajuste do modelo. O valor de $M_2$ (344,6) com p-valor = $0,54$ sugere que o modelo não é significativamente diferente dos dados. O RMSEA é 0 (intervalo de confiança de 0 a 0,0137), indicando um ajuste excelente. Os índices de ajuste incremental TLI (1) e CFI (1), reforçam que o modelo se ajustou bem aos dados.
+ 
+ 
+  A tabela \ref{tabela-coef3-excl} apresenta os resultados dos parâmetros para o 2ª ajuste, além disso, foi acrescentado o ponto máximo de informação para cada item, que é o ponto máximo da curva de informação do item  dada pela equação \ref{eq:info_item}.
+
+Na Figura \ref{fig:info_itens}, nota-se que os itens 6, 8, 14, 15, 20, 22, 23, 24 e 26 oferecem pouca ou nenhuma informação relevante para o teste. Conforme enfatizado por \citeonline{baker2001}, itens com baixa discriminação ou com valores muito baixos de informação máxima (ou seja, que não contribuem significativamente para a mensuração em qualquer nível de habilidade) devem ser considerados para revisão ou exclusão, pois não agregam valor à avaliação.
+
+
+
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=16cm]{../info_itens.png}
+	\caption{Curva de informação dos itens.}
+	\label{fig:info_itens}
+\end{figure}
+
+\begin{table}[H]
 	\IBGEtab{%
 		\caption{Parâmetros do modelo 3PL - 2ª Ajuste}
 		\label{tabela-coef3-excl}
 	}{%
-		\begin{tabular*}{.8\textwidth}{@{\extracolsep{\fill}}clccccc@{}}
+		\begin{tabular*}{.8\textwidth}{@{\extracolsep{\fill}}clcccc@{}}
 			\toprule
 			Item  & Origem & 
 			\makecell{Discriminação \\(a)}& 
 			\makecell{Dificuldade \\ (b)} &
 			\makecell{Acerto Casual \\(c)} &
-			\makecell{Máxima \\ Informação} &
-			\makecell{Item \\ Âncora}
+			\makecell{Máxima \\ Informação} 
 			\\ 
-			\midrule \midrule
-			22 & UNICENTRO & 0.31 & 2.18 & 0.01 & 0.02 \\ 
-			14 & IFPR & 0.48 & 1.00 & 0.00 & 0.06 \\ 
-			26 & FAMECA & 0.50 & 0.10 & 0.00 & 0.06 \\ 
-			15 & ESPECEX & 0.62 & 3.46 & 0.02 & 0.08 \\ 
-			6 & UNICENTRO & 0.63 & 1.25 & 0.05 & 0.09 \\ 
-			8 & UFMS & 0.63 & -0.60 & 0.00 & 0.10 \\ 
-			23 & UNICENTRO & 0.66 & -0.04 & 0.00 & 0.11 \\ 
-			20 & ENEM & 0.69 & -2.13 & 0.00 & 0.12 \\ 
-			29 & FAMECA & 0.79 & 0.88 & 0.11 & 0.13 \\ 
-			24 & UFAL & 0.74 & -1.89 & 0.00 & 0.14 \\ 
-			9 & UEA & 0.96 & 1.98 & 0.12 & 0.18 \\ 
-			7 & ENEM & 0.95 & 0.10 & 0.06 & 0.20 \\ 
-			10 & UMESCAM & 1.44 & -0.43 & 0.40 & 0.23 \\ 
-			17 & FASM & 1.00 & -1.31 & 0.00 & 0.25 \\ 
-			16 & UNIFESO & 1.19 & -0.92 & 0.17 & 0.25 \\ 
-			5 & UFPR & 1.12 & 0.77 & 0.08 & 0.27 \\ 
-			18 & ENEM & 1.20 & -1.30 & 0.00 & 0.36 \\ 
-			3 & FGV-RJ & 1.49 & 0.30 & 0.14 & 0.42 & * \\ 
-			19 & UFSCAR & 1.33 & -1.39 & 0.00 & 0.44 \\ 
-			12 & PUC-RIO & 1.36 & -0.69 & 0.00 & 0.46 \\ 
-			1 & FAAP & 1.87 & -0.19 & 0.27 & 0.52 \\ 
-			25 & ENEM & 1.82 & 1.14 & 0.23 & 0.53 & * \\ 
-			4 & UEA & 1.56 & -1.08 & 0.07 & 0.53 \\ 
-			13 & ENEM-Digital & 1.85 & 0.61 & 0.19 & 0.59 \\ 
-			11 & UFMS & 2.15 & -1.52 & 0.00 & 1.15 \\ 
-			2 & PUC & 3.12 & 1.16 & 0.34 & 1.27 & *\\ 
-			21 & UFSCAR & 2.43 & -1.75 & 0.00 & 1.47 \\ 
-			30 & UNCISAL & 3.07 & 2.23 & 0.10 & 1.92 & *\\ 
-			\bottomrule
+			\midrule
+	\midrule 22 & UNICENTRO & 0,32 & 2,12 & 0,01 & 0,03 \\ 
+\midrule 14 & IFPR & 0,49 & 0,98 & 0,00 & 0,06 \\ 
+\midrule 15 & ESPECEX & 0,53 & 3,68 & 0,00 & 0,06 \\ 
+\midrule 26 & FAMECA & 0,51 & 0,10 & 0,00 & 0,07 \\ 
+\midrule 6 & UNICENTRO & 0,59 & 1,23 & 0,04 & 0,08 \\ 
+\midrule 8 & UFMS & 0,62 & -0,60 & 0,00 & 0,10 \\ 
+\midrule 23 & UNICENTRO & 0,67 & -0,04 & 0,00 & 0,11 \\ 
+\midrule 20 & ENEM & 0,68 & -2,16 & 0,00 & 0,11 \\ 
+\midrule 24 & UFAL & 0,72 & -1,92 & 0,00 & 0,13 \\ 
+\midrule 29 & FAMECA & 0,90 & 0,93 & 0,14 & 0,15 \\ 
+\midrule 28 & UPE & 0,86 & -1,06 & 0,00 & 0,18 \\ 
+\midrule 7 & ENEM & 0,96 & 0,14 & 0,07 & 0,20 \\ 
+\midrule 9 & UEA & 1,02 & 2,01 & 0,13 & 0,20 \\ 
+\midrule 10 & UMESCAM & 1,55 & -0,31 & 0,44 & 0,25 \\ 
+\midrule 17 & FASM & 1,00 & -1,31 & 0,00 & 0,25 \\ 
+\midrule 16 & UNIFESO & 1,25 & -0,82 & 0,21 & 0,26 \\ 
+\midrule 5 & UFPR & 1,11 & 0,76 & 0,08 & 0,26 \\ 
+\midrule 18 & ENEM & 1,18 & -1,31 & 0,00 & 0,35 \\ 
+\midrule 3 & FGV-RJ & 1,49 & 0,32 & 0,15 & 0,42 \\ 
+\midrule 12 & PUC-RIO & 1,33 & -0,70 & 0,00 & 0,44 \\ 
+\midrule 19 & UFSCAR & 1,37 & -1,37 & 0,00 & 0,47 \\ 
+\midrule 25 & ENEM & 1,83 & 1,15 & 0,23 & 0,54 \\ 
+\midrule 1 & FAAP & 1,88 & -0,22 & 0,25 & 0,54 \\ 
+\midrule 13 & ENEM-Digital & 1,77 & 0,59 & 0,18 & 0,55 \\ 
+\midrule 4 & UEA & 1,50 & -1,18 & 0,00 & 0,56 \\ 
+\midrule 11 & UFMS & 2,13 & -1,53 & 0,00 & 1,13 \\ 
+\midrule 2 & PUC & 2,96 & 1,18 & 0,34 & 1,14 \\ 
+\midrule 21 & UFSCAR & 2,50 & -1,73 & 0,00 & 1,56 \\ 
+\midrule 30 & UNCISAL & 3,41 & 2,18 & 0,10 & 2,37 \\
+\bottomrule
 		\end{tabular*}
 	}{%
 		\fonte{Produzido pelos autores.}
@@ -268,34 +336,25 @@ Itens com discriminação negativa, como os analisados, não conseguem medir ade
 			}
 \end{table}
 
-Na Figura \ref{fig:info_itens}, nota-se que os itens 22, 14 e 26 oferecem pouca ou nenhuma informação relevante para o teste. Conforme enfatizado por \citeonline{baker2001}, itens com baixa discriminação ou com valores muito baixos de informação máxima (ou seja, que não contribuem significativamente para a mensuração em qualquer nível de habilidade) devem ser considerados para revisão ou exclusão, pois não agregam valor à avaliação.
 
-
-
-\begin{figure}[!hbt]
-	\centering
-	\includegraphics[width=16cm]{../info_itens.png}
-	\caption{Curva de informação do teste.}
-	\label{fig:info_itens}
-\end{figure}
 
 \subsection{Informação do Teste}
 
-A figura \ref{fig:info} ilustra a curva de informação do teste do segundo ajuste, conforme a equação \ref{eq:info_teste}, os pontos representam valores dos parâmetros de dificuldade do item na régua da habilidade e a linha pontilhada representa o erro padrão. A curva de informação do teste atinge seu pico em 5,45 quando $\theta = -1,44$. A região de $\theta$ com maior informação ($I(\theta) > 5$) é entre -1,8 e -0,9, o que indica que o teste é mais informativo para indivíduos com habilidade abaixo da média. 
+A figura \ref{fig:info} ilustra a curva de informação do teste do segundo ajuste, conforme a equação \ref{eq:info_teste} e a linha pontilhada representa o erro padrão. A curva de informação do teste atinge seu pico em 5,71 quando $\theta = -1,46$. A região de $\theta$ com informação mais precisa ($I(\theta) > 5$) é entre -1,9 e -0,7, o que indica que o teste é mais preciso para indivíduos com habilidade abaixo da média. 
 
 A maior concentração de informação ocorre no intervalo de aproximadamente -2,5 a 2,5, o que significa que o teste fornece maior precisão para respondentes cujas habilidades estão dentro dessa faixa. Fora desse intervalo, à medida que $\theta$ se afasta em direção a valores muito baixos ou muito altos, a quantidade de informação diminui consideravelmente, o que implica em menor precisão na estimativa de habilidade para esses extremos. Portanto, o teste se mostra eficaz para diferenciar participantes com habilidades intermediárias, mas perde precisão para aqueles com habilidades muito baixas ou muito altas.
 
-\begin{figure}[H]
+\begin{figure}[!htbp]
 	\centering
-	\includegraphics[width=16cm]{../info_erro_itens.png}
-	\caption{Curva de informação do teste.}
+	\includegraphics[width=16cm]{../info_modelo2.png}
+	\caption{Curva de informação e erro padrão do teste.}
 	\label{fig:info}
 \end{figure}
 
 
 \subsection{Estimativa das habilidades}
 
-Com base no segundo ajuste do modelo logístico de 3 parâmetros (3PL), as habilidades dos respondentes foram estimadas. Esse modelo, após a exclusão de itens problemáticos. A Teoria de Resposta ao Item (TRI) permite que a habilidade  de cada respondente seja estimada em uma escala contínua, considerando o padrão de respostas e os parâmetros dos itens. A estimativa das habilidades leva em conta tanto a dificuldade dos itens quanto a discriminação e a probabilidade de acerto ao acaso (parâmetro c). Com isso, cada respondente recebe uma estimativa de habilidade, que reflete seu nível de proficiência em relação aos itens aplicados.
+Com base no segundo ajuste do modelo logístico de 3 parâmetros (3PL), as habilidades dos respondentes foram estimadas. Esse modelo, após a correção e exclusão de itens problemáticos. A TRI permite que a habilidade  de cada respondente seja estimada em uma escala contínua, considerando o padrão de respostas e os parâmetros dos itens. A estimativa das habilidades leva em conta tanto a dificuldade dos itens quanto a discriminação e a probabilidade de acerto ao acaso. Com isso, cada respondente recebe uma estimativa de habilidade.
 
 
 
@@ -304,12 +363,12 @@ Com base no segundo ajuste do modelo logístico de 3 parâmetros (3PL), as habil
 		\caption{Distribuição da Habilidade estimada e total de acertos}
 		\label{summary-habilidade}
 	}{%
-		\begin{tabular*}{.8\textwidth}{@{\extracolsep{\fill}}rrrrrrr@{}}
+		\begin{tabular*}{.8\textwidth}{@{\extracolsep{\fill}}lcccccc@{}}
 			\toprule
 			& Mínimo & $Q_1$ & Mediana & Média & $Q_3$ & Máximo \\ 
 			\midrule \midrule
-			Habilidade & -2.75 & -0.56 & 0.03 & -0.00 & 0.62 & 2.26 \\ 
-			Acertos & 2 & 13 & 16 & 16.1 & 19 & 26 \\ 
+			$\hat{\theta}$ & -2,79 & -0,56 & 0,00 & 0,00 & 0,62 & 2,30 \\ 
+			$\hat{\theta}_{(500,100)}$ & -220,5 & -443,7 & 501,4 & 500,0 & 562,3 & 730,3 \\
 			\bottomrule
 		\end{tabular*}
 	}{%
@@ -317,12 +376,11 @@ Com base no segundo ajuste do modelo logístico de 3 parâmetros (3PL), as habil
 	}
 \end{table}
 
-A Tabela \ref{summary-habilidade} apresenta a distribuição das habilidades estimadas ($\hat{\theta}$) juntamente com o total de acertos dos participantes. Observa-se que a habilidade mínima estimada é de -2.75, associada a um total de acertos de 2 itens, enquanto a habilidade máxima estimada é de 2.26, correspondente a 26 acertos, sugerindo uma forte relação entre o número de acertos e a habilidade.
+A Tabela \ref{summary-habilidade} apresenta a distribuição das habilidades estimadas ($\hat{\theta}$) para a escala normal padrão e para a escala  de $\mu = 500$ e $\sigma = 100$. A habilidade mínima estimada é de -2,75, associada a um total de acertos de 2 itens, enquanto a habilidade máxima estimada é de 2,26, correspondente a 26 acertos. Não houveram respondentes que acertaram ou erraram todos os itens. Na simulação de um respondente que errou toda a prova, a habilidade estimada foi de -2,81, enquanto para um participante que acertou todos os itens, a habilidade máxima foi de 2,72. 
+\begin{comment}
+	Vale lembrar que essas habilidades são expressas em uma escala com média 0 e desvio padrão 1. Caso fosse necessário aproximar os resultados dessa escala ao padrão utilizado no ENEM, seria preciso transformá-la para uma escala com média 500 e desvio padrão 100, conforme o procedimento descrito por \citeonline{inep2021procedimento}.
+\end{comment}
 
-A mediana da habilidade é próxima de 0 (0.03), o que indica que metade dos participantes têm habilidades abaixo e metade acima desse valor, sendo um ponto de referência útil por estar no centro da escala normalizada, com média 0 e desvio padrão 1. Já a média da habilidade também é próxima de 0, sugerindo que, em geral, a distribuição das habilidades dos participantes é simétrica ao redor da média.
-
-
-Além disso, na simulação de um respondente que errou toda a prova, a habilidade estimada foi de -2.77, enquanto para um participante que acertou todos os itens, a habilidade máxima foi de 2.72. Vale lembrar que essas habilidades são expressas em uma escala com média 0 e desvio padrão 1. Caso fosse necessário aproximar os resultados dessa escala ao padrão utilizado no ENEM, seria preciso transformá-la para uma escala com média 500 e desvio padrão 100, conforme o procedimento descrito por \citeonline{inep2021procedimento}.
 
 \begin{figure}[H]
 	\centering
@@ -331,11 +389,11 @@ Além disso, na simulação de um respondente que errou toda a prova, a habilida
 	\label{fig:info_habilidade}
 \end{figure}
 
-Podemos observar pela figura \ref{fig:info_habilidade} que a distribuição das habilidades estimadas dos participantes está concentrada majoritariamente na região central, entre $\theta = -1$ e $\theta = 1$, o que reflete uma maior frequência de respondentes com habilidades intermediárias. No entanto, a curva de informação do teste atinge seu pico em valores de $\theta$ um pouco mais baixos, sugerindo que o teste está melhor ajustado para discriminar habilidades abaixo da média, especialmente entre -2 e -1.
+Podemos observar pela figura \ref{fig:info_habilidade} que a distribuição das habilidades estimadas dos participantes está concentrada majoritariamente (75\%) na região central, entre $\theta = -1$ e $\theta = 1$, o que reflete uma maior frequência de respondentes com habilidades intermediárias. No entanto, a curva de informação do teste atinge seu pico em valores de $\theta$ um pouco mais baixos, sugerindo que o teste está melhor ajustado para discriminar habilidades abaixo da média, especialmente entre -1,9 e -0,7.
 
-Este descompasso entre a concentração das habilidades estimadas e a área de maior informação indica uma lacuna no teste. Embora a curva de informação esteja fornecendo uma boa precisão para participantes com habilidades mais baixas, há um decréscimo visível na informação na região central do gráfico, onde está a maior parte dos respondentes. Isso significa que, para as habilidades em torno de 0, o teste não está fornecendo a quantidade de informação ideal.
+Este descompasso entre a concentração das habilidades estimadas e a área de maior informação indica uma lacuna no teste. A curva de informação esteja fornecendo precisãom melhor para participantes com habilidades mais baixas, há um decréscimo visível na informação na região central do gráfico, onde está a maior parte dos respondentes. 
 
-Para melhorar a precisão do teste, seria recomendável a adição de itens que aumentem a informação nessa faixa central. Dessa forma, o teste poderá discriminar melhor entre os participantes que têm habilidades próximas à média, melhorando a precisão das estimativas nessa região. Além disso, a diminuição da informação nas extremidades também sugere que o teste não está oferecendo muita precisão para participantes com habilidades extremamente altas ou baixas, mas essa questão pode ser menos preocupante dependendo do objetivo do teste e da população-alvo.
+Para melhorar a precisão do teste, seria recomendável a adição de itens que aumentem a informação nessa faixa central. Dessa forma, o teste poderá discriminar melhor entre os participantes que têm habilidades próximas à média, melhorando a precisão das estimativas nessa região. Além disso, adotar itens mais discriminativos ao teste ajudaria a melhorar a capacidade de diferenciar entre níveis de habilidade.
 
 \begin{figure}[!hbt]
 	\centering
@@ -344,9 +402,7 @@ Para melhorar a precisão do teste, seria recomendável a adição de itens que 
 	\label{fig:acertos_habilidade}
 \end{figure}
 
-O gráfico da figura\ref{fig:acertos_habilidade} mostra a relação entre o número total de acertos e a habilidade estimada pelo modelo, para verificar a distribuição total dois pontos representados pelo círculo com o "x" foram adicionados: um para o respondente que errou e outro que acertou todas as questões. Apesar da habilidade aumentar conforme aumenta a quantidade de acertos, indivíduos na qual acertam a mesma quantidade de itens geralmente recebem uma nota (estimativa para habilidade) diferente, porque na TRI não estima-se a habilidade conforme o todo da prova como na TCT, e sim com base na informação de cada item e na coerência dos acertos do respondente. 
-
-Essa variabilidade no mesmo número de acertos é observada no gráfico, onde, para um mesmo número de acertos, há uma dispersão de valores da habilidade estimada, podendo um indivíduo que acertou mais itens receber uma nota menor do que um que acertou menos itens. A tabela \ref{exemplo-10acertos} exemplifica diferentes habilidades estimadas para respondentes com 10 acertos na prova, com o vetor de respostas ordenado do item com menor para o maior valor do parâmetro de dificuldade (b).
+O gráfico da figura\ref{fig:acertos_habilidade} mostra a relação entre o número total de acertos e a habilidade estimada pelo modelo TRI. Observa-se a diferença no mesmo número de acertos, onde, para um mesmo total de acertos, há uma dispersão de valores da habilidade estimada, podendo um indivíduo que acertou mais itens receber uma nota menor do que um que acertou menos itens. A tabela \ref{exemplo-10acertos} exemplifica diferentes habilidades estimadas para respondentes com 10 acertos na prova, com o vetor de respostas ordenado do item com menor para o maior valor do parâmetro de dificuldade (b).
 
 
 \begin{table}[!hbt]
@@ -354,32 +410,31 @@ Essa variabilidade no mesmo número de acertos é observada no gráfico, onde, p
 		\caption{Vetor de resposta e habilidade estimada para respondentes com 10 acertos}
 		\label{exemplo-10acertos}
 	}{%
-		\begin{tabular*}{0.5\textwidth}{@{\extracolsep{\fill}}llc@{}}
+		\begin{tabular*}{0.7\textwidth}{@{\extracolsep{\fill}}llcc@{}}
 			\toprule
-			   & Vetor de Respostas & $\hat{\theta}$ \\ 
-			\midrule \midrule
-				1 & 0000000010110001110001011010 & -2.09 \\ 
-				2 & 1010000011010000010001001110 & -1.52 \\ 
-				3 & 1110000010010100010100001100 & -1.45 \\ 
-				4 & 1010110111000000010001100000 & -1.09 \\ 
-				5 & 1011000100010101000110000100 & -1.08 \\ 
-				6 & 1011011010110000000001100000 & -1.07 \\ 
-				7 & 1001011110001011010000000000 & -1.07 \\ 
-				8 & 1011001100101000000000101100 & -1.06 \\ 
-				9 & 1110011110010000010010000000 & -1.05 \\ 
-				10 & 1110101110000001000100000100 & -1.04 \\ 
-				11 & 1011100010101000001100100000 & -1.02 \\ 
-				12 & 0011001110110000000000100101 & -1.01 \\ 
-				13 & 0111110000000010100100001100 & -1.01 \\ 
-				14 & 0011110001110000011000100000 & -0.94 \\ 
-				15 & 1011011010101010000000010000 & -0.87 \\ 
-				16 & 1111011010011000000100000000 & -0.85 \\ 
-				17 & 0111110001110101000000000000 & -0.84 \\ 
-				18 & 0011101101100000000001010001 & -0.82 \\ 
-				19 & 0011111100101000000101000000 & -0.78 \\ 
-				20 & 1111110011000000100100000000 & -0.77 \\ 
-				21 & 0011011101110000101000000000 & -0.68 \\ 
-				22 & 1011111110110000000000000000 & -0.67 \\ 
+			   & Vetor de Respostas & $\hat{\theta}$  & $\hat{\theta}_{(500,100)}$ \\ 
+			\midrule
+		\midrule 1 & 00000000010110010110001011010 & -2,18 & 282,40 \\ 
+		\midrule 2 & 10100000011010000010001001110 & -1,60 & 340,00 \\ 
+		\midrule 3 & 01001001100011001001001100000 & -1,57 & 342,90 \\ 
+		\midrule 4 & 11100000010010100010100001100 & -1,53 & 346,80 \\ 
+		\midrule 5 & 00101001100010100001100001100 & -1,24 & 376,10 \\ 
+		\midrule 6 & 10011001110110010000000000100 & -1,19 & 381,20 \\ 
+		\midrule 7 & 11110100100010000010011000000 & -1,19 & 381,00 \\ 
+		\midrule 8 & 11110001100000010001000100100 & -1,13 & 387,00 \\ 
+		\midrule 9 & 10110011000101000000000101100 & -1,12 & 388,10 \\ 
+		\midrule 10 & 11101011010000010000100000100 & -1,09 & 390,90 \\ 
+		\midrule 11 & 01111100000000001100100001100 & -1,09 & 391,10 \\ 
+		\midrule 12 & 10101001100101001100010000000 & -1,08 & 392,10 \\ 
+		\midrule 13 & 00101001101010001011010000000 & -1,04 & 396,40 \\ 
+		\midrule 14 & 00111100001110000011000100000 & -1,01 & 398,90 \\ 
+		\midrule 15 & 10111000101010101000010000000 & -0,92 & 408,10 \\ 
+		\midrule 16 & 11110101110000100000100000000 & -0,91 & 408,60 \\ 
+		\midrule 17 & 01111100001110110000000000000 & -0,91 & 408,70 \\ 
+		\midrule 18 & 11111110110000010000000000000 & -0,86 & 413,80 \\ 
+		\midrule 19 & 10111110110000001000000010000 & -0,85 & 414,90 \\ 
+		\midrule 20 & 10111101110000100000000010000 & -0,83 & 417,40 \\ 
+		\midrule 21 & 10111111010110000000000000000 & -0,75 & 425,20 \\ 
 		\bottomrule
 		\end{tabular*}
 	}{%
@@ -388,6 +443,6 @@ Essa variabilidade no mesmo número de acertos é observada no gráfico, onde, p
 \end{table}
 
 
-A tabela \ref{exemplo-10acertos} demonstra que, com o mesmo número de acertos (10), há uma diferença na variabilidade das habilidades estimadas. Indivíduos com maior coerência nas resposta, ou seja, aqueles que acertam itens de dificuldade progressiva, recebem uma pontuação maior, enquanto aqueles com menos coerência, que acertam itens mais difíceis e erram os mais fáceis, tendem a receber uma nota inferior. Esse comportamento pode ser interpretado como uma indicação de chute, uma vez que o participante acerta itens que exigem maior habilidade, mas erra itens de menor dificuldade, o que foge do esperado.
+A tabela \ref{exemplo-10acertos} demonstra que, com o mesmo número de acertos (10), há uma diferença nas habilidades estimadas. Indivíduos com maior coerência nas resposta, ou seja, aqueles que acertam itens de dificuldade progressiva, recebem uma pontuação maior, enquanto aqueles com menos coerência, que acertam itens mais difíceis e erram os mais fáceis, tendem a receber uma nota inferior. Esse comportamento pode ser interpretado como uma indicação de chute, uma vez que o participante acerta itens que exigem maior habilidade, mas erra itens de menor dificuldade, o que foge do esperado.
 
 

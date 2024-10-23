@@ -20,9 +20,46 @@ Diferente da TRI onde o foco está no Item, na TCT, o todo é mais importante, o
 
 \subsection{Dificuldade}
 
-Conforme \citeonline{pasquali1996}, em testes de aptidão, a dificuldade de um item é descrita pela porcentagem (ou proporção) de participantes que respondem corretamente, variando de 0 a 1, sendo quanto mais próximo de 1, mais acertos o item teve, portanto mais fácil o item é. O valor do $ID_i$ está diretamente relacionado à média de acertos do item no teste e é calculado  pela fórmula: $ID_i = total\_acertos_i /n$, ou seja, o total de acertos no item $i$ dividido pelo número de respondentes. 
+Conforme \citeonline{pasquali1996}, em testes de aptidão, a dificuldade de um item é descrita pela porcentagem (ou proporção) de participantes que respondem corretamente, variando de 0 a 1, sendo quanto mais próximo de 1, mais acertos o item teve, portanto mais fácil o item é. O valor do $ID_i$ está diretamente relacionado à média de acertos do item no teste e é calculado  pela fórmula: 
 
+\[
+	ID_i =\dfrac{A_i}{n} 
+\]
+onde $A_i$ é o total de itens corretos e $n$ é o total de respostas. 
+
+\begin{comment}
 O calculo do índice de dificuldade é importante pois permite conhecer a distribuição do grau de dificuldade das questões que segundo \citeonline{pasquali2003}, para que uma avaliação educacional tenha um nível de dificuldade ideal, os índices devem seguir uma distribuição próxima à curva normal, com itens fáceis, médios e difíceis.
+\end{comment}
+
+O calculo do índice de dificuldade é importante pois permite conhecer a distribuição do grau de dificuldade das questões, \citeonline{pasquali1996} uma avaliação educacional tenha um nível de dificuldade ideal, itens fáceis, médios e difíceis, seguindo a tabela \ref{tabela-class-ID}
+
+O cálculo do índice de dificuldade permite avaliar a distribuição do grau de dificuldade das questões, assegurando que uma avaliação educacional tenha uma variedade equilibrada de itens. Conforme destaca \citeonline{pasquali1996}, uma prova ideal deve conter uma mistura adequada de itens fáceis, médios e difíceis. A tabela \ref{tabela-class-ID} apresenta a distribuição esperada dos itens por faixa de acertos, sugerindo como  uma avaliação bem construída deve ser.
+
+
+\begin{table}[H]
+	\IBGEtab{%
+		\caption{Distribuição ideal dos itens por ID.}
+		\label{tabela-class-ID}
+	}{%
+		\begin{tabular}{ccc}
+			\toprule
+			\% de Acertos  &	Faixa &  Distribuição Esperada   \\ 
+			\midrule \midrule
+			0 a 20 & I  & 10\%   \\ 
+				\midrule
+				20 a 40 & II & 20\%   \\
+				\midrule
+				40 a 60 & III & 40\%   \\ 
+				\midrule
+				60 a 80 & IV & 20\%   \\ 
+				\midrule
+				80 a 100 & V & 10\%   \\ 
+			\bottomrule
+		\end{tabular}
+	}{%
+		\fonte{\citeonline{pasquali1996}, p.83}
+	}
+\end{table}
 
 \subsection{Discriminação}
 
@@ -30,7 +67,12 @@ Na TCT, há diferentes formas de avaliar a discriminação de um item, que é a 
 
 \subsubsection{Índice de Discriminação Clássico}
 
-O Índice de Discriminação Clássico ($D_i$) avalia a distribuição de respostas entre dois grupos: o grupo de alto e o grupo de baixo escore. O grupo inferior é composto pelos respondentes com os 27\% menores escores, onde $ABAI_i$ representa a proporção de acertos do item nesse grupo, enquanto o grupo superior é formado pelos respondentes com os 27\% maiores escores e $ACIM_i$ representa a proporção de acertos do grupo superior. O índice DISC varia de -1 a 1 e é calculado como a diferença entre as proporções de respostas apresentadas pelo grupo superior e pelo grupo inferior, ou seja, $DISC_i = ACIM_i - ABAI_i$. Espera-se um valor positivo para a resposta correta, indicando que o grupo superior selecionou mais frequentemente a resposta correta do que o grupo inferior, o que é um indicativo de qualidade do item  \cite{de1983consideraccoes}. 
+O Índice de Discriminação Clássico ($D_i$) avalia a distribuição de respostas entre dois grupos: o grupo de alto e o grupo de baixo escore.
+O índice pode ser calculado por: 
+
+\[D_i =  ACIM_i - ABAI_i\] onde $ACIM_i$ representa a proporção de acertos do grupo superior, no qual é formado pelos 27\% maiores escores e $ACIM_i$   representa a proporção de acertos do grupo inferior, no qual é formado pelos 27\% menores escores. 
+
+ O índice $D_i$ varia de -1 a 1 e é calculado como a diferença entre as proporções de respostas apresentadas pelo grupo superior e pelo grupo inferior. Espera-se um valor positivo para a resposta correta, indicando que o grupo superior selecionou mais frequentemente a resposta correta do que o grupo inferior, o que é um indicativo de qualidade do item  \cite{de1983consideraccoes}. 
 
 
 
@@ -58,7 +100,7 @@ onde:
 \noindent $ p_i $  é a proporção de indivíduos que acertaram o item, ou seja, a proporção para qual a variável binária é 1.
 
 
-O valor do ponto bisserial de um item oscila de -1 a 1. Quando esse valor é inferior a 0,15, requer uma avaliação pedagógica. Com base nessa análise, o item pode ser submetido a ajustes no gabarito ou considerado para descarte \cite{andrade2010uso}.
+O valor do ponto bisserial de um item oscila de -1 a 1. \cite{pasquali2003} recomenda um valor acima de 0,30. Quando esse valor é inferior, requer uma avaliação pedagógica. Com base nessa análise, o item pode ser submetido a ajustes no gabarito ou considerado para descarte \cite{andrade2010uso}.
 
 
 \subsection{Alpha de Cronbach}
@@ -102,7 +144,6 @@ A equação que representa a probabilidade de um indivíduo $ j $ com habilidade
 \]
  
 
-
 $\newline$
 com $i = 1, 2, ..., I $ e $ j = 1,2, ... , n $, onde:
 \newline
@@ -124,6 +165,11 @@ A \autoref{fig:rasch} representa um exemplo de curva característica do Item par
 	\label{fig:rasch}
 \end{figure}
 
+
+O valor b = 2 é o ponto de inflexão da curva e para o modelo 1PL significa que a probabilidade de um indivíduo com habilidade $\theta = 2$ acertar o item é de 50\%. Para indivíduos com habilidade maior que 2, a probabilidade de acerto é maior que 50\% e sobe conforme a habilidade do indivíduo aumenta. 
+
+
+
 \subsection{Modelo Logístico de 2 parâmetros}
 
 O Modelo Logístico de 2 Parâmeros, também conhecido como o Modelo de Birnbaum é uma extensão do Modelo de Rasch.
@@ -133,7 +179,7 @@ A fórmula associada ao modelo de 2 parâmetros é a seguinte:
 
 \[
 	\label{eq:2PL}
-	P({U_i}_j = 1|{\theta}_j) =
+	P({U_i}_j = 1|{\theta}_j, a_i, b_i) =
 	\frac{1}{1+e^{-Da_i(\theta_j- b_i)}}
 \]
 
@@ -151,21 +197,21 @@ A \autoref{fig:2PL} é um exemplo de uma curva característica do item onde o pa
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=12cm]{2PL.png}
-	\caption{Exemplo de curva característica do item para modelo 2PL.}
+	\includegraphics[width=16cm]{../2PL.png}
+	\caption{Exemplo de curvas características do item para modelo 2PL.}
 	\label{fig:2PL}
 \end{figure}
 
 
 \subsection{Modelo Logístico de 3 parâmetros}
 
-Desenvolvido por \citeonline{lord1980}, o Modelo Logístico de 3 Parâmetros, ou Modelo de 3PL, é uma extensão do Modelo de 2 Parâmetros. O Modelo de 3PL adiciona um terceiro Parâmetro a função: o de acerto casual (ou "chute"), que representa a probabilidade de um respondente responder corretamente a um item, mesmo que ele não tenha a habilidade necessários para fazê-lo.
+Desenvolvido por \citeonline{lord1980}, o Modelo Logístico de 3 Parâmetros, ou Modelo de 3PL, é uma extensão do Modelo de 2 Parâmetros. O Modelo de 3PL adiciona um terceiro Parâmetro a função: o de acerto casual (ou "chute"), que representa a probabilidade de um respondente responder corretamente a um item, mesmo que ele não tenha a habilidade necessários para fazê-lo. 
 
-A equação do Modelo de 3PL é dada por:
+A equação do Modelo de 3PL, a qual representa a probabilidade de chutar e acertar mais a probabilidade de não chutar e acertar, é dada por:
 
 \begin{equation}\label{eq:3PL}
-	P({U_i}_j = 1|{\theta}_j) =
-	c_i(1-c_i)+\frac{1}{1+e^{-Da_i(\theta_j- b_i)}}
+	P({U_i}_j = 1|{\theta}_j, a_i, b_i, c_i) =
+	c_i+(1-c_i)\frac{1}{1+e^{-Da_i(\theta_j- b_i)}}
 \end{equation}
 $\newline$
 com $i = 1, 2, ..., I $ e $ j = 1,2, ... , n $, onde:
@@ -174,36 +220,47 @@ com $i = 1, 2, ..., I $ e $ j = 1,2, ... , n $, onde:
 \noindent $c_i$ representa o acerto casual do $i$-ésimo item.\\
 
 
-A figura \ref{fig:3PL} apresenta os mesmos parâmetros $a$ e $b$ mostrados na figura \ref{fig:2PL}, acrescidos do parâmetro $c$, cujo valor é igual a $0,2$.
+A figura \ref{fig:3PL} apresenta os mesmos parâmetros $a$ e $b$ (valendo 1) para 2 curvas com diferentes valores de $c$.
+
+A Figura \ref{fig:3PL} ilustra duas curvas com os mesmos parâmetros de discriminação $a = 1$ e dificuldade $b = 1$, mas com valores distintos para o parâmetro de acerto ao acaso $c$. As curvas evidenciam o impacto desse parâmetro, que ajusta a probabilidade mínima de acerto, mesmo para indivíduos com baixa habilidade. 
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=12cm]{3PL.png}
+	\includegraphics[width=16cm]{../3PLcci.png}
 	\caption{Exemplo de curva característica do item para modelo 3PL.}
 	\label{fig:3PL}
 \end{figure}
 
-O Modelo de 3PL é especialmente útil em testes de múltipla escolha, nos quais os respondentes têm a opção de adivinhar a resposta correta. Essa é uma das razões pelas quais o Modelo de 3PL é usado em avaliações de grande escala, como o Exame Nacional do Ensino Médio (ENEM) \cite{inep2021} e outras avaliações padronizadas. 
+O Modelo de 3PL é especialmente útil em testes de múltipla escolha, nos quais os respondentes têm a opção de adivinhar a resposta correta. Essa é uma das razões pelas quais o Modelo de 3PL é usado em avaliações de grande escala, como o Enem \cite{inep2021} e outras avaliações de larga escala. 
 
 \subsection{Função de Informação do Item}
 
 A função de informação do item descreve o poder informativo de um item. Essa função fornece informações sobre a precisão com que um item pode estimar a habilidade latente de um respondente. \cite{de2000teoria} 
 A função de informação do item é dada por:
 
-\begin{equation}\label{eq:info_item}
+\[
 		I_i(\theta) = \dfrac{[\frac{d}{d\theta}P_i(\theta)]^2}{P_i(\theta)Q_i(\theta)}
+\]
+
+Para os modelos TRI, a função pode ser descrita como:
+
+\begin{equation}\label{eq:info_item}
+	I_i(\theta) = D^2 a_i^2\frac{Q_i(\theta)}{P_i(\theta)} \left[\frac{P_i(\theta) - c_i}{1 - c_i}\right]^2
 \end{equation}
+
 onde:
 
 \noindent $I_i(\theta) $ representa a informação fornecida pelo item $i$ no nível de habilidade $\theta$;\\
 
 \noindent $P_i(\theta) = P(U_{ij} = 1| \theta) $ e $ Q_i(\theta) = 1 - P_i(\theta) $ \\
 
-A figura \ref{fig:fii} ilustra a função de informação de um item que informa bem para valores de $\theta$ em torno de $-2$.
+Valores maiores de $a_i$ significam que o item discrimina melhor, gerando uma maior quantidade de informação, especialmente ao redor do ponto em que $\theta$ se aproxima de $b_i$. A equação \ref{eq:info_item} mostra que a quantidade de informação é diretamente proporcional ao quadrado de $a_i$, ou seja, quanto maior o valor de $a_i$, maior será a informação fornecida pelo item em uma dada habilidade $\theta$.
+
+A figura \ref{fig:fii} ilustra a função de informação para um item com $b_i = -2$, observa-se que a informação também é maior quando $\theta$ se aproxima de $b_i$, nesse exemplo, a informação é maior quando $\theta$ se aproxima de $-2$.
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=12cm]{fii_pb.png}
+	\includegraphics[width=16cm]{../informacao_e_cci.png}
 	\caption{Função de Informação do Item.}
 	\label{fig:fii}
 \end{figure}
@@ -229,7 +286,7 @@ A função de informação do teste é uma medida útil pois permite analisar o 
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=12cm]{fft.png}
+	\includegraphics[width=12cm]{../fft.png}
 	\caption{Informação do Teste e Erro Padrão.}
 	\label{fig:fft}
 \end{figure}
@@ -248,7 +305,7 @@ Pressupõe que os itens que compõe um teste estão medindo apenas uma traço la
 
 \item  Independência Local
 
-Este postulado implica que os itens são respondidos de forma independente. Em outras palavras, as respostas a um item não são afetadas pelas respostas a outros itens após controlar a habilidade latente do indivíduo, assim como diferentes indivíduos do teste são independentes entre si. Isso implica que a probabilidade para respondentes com uma habilidade dada, a probabilidade de resposta a um conjunto de itens é igual aos produtos das probabilidades das respostas do respondente em cada item \cite{pasquali1996}. Matematicamente, isso pode ser expresso como:
+Este postulado implica que os itens são respondidos de forma independente para um dado $\theta$. Em outras palavras, as respostas a um item não são afetadas pelas respostas a outros itens após controlar a habilidade latente do indivíduo, assim como diferentes indivíduos do teste são independentes entre si. Isso implica que a probabilidade para respondentes com uma habilidade dada, a probabilidade de resposta a um conjunto de itens é igual aos produtos das probabilidades das respostas do respondente em cada item \cite{pasquali1996}. Matematicamente, isso pode ser expresso como:
 
 
 \[
@@ -298,6 +355,8 @@ P(U_{ji} = u_{ji}|\theta_j, \zeta_i) = P(U_{ji} = 1|\theta_j, \zeta_i)^{u_{ji}}
 P(U_{ji} = 0|\theta_j, \zeta_i)^{1 - u_{ji}} = P_{ji}^{u_{ji}}Q_{ji}^{1-u_{ji}}
 \end{equation}
 
+Existem diferentes métodos de estimação de parâmetros na TRI, como a máxima verossimilhança, que maximiza a função de verossimilhança dos dados, a máxima verossimilhança marginal, métodos Bayesianos, que utilizam distribuições prévias, etc.
+
 \subsection{Estimador de Máxima Verossimilhança (EMV)}
 
 Considerando a situação (i), onde $ \boldsymbol{\theta} $ é conhecido, dados os pressupostos de independência e unidimensionalidade da TRI e pela equação (\ref{eq:bern}). A função de verossimilhança de  $ \boldsymbol{\zeta} $ pode ser escrita como:
@@ -307,17 +366,14 @@ L(\boldsymbol{\zeta}) =  \prod_{j=1}^{n}\prod_{i=1}^{I}P(U_{ij} = u_{ji}|\theta_
 
 Os Estimadores de Máxima Verossimilhança (EMV) para $ \boldsymbol{\zeta}_i = (a_i, b_i , c_i )$, dados por:\\
 
-\noindent $
-	a_i: D(1 - c_i)\sum_{j=1}^{n}(u_{ji} - P_{ji})(\theta_j - b_i)W_{ij} = 0
-$\\
 
-\noindent $
-	b_i: -Da_i(1 - c_i)\sum_{j=1}^{n}(u_{ji} - P_{ji})W_{ij} = 0
-$\\
-
-\noindent $ 
-	c_i: \sum_{j=1}^{n}(u_{ji} - P_{ji})\frac{W_{ij}}{P^*_{ij}} = 0
-$\\
+\[
+\begin{aligned}
+	\hat{a_i}: & \ D(1 - c_i)\sum_{j=1}^{n}(u_{ji} - P_{ji})(\theta_j - b_i)W_{ij} = 0, \\
+	\hat{b_i}: & \ -Da_i(1 - c_i)\sum_{j=1}^{n}(u_{ji} - P_{ji})W_{ij} = 0, \\
+	\hat{c_i}: & \ \sum_{j=1}^{n}(u_{ji} - P_{ji})\frac{W_{ij}}{P^*_{ij}} = 0
+\end{aligned}
+\]
 
 \noindent onde:\\
 
@@ -329,22 +385,39 @@ $\\
 \\
 \noindent $W_{ij} = \dfrac{P^*_{ij}Q^*_{ij}}{P_{ij}Q_{ij}} $ ;\\
 
+Os parâmetros dos itens também podem ser estimados em forma de quadratura, onde a distribuição da habilidade latente ($\theta$) é aproximada por um conjunto de pontos de quadratura ($\theta_k$)  e pesos $A_k$, $k = 1, \dots, q$ associados. Esses pontos e pesos,  são usados para calcular a função de verossimilhança em relação à habilidade, permitindo a estimativa dos parâmetros sem a necessidade de integrar analiticamente a distribuição de habilidade contínua.
+
+\[
+\begin{aligned}
+	\hat{a_i}: & \ D(1 - c_i)\sum_{k=1}^{q}[r_{ki} - P_{ki}f_{ki}](\theta_k - b_i)W_{ki} = 0, \\
+	\hat{b_i}: & \ -Da_i(1 - c_i)\sum_{k=1}^{q}\left[r_{ki} - P_{ki}f_{ki}\right]W_{ki} = 0, \\
+	\hat{c_i}: & \ \sum_{k=1}^{q}(r_{ki} - P_{ki}f_{ki})\frac{W_{ki}}{P^*_{ki}} = 0
+\end{aligned}
+\]
+
+
+
 Na situação (ii), onde $\boldsymbol{\zeta}$ é conhecido, o EMV para $ \theta_j $,  é dado por:\\
 
 
-\noindent $ \theta_j : D\sum_{i=1}^{I}{a_i(1-c_i)(u_{ji}-P_{ji})W_{ji}} = 0 $\\
+\[ \hat{\theta_j} : D\sum_{i=1}^{I}{a_i(1-c_i)(u_{ji}-P_{ji})W_{ji}} = 0  \] 
 
 O desenvolvimento detalhado pode ser encontrado pelo leitor no livro de \citeonline{de2000teoria}.
 
-Os Estimadores de Máxima Verossimilhança (EMV) de $ \boldsymbol{\zeta} $ e $ \boldsymbol{\theta} $ requerem um método iterativo para sua estimação, uma vez que não possuem uma solução direta. Em geral, a estimação dos parâmetros é através do método de Newton-Raphoson, mas também podem ser utilizados os métodos de \textit{Scoring} de Fisher ou o Algoritmo EM para essa finalidade \citeonline{de2000teoria}. Sendo assim, considerando $\boldsymbol{\hat{\zeta}}^{(t)}_{i}$
+Os Estimadores de Máxima Verossimilhança (EMV) de $ \boldsymbol{\zeta} $ e $ \boldsymbol{\theta} $ requerem um método iterativo para sua estimação, uma vez que não possuem uma solução direta. Em geral, a estimação dos parâmetros é através do método de Newton-Raphoson, mas também podem ser utilizados os métodos de \textit{Scoring} de Fisher ou o Algoritmo EM para essa finalidade.
+
+\begin{comment}
+ \citeonline{de2000teoria}. Sendo assim, considerando $\boldsymbol{\hat{\zeta}}^{(t)}_{i}$
 uma estimativa de $\boldsymbol{\hat{\zeta}}$ na iteração $t$, o procedimento de
- Newton-Raphson é dado por:\\
+Newton-Raphson é dado por:\\
 
 \noindent $ \boldsymbol{\hat{\zeta}}^{(t+1)}_{i} = \boldsymbol{\hat{\zeta}}^{(t)}_{i} + [\bold{H}(\boldsymbol{\hat{\zeta}}^{(t)})]^{-1}\bold{h}({\boldsymbol{\hat{\zeta}}^{(t)}})
 $, onde $\bold{H}$ representa a matriz Hessiana.\\
+\end{comment}
+
 
 Na situação (iii), na qual tanto $ \boldsymbol{\hat{\zeta}} $ quanto $ \boldsymbol{\theta} $ são desconhecidos, é a situação mais comum, e requer uma estimação conjunta de ambos.
-Para tal finalidade, Birbaum (1968), propôs um algoritmo onde os parâmetros são estimados individualmente, usando um do métodos iterativos citados anteriormente.
+Para tal finalidade, \citeonline{birnbaum1968}, propôs um algoritmo onde os parâmetros são estimados individualmente, usando um do métodos iterativos citados anteriormente.
 O processo é dividido em dois estágios. Inicia-se com um chute inicial, uma estimativa grosseira de $ \boldsymbol{\theta} $ considerando que $ \boldsymbol{\zeta} $ é conhecido, após estimada a habilidade, a segunda parte consiste em estimar $ \boldsymbol{\zeta} $ considerando $ \boldsymbol{\theta} $ (estimado na primeira etapa) como conhecido. Esse processo \textit{vai} e \textit{volta} é repetido até a convergência de ambos os parâmetros.
 
 
@@ -353,31 +426,129 @@ O processo é dividido em dois estágios. Inicia-se com um chute inicial, uma es
 Além do método de Estimação de Máxima Verossimilhança (EMV), existem outros métodos de estimação dos parâmetros, que são frequentemente utilizados em contextos de avaliação educacional, estes incluem:
 \end{comment}
 
+\subsection{Algoritmo EM}
+
+
+O algoritmo EM (Esperança-Maximizaçao) introduzido por \citeonline{dempster1977} é uma técnica utilizada particularmente para a estimação por máxima verossimilhança na presença de variáveis latentes, como a habilidade dos indivíduos ($\theta$), que não pode ser diretamente observada.  O foco está em ajustar os parâmetros dos itens de modo que o modelo melhore sua adequação aos dados.
+
+Foi proposto por \citeonline{bock1981} para a estimação de máxima verossimilhança dos parâmetros de itens no contexto da TRI. O objetivo principal é estimar parâmetros dos itens na presença de variáveis não observáveis, como as habilidades latentes dos indivíduos ($\theta$). Neste contexto, $\boldsymbol{u}_{..}$ representa o vetor de dados incompletos (as respostas observadas), enquanto $\boldsymbol{u}_{..},\boldsymbol{\theta}$ constitui o vetor de dados completos (respostas observadas e as habilidades latentes). A função de densidade conjunta dos dados completos é denotada por $f(\boldsymbol{u}_{..}|\boldsymbol{\theta})$, e ela permite modelar o relacionamento entre as respostas dos indivíduos e suas habilidades não observadas \cite{de2000teoria}.
+
+Seja $\boldsymbol{\hat{\zeta}}^{(k)}$ uma estimativa de $\boldsymbol{\zeta}$ na interação $t$, os passos E e M são:
+\begin{itemize}
+	\item[] \textbf{Passo E:} Com base nas estimativas atuais dos parâmetros dos itens, o algoritmo calcula o valor esperado do logaritmo da verossimilhança, ou seja:
+	\[
+	E\left[log f(\boldsymbol{u}_{..}, \boldsymbol{\theta}) | \boldsymbol{u}_{..}, \boldsymbol{\hat{\zeta}}^{(k)}\right] 
+	\]
+	
+	\item[] \textbf{Passo M:} 	Obter $\boldsymbol{\hat{\zeta}}^{(k+1)}$ que maximiza a função do Passo E.
+\end{itemize}
+
+Se os modelos de TRI fizerem parte da família exponencial de distribuições, como no caso do modelo de Rasch (1PL), o processo de estimação dos parâmetros seria relativamente simples. No entanto, como os modelos de 2 e 3 parâmetros não fazem parte dessa família, uma forma modificada do algoritmo EM deve ser aplicada para estimar os parâmetros \cite{de2000teoria}.
+
+Para calcular o algoritimo EM para os modelos 2PL e 3PL, primeiro, supõe-se que as habilidades dos indivíduos estejam distribuídas em um conjunto de $q$ valores distintos, denotados por 
+$\theta_k, k = 1, \dots, q$. Esses valores correspondem a pontos de quadratura, usados para aproximar integrais complexas necessárias para a estimação dos parâmetros.
+
+Para cada item $i$, temos:
+
+\noindent $f_{ki}$: representa o número de indivíduos com habilidade $\overline{\theta}_k$ que responderam ao item.\\
+\noindent $r_{ki}$: é o número de indivíduos com habilidade $\overline{\theta}_k$ que acertaram ao item. 
+
+	
+\begin{itemize}
+	\item[] \textbf{Passo E:} Usam-se os pontos de quadratura $\bar{\theta}_k$ e os pesos \(A_k\), para $k = 1, \dots, q$, junto com as estimativas iniciais dos parâmetros dos itens, $\boldsymbol{\hat{\zeta}}_i$, para gerar \(g_{kj}^*(\bar{\theta}_k)\). Posteriormente, calcula-se \(\bar{r}_{ki}\) e \(\bar{f}_{ki}\).
+	
+	\item[] \textbf{Passo M:} Com os valores $r$ e $f$ obtidos no Passo E, resolvem-se as equações de estimação dos parâmetros $\boldsymbol{\zeta}_i$, utilizando o algoritmo de Newton-Raphson ou o método de "Scoring" de Fisher.
+\end{itemize}
+
+sendo:  \(
+	g^*_j(\theta_k) = \dfrac{ P(\boldsymbol{u}_{j.}|\bar{\theta}_k, \boldsymbol{\zeta})A_k
+	}{\sum_{k=1}^{q}P(\boldsymbol{u}_{j.}|\bar{\theta}_k)A_k}
+\)
+	
+\begin{comment}
 \subsection{Estimação de Máxima Verossimilhança Marginal (EMVM)}
 
  Proposto por \citeonline{bock1970} este método estima os parâmetros dos itens e as habilidades dos respondentes em duas etapas, levando em consideração as margens das distribuições das habilidades dos respondentes. É útil quando o número de indivíduos é grande, apresentando vantagens computacionais.
  
+ A proposta desse método é realizar a estimação em duas etapas: inicialmente, os parâmetros dos itens são estimados, e depois as habilidades dos indivíduos. Como as habilidades não são diretamente observáveis, é necessário aplicar uma técnica que permita remover a dependência direta da verossimilhança em relação às habilidades, facilitando assim o processo de estimação \cite{de2000teoria}.
+ 
+Para isso, assume-se que os respondentes são uma amostra de uma população cuja a habilidade segue uma determinada função de densidade $g(\theta|\boldsymbol{\eta})$, onde $\boldsymbol{\eta}$ é o vetor de parâmetros da distribuição da habilidade, no caso de uma distribuição normal padrão $\boldsymbol{\eta} = (\mu = 0, \sigma = 1) $. Usando a independência entre indivíduos a probabilidade associada ao vetor de respostas $\boldsymbol{U}$, pode ser escrito como:
+
+\[
+	P(\boldsymbol{u}_{..}|\boldsymbol{\zeta}) = \prod_{j=1}^{n}P(\boldsymbol{u}_{j.}|\boldsymbol{\zeta}, \boldsymbol{\eta})
+\]
+
+A equações de estimação usando EMVM para $ \boldsymbol{\zeta}_i$, são:\\
+
+ \[
+	 \hat{a}_i : D(1-c_i)\sum_{j=1}^{s}r_j
+	 \int_{\mathbb{R}}\left[(u_{ji} - P_i)(\theta - b_i)W_i\right] g_j^*(\theta)d\theta = 0,
+\]
+ 
+\[
+	 \hat{b}_i : -Da_i(1-c_i)\sum_{j=1}^{s}r_j
+	 \int_{\mathbb{R}}\left[(u_{ji} - P_i)W_i \right] g_j^*(\theta)d\theta = 0,
+\]
+ 
+\[
+ 	\hat{c}_i : \sum_{j=1}^{s}r_j \int_{\mathbb{R}}
+ 	\left[(u_{ji}  - P_i)\frac{W_i}{P^*_i}\right]
+ 	 g_j^*(\theta)d\theta = 0
+\]
+
+onde:\\ 
+
+\(
+	g^*_j(\theta) \equiv
+	g(\theta|\boldsymbol{u}_{j.}, \boldsymbol{\zeta}, \boldsymbol{\eta}) =
+	\dfrac{
+		P(\boldsymbol{u}_{j.}|\theta,\boldsymbol{\zeta})g(\theta|\boldsymbol{\eta})
+		}{
+		P(\boldsymbol{u}_{j.}|\boldsymbol{\zeta}, \boldsymbol{\eta})
+		}
+\)
+
+
+
+\end{comment}
 \subsection{Estimação Bayesiana}
 
-
 A abordagem bayesiana, proposta por \citeonline{mislevy1986} é usada para estimar os parâmetros da TRI com base na distribuição \textit{a priori} dos parâmetros. Ela incorpora informações prévias sobre os parâmetros e atualiza essas informações com base nas respostas dos participantes. O ENEM e utiliza o método EAP (\textit{Expected a Posteriori}) para estimar as habilidades dos participantes \cite{inep2021}.
+
+Considera-se que a distribuição da habilidade é função de parâmetros com densidade $g(\theta| \boldsymbol{\eta})$. Assume-se que a distribuição \textit{a priori} para $\theta_j$ é normal com vetor de parâmetros
+$\boldsymbol{\eta} = (\mu, \sigma^2)$ 
+
+\subsubsection{Estimação das habilidades pela média a posteriori - EAP}
+
+A estimação de \(\theta_j\) pela média da posteriori consiste em obter a esperança da \textit{posteriori}, que pode ser escrita como:
+
+\[
+g(\theta | \boldsymbol{u}_{j,\cdot}, \boldsymbol{\zeta}, \boldsymbol{\eta}) = \dfrac{P(\boldsymbol{u}_{j.} | \theta, \boldsymbol{\zeta}) g(\theta | \boldsymbol{\eta})}{P(\boldsymbol{u}_{j.} | \boldsymbol{\zeta}, \boldsymbol{\eta})}
+\]
+
+Segue que a esperança da posteriori é
+
+\[
+\hat{\theta}_j = E[\theta_j | \boldsymbol{u}_{j.}, \boldsymbol{\zeta}, \boldsymbol{\eta}] = \dfrac{\int_{\mathbb{R}} \theta g(\theta | \boldsymbol{\eta}) P(\boldsymbol{u}_{j.} | \theta, \boldsymbol{\zeta}) d\theta}{\int_{\mathbb{R}} g(\theta |\boldsymbol{\eta}) P(\boldsymbol{u}_{j.} | \theta, \boldsymbol{\zeta}) d\theta}.
+\]
 
 
 \section{Escala}
 
 
-Na Teoria de Resposta ao Item (TRI), os resultados da habilidade ($\theta$) e dos parâmetros dos itens são geralmente reportados na escala normal padrão, $\theta_z \sim N(0, 1)$. No entanto, para algumas aplicações, como no Exame Nacional do Ensino Médio (ENEM), esses valores são transformados para uma escala com média 500 e desvio padrão 100, $\theta_{\text{ENEM}} \sim N(500, 100)$ \cite{inep2021procedimento}.
+
+
+Na Teoria de Resposta ao Item (TRI), os resultados da habilidade ($\theta$) e dos parâmetros dos itens são geralmente reportados na escala normal padrão com $\mu = 0$ e $\sigma = 1$. No entanto, para algumas aplicações, como no ENEM, esses valores são transformados para uma escala com $\mu = 500$ e $\sigma = 100$, %$\theta_{\text{ENEM}} \sim N(500, 100)$ 
+\cite{inep2021procedimento}.
 
 As transformações da habilidade de uma escala padrão para a escala ENEM é dada por:
 
 
 \[
-	\theta_{\text{ENEM}} = 500 + 100 \times \theta_z
+	\theta_{\text{(500,100)}} = 100 \theta_{(0,1)} + 500
 \]
 
 
-
-%Onde $ \theta_{\text{ENEM}} $ é o valor de $\theta$ na escala do enem e $ \theta_z $ na escala normal padrão.
 \begin{comment}
 \begin{itemize}
 	
@@ -406,9 +577,9 @@ c_{\text{ENEM}} = c_z
 \end{comment}
 
 
+A escala utilizada para os parâmetros de habilidade ($\theta$) e dos itens é flexível, pois o que realmente importa é a ordem relativa entre esses parâmetros \cite{de2000teoria}. Essa ordenação determina as relações entre as habilidades dos indivíduos e as características dos itens, e se mantém consistente independentemente da escala adotada. Ao transformar a escala padrão normal para a escala utilizada pelo ENEM, a hierarquia dos indivíduos em termos de habilidade e a dificuldade dos itens permanecem as mesmas, facilitando a interpretação sem alterar as conclusões essenciais da análise.
 
-
-A escala utilizada para os parâmetros de habilidade ($\theta$) e dos itens é flexível, pois o que realmente importa é a ordem relativa entre esses parâmetros. Essa ordenação determina as relações entre as habilidades dos indivíduos e as características dos itens, e se mantém consistente independentemente da escala adotada. Ao transformar a escala padrão normal  para a escala utilizada pelo ENEM, a hierarquia dos indivíduos em termos de habilidade e a dificuldade dos itens permanecem as mesmas, facilitando a interpretação sem alterar as conclusões essenciais da análise.
+\begin{comment}
 
 \section{Itens Âncoras}
 
@@ -436,7 +607,7 @@ O conceito de "item âncora" refere-se a um item específico em um teste ou aval
 	\]
 \end{enumerate}
 
-
+\end{comment}
 
 
 
