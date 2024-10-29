@@ -2,7 +2,7 @@
 
 \section{Dados}
 
-Os dados utilizados são  de uma aplicação realizada na plataforma digital est.s de um simulado de ciências humanas. O simulado é realizado online e gratuitamente pela plataforma da empresa. 
+Os dados utilizados são  de uma aplicação realizada na plataforma digital estuda.com de um simulado de ciências humanas. O simulado é realizado online e gratuitamente pela plataforma da empresa. 
 A prova contém um total de 30 itens, sendo que 16 deles são provenientes de instituições de ensino públicas (UEA, UFPR, UNICENTRO, UFMS, IFPR, ESPCEX, UFSCAR, UFAL, UFMS, UPE e UNCISAL) , 9 de instituições de ensino particulares (FAAP, PUC-PR, FGV-RJ, EMESCAM, PUC-RIO, UNIFESO, FASM e FAMECA), e 5 itens são do ENEM.
 
 
@@ -56,11 +56,11 @@ H_1: \boldsymbol{\pi} \neq \boldsymbol{\pi}(\boldsymbol{\theta})
 
 Ou seja, avalia-se se o vetor de probabilidade populacional $\boldsymbol{\pi}$ surge do modelo paramétrico $\boldsymbol{\pi}(\boldsymbol{\theta})$ contra a alternativa de que o modelo está incorreto \cite{maydeu2006limited}.
 
-Neste trabalho, utilizaremos a estatística $M_2$ proposta por \citeonline{maydeu2005limited} para avaliar o ajuste do modelo. Essa estatística é parte de uma família de estatísticas de informação limitada, denominada $M_r$, desenvolvida para avaliar modelos TRI. A estatística $M_2$ é particularmente útil porque utiliza momentos de ordem 2 em vez da tabela de contingência completa, o que a torna mais adequada para modelos TRI. \citeonline{maydeu2006limited} demonstraram que, especialmente quando $r=2$, a estatística $M_2$ apresenta desempenho superior em comparação com estatísticas de informação completa. 
+Neste trabalho, utilizaremos a estatística M$_2$ proposta por \citeonline{maydeu2005limited} para avaliar o ajuste do modelo. Essa estatística é parte de uma família de estatísticas de informação limitada, denominada M$_r$, desenvolvida para avaliar modelos TRI. A estatística M$_2$ é particularmente útil porque utiliza momentos de ordem 2 em vez da tabela de contingência completa, o que a torna mais adequada para modelos TRI. \citeonline{maydeu2006limited} demonstraram que, especialmente quando $r=2$, a estatística M$_2$ apresenta desempenho superior em comparação com estatísticas de informação completa. 
 
 
 
-O RMSEA (índice de raiz quadrada média do erro de aproximação) é um índice de ajuste absoluto que mede a discrepância média entre o modelo especificado e os dados observados. O valor do RMSEA varia de 0 a 1, sendo que quanto mais próximo a 0, melhor o modelo \cite{kline2016principles}. \citeonline{maydeu2014assessing} propôs a estatística de informação limitada RMSEA$_{2}$ para aplicações em modelos TRI, na qual utiliza momentos bivariados e é estimado através do $M_2$. O RMSEA$_2$ pode ser estimado por:
+O RMSEA (índice de raiz quadrada média do erro de aproximação) é um índice de ajuste absoluto que mede a discrepância média entre o modelo especificado e os dados observados. O valor do RMSEA varia de 0 a 1, sendo que quanto mais próximo a 0, melhor o modelo \cite{kline2016principles}. \citeonline{maydeu2014assessing} propôs a estatística de informação limitada RMSEA$_{2}$ para aplicações em modelos TRI, na qual utiliza momentos bivariados e é estimado através do M$_2$. O RMSEA$_2$ pode ser estimado por:
 
 \[
 	\hat{\epsilon}_2 = \sqrt{Max\left(\frac{\hat{M_{2}} - df_{2}}
@@ -71,16 +71,12 @@ O RMSEA (índice de raiz quadrada média do erro de aproximação) é um índice
 
 
 
+Outro método para avaliar o modelo são os índices TLI (\textit{Tucker–Lewis Index}) e CFI (\textit{Comparative Fit Index}). O TLI, ou Índice Tucker-Lewis, compara o modelo estimado com um modelo teórico nulo e visa determinar se todos os indicadores estão associados a um único fator latente. Já o CFI, ou Índice de Ajuste Comparativo, é um indicador adicional utilizado para comparar modelos alternativos. Ambos os índices sugerem um bom ajuste quando seus valores se aproximam de 1 \cite{hair2009multivariada}.
+
 \begin{comment}
 	Outro método método para avaliar o modelo são os índices TLI  (\textit{Tucker–Lewis Index}) e CFI (\textit{Comparative Fit Index}), TLI significa Índice Tucker-Lewis e CFI significa Índice de Ajuste Comparativo. O TLI  compara o modelo estimado com um modelo teórico nulo e visa determinar se todos os indicadores são
 	associados a um único fator latente, o CFI é um indicador adicional que serve para comparar modelos alternativos \cite{boruchovitch2017dark}. Ambos os indicadores indicam modelos com bom ajustes quando seu valor próximos de 1 \cite{hair2009multivariada}). 
-\end{comment}
 
-
-Outro método para avaliar o modelo são os índices TLI (\textit{Tucker–Lewis Index}) e CFI (\textit{Comparative Fit Index}). O TLI, ou Índice Tucker-Lewis, compara o modelo estimado com um modelo teórico nulo e visa determinar se todos os indicadores estão associados a um único fator latente. Já o CFI, ou Índice de Ajuste Comparativo, é um indicador adicional utilizado para comparar modelos alternativos. Ambos os índices sugerem um bom ajuste quando seus valores se aproximam de 1 \cite{hair2009multivariada}.
-
-
-\begin{comment}
 
 \citeonline{timothy2015} considera o ajuste adequado quando o RMSEA é menor que 0,05. Quanto ao CFI e TLI, os onde valores acima de 0,90 sugerem um ajuste aceitável, e valores acima de 0,95 são considerados indicativos de um excelente ajuste.
 
@@ -132,8 +128,8 @@ Além disso, foram = avaliado o Akaike Information Criterion (AIC), criado por A
 
 \subsection{Unidimensionalidade e Independência}
 
-Conforme destacado por \citeonline{pasquali2003},  ``se os índices de adequação indicarem que o modelo utilizado é adequado, então fica demonstrado que o item é unidimensional'' . Assim, o pressuposto de unidimensionalidade será verificado com base no índice de adequação do modelo $M_2$ de \citeonline{maydeu2006limited}. 
+Conforme destacado por \citeonline{pasquali2003},  ``se os índices de adequação indicarem que o modelo utilizado é adequado, então fica demonstrado que o item é unidimensional'' . Assim, o pressuposto de unidimensionalidade será verificado com base no índice de adequação do modelo M$_2$ de \citeonline{maydeu2006limited}. 
 
 
-Segundo \citeonline{de2000teoria}, ``a unidimensionalidade implica independência local'' (apud \cite{hambleton1991}). Portanto, tanto a unidimensionalidade quanto a independência local serão consideradas atendidas se o índice de adequação do modelo $M_2$ for satisfatório.
+Segundo \citeonline{de2000teoria}, ``a unidimensionalidade implica independência local'' (apud \cite{hambleton1991}). Portanto, tanto a unidimensionalidade quanto a independência local serão consideradas atendidas se o índice de adequação do modelo M$_2$ for satisfatório.
 

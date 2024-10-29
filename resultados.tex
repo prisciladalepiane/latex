@@ -6,60 +6,69 @@ Segundo a ótica TCT, que analisa o escore bruto, ou seja, a soma de todos os ac
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=16cm]{hist_acertos.png}
 	\caption{Distribuição do total de acertos do simulado.}
+	\includegraphics[width=16cm]{hist_acertos.png}
 	\label{fig:hist_acertos}
+	\parbox{\textwidth}{
+	\centering % 
+	\makebox[16cm][l]{
+		\parbox{16cm}{
+			\raggedright
+			\small \textbf{Fonte}: Elaborado pelos autores.
+		}
+	}
+}
 \end{figure}
 
 \begin{table}[H]
-	\IBGEtab{%
+	\centering
 		\caption{Índices TCT.}
 		\label{tabela-tct}
-	}{%
-		\begin{tabular*}{.8\textwidth}{@{\extracolsep{\fill}}clccccc@{}}
+		\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}clccccc@{}}
 			\toprule
-			Item & Origem & \makecell{\% Erro \\ $(ID_i)$ } & \% Acerto & \makecell{Discriminação \\ ($D_i$)} & \makecell{Ponto \\ Bisserial} & \makecell{Cronbach \\ Excluindo item} \\ 
-			\midrule
-		\midrule 1 & FAAP & 32,2\% & 67,8\% & 0,552 & 0,468 & 0,730 \\ 
-		\midrule 2 & PUC & 56,0\% & 44,0\% & 0,394 & 0,319 & 0,741 \\ 
-		\midrule 3 & FGV-RJ & 49,4\% & 50,6\% & 0,551 & 0,468 & 0,730 \\ 
-		\midrule 4 & UEA & 21,5\% & 78,5\% & 0,464 & 0,486 & 0,729 \\ 
-		\midrule 5 & UFPR & 61,0\% & 39,0\% & 0,507 & 0,415 & 0,734 \\ 
-		\midrule 6 & UNICENTRO & 63,7\% & 36,3\% & 0,367 & 0,317 & 0,740 \\
-		\midrule 7 & ENEM & 48,6\% & 51,4\% & 0,523 & 0,431 & 0,733 \\ 
-		\midrule 8 & UFMS & 41,4\% & 58,6\% & 0,402 & 0,358 & 0,738 \\ 
-		\midrule 9 & UEA & 73,9\% & 26,1\% & 0,307 & \textbf{0,290} & 0,741 \\ 
-		\midrule 10 & EMESCAM & 23,0\% & 77,0\% & 0,390 & 0,402 & 0,734 \\ 
-		\midrule 11 & UFMS & 11,9\% & 88,1\% & 0,366 & 0,488 & 0,731 \\ 
-		\midrule 12 & PUC-RIO & 32,8\% & 67,2\% & 0,564 & 0,507 & 0,727 \\ 
-		\midrule 13 & ENEM-Digital & 54,1\% & 45,9\% & 0,541 & 0,449 & 0,731 \\ 
-		\midrule 14 & IFPR & 61,0\% & 39,0\% & 0,358 & \textbf{0,299} & 0,742 \\ 
-		\midrule 15 & ESPCEX & 86,1\% & 13,9\% & 0,155 & \textbf{0,205} & 0,744 \\ 
-		\midrule 16 & UNIFESO & 24,4\% & 75,6\% & 0,441 & 0,431 & 0,733 \\ 
-		\midrule 17 & FASM & 25,0\% & 75,0\% & 0,399 & 0,399 & 0,735 \\ 
-		\midrule 18 & ENEM & 22,4\% & 77,6\% & 0,423 & 0,439 & 0,732 \\ 
-		\midrule 19 & UFSCAR & 19,4\% & 80,6\% & 0,391 & 0,431 & 0,733 \\ 
-		\midrule 20 & ENEM & 20,8\% & 79,2\% & 0,297 & 0,306 & 0,740 \\ 
-		\midrule 21 & UFSCAR & 8,1\% & 91,9\% & 0,242 & 0,450 & 0,734 \\ 
-		\midrule 22 & UNICENTRO & 65,7\% & 34,3\% & 0,241 & \textbf{0,235} & 0,745 \\ 
-		\midrule 23 & UNICENTRO & 49,2\% & 50,8\% & 0,429 & 0,357 & 0,738 \\ 
-		\midrule 24 & UFAL & 22,1\% & 77,9\% & 0,307 & 0,336 & 0,738 \\ 
-		\midrule 25 & ENEM & 61,1\% & 38,9\% & 0,399 & 0,350 & 0,738 \\ 
-		\midrule 26 & FAMECA & 51,1\% & 48,9\% & 0,390 & 0,305 & 0,742 \\ 
-		\midrule 27 & UFMS & 85,8\% & 14,2\% & 0,000 & \textbf{0,006} & 0,753 \\ 
-		\midrule 28 & UPE & 77,0\% & 23,0\% & -0,068 & \textbf{-0,061} & 0,760 \\ 
-		\midrule 29 & FAMECA & 57,5\% & 42,5\% & 0,389 & 0,324 & 0,740 \\ 
-		\midrule 30 & UNCISAL & 87,5\% & 12,5\% & 0,078 & \textbf{0,119} & 0,747 \\
-		\midrule  Total &&&&&& 0,744 \\
+			\textbf{Item} & \textbf{Origem} &
+			 \makecell{\textbf{\% Erro} \\\textbf{ $(ID_i)$ }} & 
+			 \makecell{\textbf{\% Acerto}\\}&
+			  \makecell{\textbf{Discriminação} \\ \textbf{($D_i$)}} & \makecell{\textbf{Ponto} \\ \textbf{Bisserial}} & \makecell{\textbf{Cronbach} \\ \textbf{Excluindo item}} \\ 
+\hline \textbf{1 }& FAAP & 32,2\% & 67,8\% & 0,552 & 0,468 & 0,730 \\ 
+\hline \textbf{2 }& PUC & 56,0\% & 44,0\% & 0,394 & 0,319 & 0,741 \\ 
+\hline \textbf{3 }& FGV-RJ & 49,4\% & 50,6\% & 0,551 & 0,468 & 0,730 \\ 
+\hline \textbf{4 }& UEA & 21,5\% & 78,5\% & 0,464 & 0,486 & 0,729 \\ 
+\hline \textbf{5 }& UFPR & 61,0\% & 39,0\% & 0,507 & 0,415 & 0,734 \\ 
+\hline \textbf{6 }& UNICENTRO & 63,7\% & 36,3\% & 0,367 & 0,317 & 0,740 \\
+\hline \textbf{7 }& ENEM & 48,6\% & 51,4\% & 0,523 & 0,431 & 0,733 \\ 
+\hline \textbf{8 }& UFMS & 41,4\% & 58,6\% & 0,402 & 0,358 & 0,738 \\ 
+\hline \textbf{9 }& UEA & 73,9\% & 26,1\% & 0,307 & \textbf{0,290} & 0,741 \\ 
+\hline \textbf{10} & EMESCAM & 23,0\% & 77,0\% & 0,390 & 0,402 & 0,734 \\ 
+\hline \textbf{11} & UFMS & 11,9\% & 88,1\% & 0,366 & 0,488 & 0,731 \\ 
+\hline \textbf{12} & PUC-RIO & 32,8\% & 67,2\% & 0,564 & 0,507 & 0,727 \\ 
+\hline \textbf{13} & ENEM-Digital & 54,1\% & 45,9\% & 0,541 & 0,449 & 0,731 \\ 
+\hline \textbf{14} & IFPR & 61,0\% & 39,0\% & 0,358 & \textbf{0,299} & 0,742 \\ 
+\hline \textbf{15} & ESPCEX & 86,1\% & 13,9\% & 0,155 & \textbf{0,205} & 0,744 \\ 
+\hline \textbf{16} & UNIFESO & 24,4\% & 75,6\% & 0,441 & 0,431 & 0,733 \\ 
+\hline \textbf{17} & FASM & 25,0\% & 75,0\% & 0,399 & 0,399 & 0,735 \\ 
+\hline \textbf{18} & ENEM & 22,4\% & 77,6\% & 0,423 & 0,439 & 0,732 \\ 
+\hline \textbf{19} & UFSCAR & 19,4\% & 80,6\% & 0,391 & 0,431 & 0,733 \\ 
+\hline \textbf{20} & ENEM & 20,8\% & 79,2\% & 0,297 & 0,306 & 0,740 \\ 
+\hline \textbf{21} & UFSCAR & 8,1\% & 91,9\% & 0,242 & 0,450 & 0,734 \\ 
+\hline \textbf{22} & UNICENTRO & 65,7\% & 34,3\% & 0,241 & \textbf{0,235} & 0,745 \\ 
+\hline \textbf{23} & UNICENTRO & 49,2\% & 50,8\% & 0,429 & 0,357 & 0,738 \\ 
+\hline \textbf{24} & UFAL & 22,1\% & 77,9\% & 0,307 & 0,336 & 0,738 \\ 
+\hline \textbf{25} & ENEM & 61,1\% & 38,9\% & 0,399 & 0,350 & 0,738 \\ 
+\hline \textbf{26} & FAMECA & 51,1\% & 48,9\% & 0,390 & 0,305 & 0,742 \\ 
+\hline \textbf{27} & UFMS & 85,8\% & 14,2\% & 0,000 & \textbf{0,006} & 0,753 \\ 
+\hline \textbf{28} & UPE & 77,0\% & 23,0\% & -0,068 & \textbf{-0,061} & 0,760 \\ 
+\hline \textbf{29} & FAMECA & 57,5\% & 42,5\% & 0,389 & 0,324 & 0,740 \\ 
+\hline \textbf{30} & UNCISAL & 87,5\% & 12,5\% & 0,078 & \textbf{0,119} & 0,747 \\
+		\hline  \textbf{Total} &&&&&& 0,744 \\
 			\bottomrule
-		\end{tabular*}
-	}{%
-		\fonte{Produzido pelos autores.}
-	}
+		\end{tabular*}\\
+		\vspace*{0.5cm}
+		\small{\textbf{Fonte:} Produzido pelos autores.}
 \end{table}
 
 
-A Tabela \ref{tabela-tct} apresenta os principais índices da Teoria Clássica dos Testes (TCT) para os itens. Inicialmente, observa-se que o item 28 possui índices de discriminação negativo, indicando que esses item foi mais acertados por indivíduos de menor habilidade.
+A Tabela \ref{tabela-tct} apresenta os principais índices TCT para os itens. Inicialmente, observa-se que o item 28 possui índices de discriminação negativo, indicando que esses item foi mais acertados por indivíduos de menor habilidade.
 
 
 O alfa de Cronbach obtido foi de 0,744, um valor próximo ao recomendado, sendo considerado adequado para a análise. No entanto, foi observado um aumento no alfa de Cronbach ao excluir os itens 21, 27, 28 e 30, o que sugere que esses itens podem estar impactando negativamente a consistência interna da prova.
@@ -76,7 +85,7 @@ Os índices de dificuldade do teste estão distribuídos conforme ilustrado na f
 		\makebox[16cm][l]{
 			\parbox{16cm}{
 				\raggedright
-				\small \textbf{Fonte}: Elaborado pelos autores.
+				\small \textbf{Fonte}: Produzido pelos autores.
 			}
 		}
 	}
@@ -87,32 +96,30 @@ Os índices de dificuldade do teste estão distribuídos conforme ilustrado na f
 Observa-se pela figura \ref{fig:hist_difi} que a distribuição dos índices de dificuldade dos itens não segue uma distribuição normal, que sugere que uma prova deve ter uma maior concentração de itens de dificuldade média, complementada por uma menor quantidade de itens fáceis e difíceis, de forma a se aproximar de uma distribuição normal. Segundo essa recomendação, o ideal seria que a maioria dos itens tivesse uma dificuldade intermediária. A tabela \ref{tabela-dificuldade-obtida} mostra uma comparação entre o recomendado na tabela \ref{tabela-class-ID} o que indica que faltam itens na faixa de 40\% a 60\%.
 
 \begin{table}[H]
-	\IBGEtab{%
+	\centering
 		\caption{Distribuição ideal dos itens por ID.}
 		\label{tabela-dificuldade-obtida}
-	}{%
-		\begin{tabular}{cccc}
+		\begin{tabular}{lccc}
 			\toprule
-				Faixa & Total Itens & Distribuição Esperada & Distribuição Obtida   \\ 
-			\midrule \midrule
-			 I & 3 & 10\% &  10,0\% \\ 
-			\midrule
-			 II & 7 & 20\% & 23,3\% \\
-			\midrule
-			 III & 8 & 40\% & 26,7\% \\ 
-			\midrule
-			 IV & 9 & 20\% & 30,0\% \\ 
-			\midrule
-			 V & 3 & 10\% & 10,0\% \\ 
+				\textbf{Faixa} & \textbf{Total Itens} &\textbf{ Distribuição Esperada} & \textbf{Distribuição Obtida}   \\ 
+			\hline
+			 \textbf{I} & 3 & 10\% &  10,0\% \\ 
+			\hline
+			\textbf{II} & 7 & 20\% & 23,3\% \\
+			\hline
+			\textbf{III} & 8 & 40\% & 26,7\% \\ 
+			\hline
+			 \textbf{IV}& 9 & 20\% & 30,0\% \\ 
+			\hline
+			 \textbf{V} & 3 & 10\% & 10,0\% \\ 
 			\bottomrule
-		\end{tabular}
-	}{%
-		\fonte{Produzido pelos autores.}
-	}
+		\end{tabular}\\
+		\vspace*{0.5cm}
+		\small{\textbf{Fonte:} Produzido pelos autores.}
 \end{table}
 
 
-\newpage
+
 \section{Análise TRI}
 
 \subsection{Avaliação do Modelo}
@@ -121,24 +128,22 @@ Para avaliar a adequação dos modelos unidimensionais de TRI aos dados do simul
 testados os três modelos distintos: o modelo de um parâmetro logístico (1PL), o modelo de dois parâmetros logísticos (2PL) e o modelo de três parâmetros logísticos (3PL).
 
 \begin{table}[!htb]
-	\IBGEtab{%
+	\centering
 		\caption{Teste Razão de verossimilhança.}
 		\label{tabela-anova}
-	}{%
-		\begin{tabular}{ccccc}
-			\toprule
-			Modelo &   log-verossimilhança & $X^2$ & df & p-valor \\ 
-			\midrule \midrule
-			1PL &  -10991,57 &  &  &  \\ 
-			\midrule
-			2PL &  -10768,56 & 446,01 & 29 & 0,000 \\ 
-			\midrule
-			3PL & -10741,91 & 53,29 & 30 & 0,006 \\ 
-			\bottomrule
-		\end{tabular}
-	}{%
-		\fonte{Produzido pelos autores.}
-	}
+		\begin{tabular}{lcccc}
+			\hline
+			\textbf{Modelo} &  \textbf{ log-verossimilhança }& $\boldsymbol{\chi^2}$ & \textbf{df} &\textbf{ p-valor }\\ 
+			\hline
+			\textbf{1PL} &  -10991,57 &  &  &  \\ 
+			\hline
+			\textbf{2PL} &  -10768,56 & 446,01 & 29 & 0,000 \\ 
+			\hline
+			\textbf{3PL} & -10741,91 & 53,29 & 30 & 0,006 \\ 
+			\hline
+		\end{tabular}\\
+		\vspace*{0.5cm}
+		\small{\textbf{Fonte:} Produzido pelos autores.}
 \end{table}
 
 
@@ -146,28 +151,26 @@ testados os três modelos distintos: o modelo de um parâmetro logístico (1PL),
 Os resultados do teste de razão de verossimilhança, apresentados na \ref{tabela-anova}, indicam que a inclusão de parâmetros adicionais melhora significativamente o ajuste do modelo. O modelo de 2PL mostrou uma melhoria significativa em relação ao modelo de 1PL ($p < 0,001$), e o modelo de 3PL também apresentou um ajuste superior ao 2PL ($p = 0,006$). Esses resultados sugerem que, entre os modelos testados, o 3PL é o mais adequado para representar os dados do simulado, capturando de forma mais precisa as variáveis latentes relacionadas ao desempenho dos respondentes.
 
 \begin{table}[!htb]
-	\IBGEtab{%
+	 \centering
 		\caption{Teste de adequação dos modelos. }
 		\label{tabela-m2}
-	}{%
-		\begin{tabular}{ccccccccc}
-			\toprule
-			Modelo & M2 & df & p-valor & RMSEA & RMSEA$_5$ & RMSEA$_{95}$ & TLI & CFI \\ 
-			\midrule \midrule
-			1PL & 1167 & 434 & 0,0000 & 0,0504 & 0,0469 & 0,0539 & 0,81 & 0,81 \\ 
-			\midrule
-			2PL & 485 & 405 & 0,0036 & 0,0173 & 0,0104 & 0,0228 & 0,98 & 0,98 \\ 
-			\midrule
-			3PL & 371 & 375 & 0,5502 & 0,0000 & 0,0000 & 0,0134 & 1,00 & 1,00 \\ 
-			\bottomrule
-		\end{tabular}
-	}{%
-		\fonte{Produzido pelos autores.}
-	}
+		\begin{tabular}{lcccccccc}
+			\hline
+			\textbf{Modelo} & \textbf{M}$_\textbf{2}$ & \textbf{df} &\textbf{ p-valor} & \textbf{RMSEA} & \textbf{RMSEA$_\textbf{5}$} & \textbf{RMSEA$_{\textbf{95}}$} & \textbf{TLI} & \textbf{CFI} \\ 
+			\hline 
+		\textbf{1PL} & 1167 & 434 & 0,0000 & 0,0504 & 0,0469 & 0,0539 & 0,81 & 0,81 \\ 
+		\hline
+		\textbf{2PL} & 485 & 405 & 0,0036 & 0,0173 & 0,0104 & 0,0228 & 0,98 & 0,98 \\ 
+		\hline
+		\textbf{3PL} & 371 & 375 & 0,5502 & 0,0000 & 0,0000 & 0,0134 & 1,00 & 1,00 \\ 
+			\hline
+		\end{tabular}\\
+		\vspace*{0.5cm}
+		\small{\textbf{Fonte:} Produzido pelos autores.}
 \end{table}
 
 
-A \ref{tabela-m2} apresenta os resultados do teste de adequação dos modelos. O teste M2 mostra que o modelo de 1PL não se ajusta bem, com um valor de p < 0,001 indicando rejeição da hipótese nula de bom ajuste e índices de TLI e CFI de 0,81, abaixo do valor de referência de 0,90. O modelo de 2PL apresenta valores altos para TLI e CFI (0,98), porém, também não passa no teste de adequação,com um p-valor de 0,0036, sugerindo que ele não se ajusta bem aos dados.
+A tabela \ref{tabela-m2} apresenta os resultados do teste de adequação dos modelos. O teste M$_2$ mostra que o modelo de 1PL não se ajusta bem, com um valor de p < 0,001 indicando rejeição da hipótese nula de bom ajuste e índices de TLI e CFI de 0,81, abaixo do valor de referência de 0,90. O modelo de 2PL apresenta valores altos para TLI e CFI (0,98), porém, também não passa no teste de adequação,com um p-valor de 0,0036, sugerindo que ele não se ajusta bem aos dados.
 
 O modelo de 3PL demonstra o melhor ajuste entre os três modelos testados. Com um p-valor de 0,5502, que não rejeita a hipótese nula de bom ajuste, os índices TLI e CFI perfeitos (1,00), além de um RMSEA próximo de zero. Esses resultados indicam que o modelo de 3PL tem a melhor representação das relações entre os itens do teste e a habilidade latente dos respondentes.
 
@@ -177,56 +180,54 @@ O modelo de 3PL demonstra o melhor ajuste entre os três modelos testados. Com u
 Os resultados dos parâmetros estimados para o modelo de 3 parâmetros logísticos (3PL) estão detalhados na Tabela \ref{tabela-coef3} os 3 parâmetros: discriminação (a), dificuldade (b) e chute (c), permitindo construir a curva característica de cada item. 
 
 \begin{table}[!htb]
-	\IBGEtab{%
+	\centering
 		\caption{Parâmetros do modelo 3PL}
 		\label{tabela-coef3}
-	}{%
-		\begin{tabular*}{.8\textwidth}{@{\extracolsep{\fill}}clccc@{}}
-			\toprule
-			Item  & Origem & 
-		   \makecell{Discriminação \\(a)}& 
-			\makecell{Dificuldade \\ (b)} &
-			 \makecell{Acerto Casual \\(c)} 
-			   \\ 
-			\midrule
-		\midrule 1 & FAAP & 1,94 & -0,17 & 0,27 \\ 
-\midrule 2 & PUC & 3,08 & 1,17 & 0,34 \\ 
-\midrule 3 & FGV-RJ & 1,47 & 0,30 & 0,14  \\ 
-\midrule 4 & UEA & 1,50 & -1,16 & 0,02  \\ 
-\midrule 5 & UFPR & 1,12 & 0,77 & 0,08 \\ 
-\midrule 6 & UNICENTRO & 0,60 & 1,23 & 0,04  \\ 
-\midrule 7 & ENEM & 0,92 & 0,06 & 0,04 \\ 
-\midrule 8 & UFMS & 0,62 & -0,60 & 0,00 \\ 
-\midrule 9 & UEA & 0,98 & 2,00 & 0,12  \\ 
-\midrule 10 & UMESCAM & 1,44 & -0,44 & 0,40 \\ 
-\midrule 11 & UFMS & 2,16 & -1,52 & 0,00  \\ 
-\midrule 12 & PUC-RIO & 1,34 & -0,70 & 0,00 \\ 
-\midrule 13 & ENEM-Digital & 1,80 & 0,61 & 0,19 \\ 
-\midrule 14 & IFPR & 0,48 & 1,01 & 0,01  \\ 
-\midrule 15 & ESPECEX & 0,54 & 3,63 & 0,01 \\ 
-\midrule 16 & UNIFESO & 1,19 & -0,91 & 0,18  \\ 
-\midrule 17 & FASM & 1,00 & -1,31 & 0,00  \\ 
-\midrule 18 & ENEM & 1,20 & -1,29 & 0,01 \\ 
-\midrule 19 & UFSCAR & 1,36 & -1,38 & 0,00 \\ 
-\midrule 20 & ENEM & 0,68 & -2,14 & 0,01 \\ 
-\midrule 21 & UFSCAR & 2,46 & -1,74 & 0,00  \\ 
-\midrule 22 & UNICENTRO & 0,32 & 2,20 & 0,01 \\ 
-\midrule 23 & UNICENTRO & 0,68 & -0,04 & 0,00  \\ 
-\midrule 24 & UFAL & 0,73 & -1,91 & 0,00 \\ 
-\midrule 25 & ENEM & 1,83 & 1,15 & 0,23  \\ 
-\midrule 26 & FAMECA & 0,51 & 0,10 & 0,00 \\ 
-\midrule 27 & UFMS & \textbf{-1,16} & -3,45 & 0,11  \\ 
-\midrule 28 & UPE & \textbf{-0,46} & -2,76 & 0,00  \\ 
-\midrule 29 & FAMECA & 0,87 & 0,93 & 0,14  \\ 
-\midrule 30 & UNCISAL & 3,21 & 2,22 & 0,10 \\ 
-			\bottomrule
-		\end{tabular*}
-	}{%
-		\fonte{Produzido pelos autores.}
-	}
-\end{table}
 
-\begin{figure}[!htb]
+		\begin{tabular*}{.9\textwidth}{@{\extracolsep{\fill}}clccc@{}}
+			\toprule
+			\textbf{Item}  & \textbf{Origem} & 
+		   \makecell{\textbf{Discriminação} \\\textbf{(a)}}& 
+			\makecell{\textbf{Dificuldade} \\ \textbf{(b)}} &
+			 \makecell{\textbf{Acerto Casual} \\\textbf{(c)}} 
+			   \\ 
+		\hline \textbf{1 }& FAAP & 1,94 & -0,17 & 0,27 \\ 
+		\hline \textbf{2 }& PUC & 3,08 & 1,17 & 0,34 \\ 
+		\hline \textbf{3 }& FGV-RJ & 1,47 & 0,30 & 0,14  \\ 
+		\hline \textbf{4 }& UEA & 1,50 & -1,16 & 0,02  \\ 
+		\hline \textbf{5 }& UFPR & 1,12 & 0,77 & 0,08 \\ 
+		\hline \textbf{6 }& UNICENTRO & 0,60 & 1,23 & 0,04  \\ 
+		\hline \textbf{7 }& ENEM & 0,92 & 0,06 & 0,04 \\ 
+		\hline \textbf{8 }& UFMS & 0,62 & -0,60 & 0,00 \\ 
+		\hline \textbf{9 }& UEA & 0,98 & 2,00 & 0,12  \\ 
+		\hline \textbf{10} & UMESCAM & 1,44 & -0,44 & 0,40 \\ 
+		\hline \textbf{11} & UFMS & 2,16 & -1,52 & 0,00  \\ 
+		\hline \textbf{12} & PUC-RIO & 1,34 & -0,70 & 0,00 \\ 
+		\hline \textbf{13} & ENEM-Digital & 1,80 & 0,61 & 0,19 \\ 
+		\hline \textbf{14} & IFPR & 0,48 & 1,01 & 0,01  \\ 
+		\hline \textbf{15} & ESPECEX & 0,54 & 3,63 & 0,01 \\ 
+		\hline \textbf{16} & UNIFESO & 1,19 & -0,91 & 0,18  \\ 
+		\hline \textbf{17} & FASM & 1,00 & -1,31 & 0,00  \\ 
+		\hline \textbf{18} & ENEM & 1,20 & -1,29 & 0,01 \\ 
+		\hline \textbf{19} & UFSCAR & 1,36 & -1,38 & 0,00 \\ 
+		\hline \textbf{20} & ENEM & 0,68 & -2,14 & 0,01 \\ 
+		\hline \textbf{21} & UFSCAR & 2,46 & -1,74 & 0,00  \\ 
+		\hline \textbf{22} & UNICENTRO & 0,32 & 2,20 & 0,01 \\ 
+		\hline \textbf{23} & UNICENTRO & 0,68 & -0,04 & 0,00  \\ 
+		\hline \textbf{24} & UFAL & 0,73 & -1,91 & 0,00 \\ 
+		\hline \textbf{25} & ENEM & 1,83 & 1,15 & 0,23  \\ 
+		\hline \textbf{26} & FAMECA & 0,51 & 0,10 & 0,00 \\ 
+		\hline \textbf{27} & UFMS & \textbf{-1,16} & -3,45 & 0,11  \\ 
+		\hline \textbf{28} & UPE & \textbf{-0,46} & -2,76 & 0,00  \\ 
+		\hline \textbf{29} & FAMECA & 0,87 & 0,93 & 0,14  \\ 
+		\hline \textbf{30} & UNCISAL & 3,21 & 2,22 & 0,10 \\ 
+			\bottomrule
+		\end{tabular*}\\
+		\vspace*{0.5cm}
+		\small{\textbf{Fonte:} Produzido pelos autores.}
+\end{table}
+\clearpage
+\begin{figure}[H]
 	\centering
 	\caption{Curva característica dos itens.}
 	\includegraphics[width=16cm]{../TCCfigura01.png}
@@ -314,7 +315,7 @@ No caso do item 28, verificou-se que ele foi corrigido com o gabarito incorreto,
 
 \subsubsection{Modelo de 3 Parâmetros - 2º Ajuste}
 
- Com base nessas análises, o modelo foi ajustado novamente, removendo-se os itens problemáticos. Para a avaliação do modelo o resultados do teste $M_2$ indicam um bom ajuste do modelo. O valor de $M_2$ (344,6) com p-valor = $0,54$ sugere que o modelo não é significativamente diferente dos dados. O RMSEA é 0 (intervalo de confiança de 0 a 0,0137), indicando um ajuste excelente. Os índices de ajuste incremental TLI (1) e CFI (1), reforçam que o modelo se ajustou bem aos dados.
+ Com base nessas análises, o modelo foi ajustado novamente, removendo-se os itens problemáticos. Para a avaliação do modelo o resultados do teste M$_2$ indicam um bom ajuste do modelo. O valor de M$_2$ (344,6) com p-valor = $0,54$ sugere que o modelo não é significativamente diferente dos dados. O RMSEA é 0 (intervalo de confiança de 0 a 0,0137), indicando um ajuste excelente. Os índices de ajuste incremental TLI (1) e CFI (1), reforçam que o modelo se ajustou bem aos dados.
  
  
   A tabela \ref{tabela-coef3-excl} apresenta os resultados dos parâmetros para o 2ª ajuste, além disso, foi acrescentado o ponto máximo de informação para cada item, que é o ponto máximo da curva de informação do item  dada pela equação \ref{eq:info_item}.
@@ -339,55 +340,51 @@ Na Figura \ref{fig:info_itens}, nota-se que os itens 6, 8, 14, 15, 20, 22, 23, 2
 	\label{fig:info_itens}
 \end{figure}
 
-\begin{table}[H]
-	\IBGEtab{%
+\begin{table}[h]
+	\centering
 		\caption{Parâmetros do modelo 3PL - 2ª Ajuste}
 		\label{tabela-coef3-excl}
-	}{%
-		\begin{tabular*}{.8\textwidth}{@{\extracolsep{\fill}}clcccc@{}}
-			\toprule
-			Item  & Origem & 
-			\makecell{Discriminação \\(a)}& 
-			\makecell{Dificuldade \\ (b)} &
-			\makecell{Acerto Casual \\(c)} &
-			\makecell{Máxima \\ Informação} 
+		\begin{tabular}{clcccc}
+			\hline
+			\textbf{Item}  & \textbf{Origem} & 
+			\makecell{\textbf{Discriminação} \\\textbf{(a)}}& 
+			\makecell{\textbf{Dificuldade} \\\textbf{ (b)}} &
+			\makecell{\textbf{Acerto Casual} \\\textbf{(c})} &
+			\makecell{\textbf{Máxima} \\ \textbf{Informação}} 
 			\\ 
-			\midrule
-	\midrule 22 & UNICENTRO & 0,32 & 2,12 & 0,01 & 0,03 \\ 
-\midrule 14 & IFPR & 0,49 & 0,98 & 0,00 & 0,06 \\ 
-\midrule 15 & ESPECEX & 0,53 & 3,68 & 0,00 & 0,06 \\ 
-\midrule 26 & FAMECA & 0,51 & 0,10 & 0,00 & 0,07 \\ 
-\midrule 6 & UNICENTRO & 0,59 & 1,23 & 0,04 & 0,08 \\ 
-\midrule 8 & UFMS & 0,62 & -0,60 & 0,00 & 0,10 \\ 
-\midrule 23 & UNICENTRO & 0,67 & -0,04 & 0,00 & 0,11 \\ 
-\midrule 20 & ENEM & 0,68 & -2,16 & 0,00 & 0,11 \\ 
-\midrule 24 & UFAL & 0,72 & -1,92 & 0,00 & 0,13 \\ 
-\midrule 29 & FAMECA & 0,90 & 0,93 & 0,14 & 0,15 \\ 
-\midrule 28 & UPE & 0,86 & -1,06 & 0,00 & 0,18 \\ 
-\midrule 7 & ENEM & 0,96 & 0,14 & 0,07 & 0,20 \\ 
-\midrule 9 & UEA & 1,02 & 2,01 & 0,13 & 0,20 \\ 
-\midrule 10 & UMESCAM & 1,55 & -0,31 & 0,44 & 0,25 \\ 
-\midrule 17 & FASM & 1,00 & -1,31 & 0,00 & 0,25 \\ 
-\midrule 16 & UNIFESO & 1,25 & -0,82 & 0,21 & 0,26 \\ 
-\midrule 5 & UFPR & 1,11 & 0,76 & 0,08 & 0,26 \\ 
-\midrule 18 & ENEM & 1,18 & -1,31 & 0,00 & 0,35 \\ 
-\midrule 3 & FGV-RJ & 1,49 & 0,32 & 0,15 & 0,42 \\ 
-\midrule 12 & PUC-RIO & 1,33 & -0,70 & 0,00 & 0,44 \\ 
-\midrule 19 & UFSCAR & 1,37 & -1,37 & 0,00 & 0,47 \\ 
-\midrule 25 & ENEM & 1,83 & 1,15 & 0,23 & 0,54 \\ 
-\midrule 1 & FAAP & 1,88 & -0,22 & 0,25 & 0,54 \\ 
-\midrule 13 & ENEM-Digital & 1,77 & 0,59 & 0,18 & 0,55 \\ 
-\midrule 4 & UEA & 1,50 & -1,18 & 0,00 & 0,56 \\ 
-\midrule 11 & UFMS & 2,13 & -1,53 & 0,00 & 1,13 \\ 
-\midrule 2 & PUC & 2,96 & 1,18 & 0,34 & 1,14 \\ 
-\midrule 21 & UFSCAR & 2,50 & -1,73 & 0,00 & 1,56 \\ 
-\midrule 30 & UNCISAL & 3,41 & 2,18 & 0,10 & 2,37 \\
-\bottomrule
-		\end{tabular*}
-	}{%
-		\fonte{Produzido pelos autores.}
-		\nota{Ajuste excluindo itens com discriminação negativa.}
-			}
+		\hline \textbf{22} & UNICENTRO & 0,32 & 2,12 & 0,01 & 0,03 \\ 
+		\hline \textbf{14} & IFPR & 0,49 & 0,98 & 0,00 & 0,06 \\ 
+		\hline \textbf{15} & ESPECEX & 0,53 & 3,68 & 0,00 & 0,06 \\ 
+		\hline \textbf{26} & FAMECA & 0,51 & 0,10 & 0,00 & 0,07 \\ 
+		\hline \textbf{6 }& UNICENTRO & 0,59 & 1,23 & 0,04 & 0,08 \\ 
+		\hline \textbf{8 }& UFMS & 0,62 & -0,60 & 0,00 & 0,10 \\ 
+		\hline \textbf{23} & UNICENTRO & 0,67 & -0,04 & 0,00 & 0,11 \\ 
+		\hline \textbf{20} & ENEM & 0,68 & -2,16 & 0,00 & 0,11 \\ 
+		\hline \textbf{24} & UFAL & 0,72 & -1,92 & 0,00 & 0,13 \\ 
+		\hline \textbf{29} & FAMECA & 0,90 & 0,93 & 0,14 & 0,15 \\ 
+		\hline \textbf{28} & UPE & 0,86 & -1,06 & 0,00 & 0,18 \\ 
+		\hline \textbf{7 }& ENEM & 0,96 & 0,14 & 0,07 & 0,20 \\ 
+		\hline \textbf{9 }& UEA & 1,02 & 2,01 & 0,13 & 0,20 \\ 
+		\hline \textbf{10} & UMESCAM & 1,55 & -0,31 & 0,44 & 0,25 \\ 
+		\hline \textbf{17} & FASM & 1,00 & -1,31 & 0,00 & 0,25 \\ 
+		\hline \textbf{16} & UNIFESO & 1,25 & -0,82 & 0,21 & 0,26 \\ 
+		\hline \textbf{5 }& UFPR & 1,11 & 0,76 & 0,08 & 0,26 \\ 
+		\hline \textbf{18} & ENEM & 1,18 & -1,31 & 0,00 & 0,35 \\ 
+		\hline \textbf{3 }& FGV-RJ & 1,49 & 0,32 & 0,15 & 0,42 \\ 
+		\hline \textbf{12} & PUC-RIO & 1,33 & -0,70 & 0,00 & 0,44 \\ 
+		\hline \textbf{19} & UFSCAR & 1,37 & -1,37 & 0,00 & 0,47 \\ 
+		\hline \textbf{25} & ENEM & 1,83 & 1,15 & 0,23 & 0,54 \\ 
+		\hline \textbf{1 }& FAAP & 1,88 & -0,22 & 0,25 & 0,54 \\ 
+		\hline \textbf{13} & ENEM-Digital & 1,77 & 0,59 & 0,18 & 0,55 \\ 
+		\hline \textbf{4 }& UEA & 1,50 & -1,18 & 0,00 & 0,56 \\ 
+		\hline \textbf{11} & UFMS & 2,13 & -1,53 & 0,00 & 1,13 \\ 
+		\hline \textbf{2 }& PUC & 2,96 & 1,18 & 0,34 & 1,14 \\ 
+		\hline \textbf{21} & UFSCAR & 2,50 & -1,73 & 0,00 & 1,56 \\ 
+		\hline \textbf{30} & UNCISAL & 3,41 & 2,18 & 0,10 & 2,37 \\
+		\hline
+		\end{tabular}\\
+		\vspace*{0.5cm}
+		\small{\textbf{Fonte:} Produzido pelos autores.}
 \end{table}
 
 
@@ -398,7 +395,7 @@ A figura \ref{fig:info} ilustra a curva de informação do teste do segundo ajus
 
 A maior concentração de informação ocorre no intervalo de aproximadamente -2,5 a 2,5, o que significa que o teste fornece maior precisão para respondentes cujas habilidades estão dentro dessa faixa. Fora desse intervalo, à medida que $\theta$ se afasta em direção a valores muito baixos ou muito altos, a quantidade de informação diminui consideravelmente, o que implica em menor precisão na estimativa de habilidade para esses extremos. Portanto, o teste se mostra eficaz para diferenciar participantes com habilidades intermediárias, mas perde precisão para aqueles com habilidades muito baixas ou muito altas.
 
-\begin{figure}[!htbp]
+\begin{figure}[H]
 	\centering
 	\caption{Curva de informação e erro padrão do teste.}
 	\includegraphics[width=16cm]{../info_modelo2.png}
@@ -421,29 +418,26 @@ Com base no segundo ajuste do modelo logístico de 3 parâmetros (3PL), as habil
 
 
 
-\begin{table}[!hbt]
-	\IBGEtab{%
+\begin{table}[H]		
+	\centering
 		\caption{Distribuição da Habilidade estimada e total de acertos}
 		\label{summary-habilidade}
-	}{%
-		\begin{tabular*}{.8\textwidth}{@{\extracolsep{\fill}}lcccccc@{}}
-			\toprule
-			& Mínimo & $Q_1$ & Mediana & Média & $Q_3$ & Máximo \\ 
-			\midrule \midrule
-			$\hat{\theta}$ & -2,79 & -0,56 & 0,00 & 0,00 & 0,62 & 2,30 \\ 
-			$\hat{\theta}_{(500,100)}$ & -220,5 & -443,7 & 501,4 & 500,0 & 562,3 & 730,3 \\
-			\bottomrule
-		\end{tabular*}
-	}{%
-		\fonte{Produzido pelos autores.}
-	}
+		\begin{tabular}{lcccccc}
+			\hline
+			& \textbf{Mínimo} & $\textbf{Q}_1$ & \textbf{Mediana} & \textbf{Média} & $\textbf{Q}_3$ & \textbf{Máximo} \\ 
+			\hline
+			$\boldsymbol{\hat{\theta}_{(0,1)}}$ & -2,79 & -0,56 & 0,00 & 0,00 & 0,62 & 2,30 \\ 
+			\hline
+			$\boldsymbol{\hat{\theta}_{(500,100)}}$ & -220,5 & -443,7 & 501,4 & 500,0 & 562,3 & 730,3 \\
+			\hline
+		\end{tabular}\\
+		\vspace*{0.5cm}
+		\small{\textbf{Fonte:} Produzido pelos autores.}
 \end{table}
 
 A Tabela \ref{summary-habilidade} apresenta a distribuição das habilidades estimadas ($\hat{\theta}$) para a escala normal padrão e para a escala  de $\mu = 500$ e $\sigma = 100$. A habilidade mínima estimada é de -2,75, associada a um total de acertos de 2 itens, enquanto a habilidade máxima estimada é de 2,26, correspondente a 26 acertos. Não houveram respondentes que acertaram ou erraram todos os itens. Na simulação de um respondente que errou toda a prova, a habilidade estimada foi de -2,81, enquanto para um participante que acertou todos os itens, a habilidade máxima foi de 2,72. 
-\begin{comment}
-	Vale lembrar que essas habilidades são expressas em uma escala com média 0 e desvio padrão 1. Caso fosse necessário aproximar os resultados dessa escala ao padrão utilizado no ENEM, seria preciso transformá-la para uma escala com média 500 e desvio padrão 100, conforme o procedimento descrito por \citeonline{inep2021procedimento}.
-\end{comment}
 
+\clearpage
 
 \begin{figure}[H]
 	\centering
@@ -463,7 +457,7 @@ A Tabela \ref{summary-habilidade} apresenta a distribuição das habilidades est
 
 Podemos observar pela figura \ref{fig:info_habilidade} que a distribuição das habilidades estimadas dos participantes está concentrada majoritariamente (75\%) na região central, entre $\theta = -1$ e $\theta = 1$, o que reflete uma maior frequência de respondentes com habilidades intermediárias. No entanto, a curva de informação do teste atinge seu pico em valores de $\theta$ um pouco mais baixos, sugerindo que o teste está melhor ajustado para discriminar habilidades abaixo da média, especialmente entre -1,9 e -0,7.
 
-Este descompasso entre a concentração das habilidades estimadas e a área de maior informação indica uma lacuna no teste. A curva de informação esteja fornecendo precisãom melhor para participantes com habilidades mais baixas, há um decréscimo visível na informação na região central do gráfico, onde está a maior parte dos respondentes. 
+Este descompasso entre a concentração das habilidades estimadas e a área de maior informação indica uma lacuna no teste. A curva de informação esteja fornecendo melhor precisão para participantes com habilidades mais baixas, há um decréscimo visível na informação na região central do gráfico, onde está a maior parte dos respondentes. 
 
 Para melhorar a precisão do teste, seria recomendável a adição de itens que aumentem a informação nessa faixa central. Dessa forma, o teste poderá discriminar melhor entre os participantes que têm habilidades próximas à média, melhorando a precisão das estimativas nessa região. Além disso, adotar itens mais discriminativos ao teste ajudaria a melhorar a capacidade de diferenciar entre níveis de habilidade.
 
@@ -487,40 +481,37 @@ O gráfico da figura\ref{fig:acertos_habilidade} mostra a relação entre o núm
 
 
 \begin{table}[!hbt]
-	\IBGEtab{%
+	\centering
 		\caption{Vetor de resposta e habilidade estimada para respondentes com 10 acertos}
 		\label{exemplo-10acertos}
-	}{%
-		\begin{tabular*}{0.7\textwidth}{@{\extracolsep{\fill}}llcc@{}}
-			\toprule
-			   & Vetor de Respostas & $\hat{\theta}$  & $\hat{\theta}_{(500,100)}$ \\ 
-			\midrule
-		\midrule 1 & 00000000010110010110001011010 & -2,18 & 282,40 \\ 
-		\midrule 2 & 10100000011010000010001001110 & -1,60 & 340,00 \\ 
-		\midrule 3 & 01001001100011001001001100000 & -1,57 & 342,90 \\ 
-		\midrule 4 & 11100000010010100010100001100 & -1,53 & 346,80 \\ 
-		\midrule 5 & 00101001100010100001100001100 & -1,24 & 376,10 \\ 
-		\midrule 6 & 10011001110110010000000000100 & -1,19 & 381,20 \\ 
-		\midrule 7 & 11110100100010000010011000000 & -1,19 & 381,00 \\ 
-		\midrule 8 & 11110001100000010001000100100 & -1,13 & 387,00 \\ 
-		\midrule 9 & 10110011000101000000000101100 & -1,12 & 388,10 \\ 
-		\midrule 10 & 11101011010000010000100000100 & -1,09 & 390,90 \\ 
-		\midrule 11 & 01111100000000001100100001100 & -1,09 & 391,10 \\ 
-		\midrule 12 & 10101001100101001100010000000 & -1,08 & 392,10 \\ 
-		\midrule 13 & 00101001101010001011010000000 & -1,04 & 396,40 \\ 
-		\midrule 14 & 00111100001110000011000100000 & -1,01 & 398,90 \\ 
-		\midrule 15 & 10111000101010101000010000000 & -0,92 & 408,10 \\ 
-		\midrule 16 & 11110101110000100000100000000 & -0,91 & 408,60 \\ 
-		\midrule 17 & 01111100001110110000000000000 & -0,91 & 408,70 \\ 
-		\midrule 18 & 11111110110000010000000000000 & -0,86 & 413,80 \\ 
-		\midrule 19 & 10111110110000001000000010000 & -0,85 & 414,90 \\ 
-		\midrule 20 & 10111101110000100000000010000 & -0,83 & 417,40 \\ 
-		\midrule 21 & 10111111010110000000000000000 & -0,75 & 425,20 \\ 
-		\bottomrule
-		\end{tabular*}
-	}{%
-		\fonte{Produzido pelos autores.}
-	}
+		\begin{tabular*}{0.7\textwidth}{@{\extracolsep{\fill}}lccc@{}}
+			\hline
+			 & \textbf{Vetor de Respostas} & $\boldsymbol{\hat{\theta}_{(0,1)}}$  & $\boldsymbol{\hat{\theta}_{(500,100)}}$ \\ 
+\hline \textbf{1 }& 00000000010110010110001011010 & -2,18 & 282,40 \\ 
+\hline \textbf{2 }& 10100000011010000010001001110 & -1,60 & 340,00 \\ 
+\hline \textbf{3 }& 01001001100011001001001100000 & -1,57 & 342,90 \\ 
+\hline \textbf{4 }& 11100000010010100010100001100 & -1,53 & 346,80 \\ 
+\hline \textbf{5 }& 00101001100010100001100001100 & -1,24 & 376,10 \\ 
+\hline \textbf{6 }& 10011001110110010000000000100 & -1,19 & 381,20 \\ 
+\hline \textbf{7 }& 11110100100010000010011000000 & -1,19 & 381,00 \\ 
+\hline \textbf{8 }& 11110001100000010001000100100 & -1,13 & 387,00 \\ 
+\hline \textbf{9 }& 10110011000101000000000101100 & -1,12 & 388,10 \\ 
+\hline \textbf{10} & 11101011010000010000100000100 & -1,09 & 390,90 \\ 
+\hline \textbf{11} & 01111100000000001100100001100 & -1,09 & 391,10 \\ 
+\hline \textbf{12} & 10101001100101001100010000000 & -1,08 & 392,10 \\ 
+\hline \textbf{13} & 00101001101010001011010000000 & -1,04 & 396,40 \\ 
+\hline \textbf{14} & 00111100001110000011000100000 & -1,01 & 398,90 \\ 
+\hline \textbf{15} & 10111000101010101000010000000 & -0,92 & 408,10 \\ 
+\hline \textbf{16} & 11110101110000100000100000000 & -0,91 & 408,60 \\ 
+\hline \textbf{17} & 01111100001110110000000000000 & -0,91 & 408,70 \\ 
+\hline \textbf{18} & 11111110110000010000000000000 & -0,86 & 413,80 \\ 
+\hline \textbf{19} & 10111110110000001000000010000 & -0,85 & 414,90 \\ 
+\hline \textbf{20} & 10111101110000100000000010000 & -0,83 & 417,40 \\ 
+\hline \textbf{21} & 10111111010110000000000000000 & -0,75 & 425,20 \\ 
+\hline
+		\end{tabular*}\\
+		\vspace*{0.5cm}
+		\small{\textbf{Fonte:} Produzido pelos autores.}
 \end{table}
 
 
