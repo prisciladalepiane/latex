@@ -5,13 +5,14 @@
 \usepackage[brazil]{babel} 
 \usecolortheme{default}
 \usepackage{multirow}
+\usepackage{makecell}
 %------------------------------------------------------------
 %This block of code defines the information to appear in the
 %Title page
 \title[TRI] %optional
-{Análise de Desempenho em um Simulado utilizando a Teoria de Resposta ao Item}
+{m}
 
-\subtitle{Trabalho de Conclusão do Curso 1}
+\subtitle{Trabalho de Conclusão do Curso}
 
 \author[Priscila] % (optional)
 {Priscila Dalepiane}
@@ -24,8 +25,8 @@
 	
 }
 
-\date[2023] % (optional)
-{Outubro 2023}
+\date[2024] % (optional)
+{Novembro 2024}
 
 %\logo{\includegraphics[height=1cm]{overleaf-logo}}
 
@@ -52,19 +53,7 @@
 	
 	%The next statement creates the title page.
 	\frame{\titlepage}
-	
-	
-	%---------------------------------------------------------
-	%This block of code is for the table of contents after
-	%the title page
-	
-	%\begin{frame}
-	%	\frametitle{Sumário}
-	%	\tableofcontents
-	%\end{frame}
-	
-	%---------------------------------------------------------
-	
+
 	
 	\section{Introdução}
 	
@@ -87,7 +76,7 @@
 			\column{0.4\textwidth}
 			
 			\begin{figure}
-				\includegraphics[width=5cm,height=5cm]{medida.jpg}
+			%	\includegraphics[width=5cm,height=5cm]{medida.jpg}
 			\end{figure}
 			
 			
@@ -95,7 +84,7 @@
 
 		
 		
-	\end{frame}
+\end{frame}
 	%---------------------------------------------------------
 	\begin{frame}
 		
@@ -111,12 +100,12 @@
 		\column{0.4\textwidth}
 		
 		\begin{figure}
-			\includegraphics[width=5cm,height=5cm]{medida.jpg}
+		%	\includegraphics[width=5cm,height=5cm]{medida.jpg}
 		\end{figure}	
 		
 		\end{columns}
 			
-	\end{frame}
+\end{frame}
 	%---------------------------------------------------------
 \begin{frame}
 	
@@ -132,7 +121,7 @@
 		\column{0.4\textwidth}
 		
 		\begin{figure}
-			\includegraphics[width=4.4cm,height=7cm]{inst.jpg}
+			%\includegraphics[width=4.4cm,height=7cm]{inst.jpg}
 		\end{figure}	
 		
 	\end{columns}
@@ -142,19 +131,15 @@
 
 	
 	%---------------------------------------------------------
-	\begin{frame}
+\begin{frame}
 		\frametitle{Introdução}
 		\begin{center}
 		\textbf{Objetivo Geral}	
 		\end{center}
 		
-		\begin{itemize}
-			\item<1-> Analisar a qualidade dos itens que compõe um simulado e 
-			estimar a habilidade dos respondentes.
-			%	\item<2-> Text visible on slide 2
-			%	\item<3> Text visible on slides 3
-			%	\item<4-> Text visible on slide 4
-		\end{itemize}
+			O objetivo geral é analisar a qualidade dos itens que compõe um simulado de Ciências Humanas (instrumento) e estimar a habilidade dos respondentes (traço latente).
+			
+
 	\end{frame}
 	%---------------------------------------------------------
 	\begin{frame}
@@ -164,13 +149,9 @@
 		\end{center}
 		
 		\begin{itemize}
-			\item<1-> Selecionar o melhor modelo para estimação da habilidade e estimar os parâmetros dos Itens.
-			\item<2-> Avaliar Dimensionalidade.
-			\item<3-> Usar o modelo escolhido para estimar a habilidade.
-			\item<4-> Definir Escalas de habilidades e identificar Itens âncoras.
-			\item<5-> Avaliar a informação do teste.
-			%	\item<3> Text visible on slides 3
-			%	\item<4-> Text visible on slide 4
+			\item<1-> Selecionar o melhor modelo TRI para estimação dos parâmetros dos itens e da habilidade.
+			\item<2-> Analisar a qualidade dos Itens e da prova utilizando a TCT e a TRI. 
+			\item<3-> Determinar se os itens que compõem a prova são adequados para estimar a habilidade.
 		\end{itemize}
 	\end{frame}
 	
@@ -178,27 +159,107 @@
 	
 	\section{Referencial Teórico}
 	
-	%---------------------------------------------------------
-		\begin{comment}
+	% --------------- TCT ------------------------------------------
+
 	\begin{frame}
 		
-	
-			conteúdo...
+		\frametitle{Teoria Clássica dos Testes}
 		
-		\frametitle{Teoria do Traço Latente}
-
-		\begin{block}{Teoria do Traço Latente}
-			O conceito de "Teoria do Traço Latente" engloba uma classe de modelos matemáticos e traços subjacentes não diretamente observáveis. A Teoria de Resposta ao Item (TRI) é uma das maneira pela quais a Teoria do Traço latente é aplicado, especificamente no contexto de avaliações e testes, para estimar desempenho e habilidade. (PASQUALI, 2018)
-		\end{block}
+		A \textbf{Teoria clássica dos testes} é a teoria que antecede o TRI, 
+		com cálculos mais simples, onde é o foco é o teste como um todo.
+		
+	\end{frame}		
+	
+	\begin{frame}
+		
+		\frametitle{Teoria Clássica dos Testes}
+		
+		\begin{center}
+			\textbf{Dificuldade Clássica}
+		\end{center}
+		
+		É calculada pela proporção de itens incorretos.
+		
+		\[
+		ID_i =\dfrac{A_i}{n} 
+		\]
+		onde $A_i$ é o total de respostas incorretas no item e $n$ é o total de respostas ao item. 
+		
+	\end{frame}	
+	
+	\begin{frame}
+		
+		\frametitle{Teoria Clássica dos Testes}
+		\begin{center}
+			\textbf{Coeficiente Ponto Bisserial}
+		\end{center}
+		O coeficiente ponto bisserial representa uma métrica que avalia a relação entre o desempenho em um item e o desempenho geral na prova.
+		Auxiliando na identificação de questões que podem apresentar problemas, como respostas incorretas no gabarito.
+		
+		\[
+		r_{bis} = \frac{\bar{X}_p - \bar{X}_t}{S_t}
+		\sqrt{\frac{p_i}{1 - p_i}}
+		\]
+		
+		
+		onde:
+		
+		
+		$ \bar{X}_p :$ média dos escores dos examinados que responderam ao item corretamente;
+		
+		$ \bar{X}_t :$  média global dos escores;
+		
+		$ S_t :$  desvio padrão do teste;
+	\end{frame}
+	
+	
+	\begin{frame}
+		
+		\frametitle{Teoria Clássica dos Testes}
+		\begin{center}
+			\textbf{\textit{Alpha} de Cronbach}
+		\end{center}
+		Para avaliar se um conjunto de itens avaliam a mesma habilidade.
+		
+		
+		\[
+		\alpha = \frac{k}{k-1}(1 - \frac{\sum_{i=1}^{k}{s^2_i}}{s_T^2})
+		\]
+		
+		
+		$k$ é o numero de itens do teste;
+		
+		${s_i^2}$ a variância do item;
+		
+		${s_T^2}$ a variância total do teste.
 		
 		
 	\end{frame}
-\end{comment}
 	
-    %---------------------------------------------------------
+		
+	\begin{frame}
+		
+		\frametitle{Teoria Clássica dos Testes}
+		
+		\begin{center}
+			\textbf{\textit{Alpha} de Cronbach}
+		\end{center}
+		
+		
+		
+		O coeficiente calcula consistência no intervalo de 0 a 1, sendo quanto mais próximo de 1 maior a consistência, para Pasquali (2003), valores entre \textbf{0,7 e 0,9} são considerados bons, acima de 0,9	 indica itens repetitivos
+		
+	\end{frame}
+	
+	
+    % --------------- TRI ------------------------------------------
 	\begin{frame}
 		
 		\frametitle{Teoria de Resposta ao Item}
+		
+		\begin{center}
+			\textbf{Teoria de Resposta ao Item (TRI)}
+		\end{center}
 		
 		\begin{block}{Definição}
 			A TRI é um \textbf{conjunto de modelos} matemáticos que procuram representar a probabilidade de um indivíduo dar uma certa resposta a um item, como função dos parâmetros dos itens.
@@ -207,7 +268,6 @@
 		
 	\end{frame}
 	
-	%--------------------------------------------------
 	\begin{frame}
 		
 		\frametitle{Teoria de Resposta ao Item}
@@ -222,30 +282,24 @@
 		    
 		\end{itemize}
 	\end{frame}
-	
-	%--------------------------------------------------
+
 	
 	\begin{frame}
 		
 		\frametitle{Modelos Unidimensionais para Itens dicotômicos}
 		
-		Os principais modelos unidimensionais para itens dicotômicos são:\newline
+		Modelos unidimensionais assumem que a probabilidade de um indivíduo responder corretamente a um item depende de um único traço latente (habilidade) que se deseja medir. Serão apresentados 3 modelos para casos de itens dicotômicos. 
 		
-		\begin{itemize}
-			\item<1-> Modelo de Rasch ou 1PL;
-			\item<1-> Modelo de Birnbaum ou 2PL;
-			\item<1-> Modelo Logístico de 3 Parâmetros (3PL).
-			
-		\end{itemize}
+		
+
 	\end{frame}
 	
-		%--------------------------------------------------
-		\begin{frame}
+	\begin{frame}
 		
 		\frametitle{Modelos Unidimensionais para Itens dicotômicos }
 		
 		\begin{center}
-			Denotações:
+			\textbf{Denotações:}
 		\end{center}
 		
 		$ \boldsymbol{\theta} = (\theta_1, \cdots, \theta_n) \rightarrow $  vetor de habilidades dos $n$ indivíduos; \newline
@@ -265,9 +319,10 @@
 		
 	\end{frame}
 	
+	% Modelo 1PL
 	\begin{frame}
 		
-		\frametitle{Modelos Unidimensionais para Itens dicotômicos}
+		\frametitle{Modelo de 1 Parâmetro Logístico}
 		
 		\[
 				P({U_i}_j = 1|{\theta}_j, b_i) = 
@@ -279,11 +334,11 @@
 
 	\end{frame}
 	
-	%--------------------------------------------------
+	% Modelo 2PL
 	
 	\begin{frame}
 		
-		\frametitle{Modelos Unidimensionais para Itens dicotômicos}
+		\frametitle{Modelo de 2 Parâmetros Logísticos}
 		
 		\[
 			P({U_i}_j = 1|{\theta}_j, a_i, b_i) =
@@ -291,59 +346,68 @@
 		\]
 		
 		\begin{figure}
-			\includegraphics[width=10cm,height=6cm]{2pl.png}
+			\includegraphics[width=10cm,height=6cm]{../2PL.png}
 		\end{figure}
 
 		
 	\end{frame}
 	
-	%--------------------------------------------------
+	% Modelo 3PL
 	
 	\begin{frame}
 		
-		\frametitle{Modelos Unidimensionais para Itens dicotômicos}
+		\frametitle{Modelo de 3 Parâmetros Logísticos}
 		\[
 			P({U_i}_j = 1|{\theta}_j, a_i, b_i, c_i) =
 			c_i+(1-c_i)\frac{1}{1+e^{-Da_i(\theta_j- b_i)}}
 		\]
 		\begin{figure}
-			\includegraphics[width=10cm,height=6cm]{3pl.png}
+			\includegraphics[width=10cm,height=6cm]{../3PLcci.png}
 		\end{figure}
 
 		
 	\end{frame}
 
-	%--------------------------------------------------
-	
+	% Função de Informação do Item	
 	\begin{frame}
 		
 		\frametitle{Função de Informação do Item}
 		
-			\begin{center}
-			Função de Informação do Item
+		\begin{center}
+			\textbf{Função de Informação do Item}
 		\end{center}
 		
 		$I_i(\theta)$ representa a quantidade de informação que o item $i$ trás sobre a
 		habilidade $\theta$.
 		
 		\[
-		I_i(\theta) = \dfrac{[\frac{d}{d\theta}P_i(\theta)]^2}{P_i(\theta)Q_i(\theta)}
-		\]	
+		I_i(\theta) =  D^2 a_i^2\frac{Q_i(\theta)}{P_i(\theta)} \left[\frac{P_i(\theta) - c_i}{1 - c_i}\right]^2
+		\] \\ \pause	
+				A Informação é maior quando:
 		
-		$P_i(\theta) = P(U_{ij} = 1| \theta) $ e\\ $ Q_i(\theta) = 1 - P_i(\theta) $
+		\begin{itemize}
+			\item<1-> Maior o valor de $a_i$;
+			\item<1-> Menor o valor de $c_i$;
+			\item<1-> Quando $b_i$ se aproxima de $\theta_j$.
+			
+		\end{itemize}
+		%$P_i(\theta) = P(U_{ij} = 1| \theta) $ e\\ $ Q_i(\theta) = 1 - P_i(\theta) $
 
 	\end{frame}
 	
+	
+	% função de informação do item - gráfico
 	\begin{frame}
 		
 		\frametitle{Função de Informação do Item}
 
 		\begin{figure}
-			\includegraphics[width=10cm,height=8cm]{fii.png}
+			\includegraphics[width=10cm,height=8cm]{../info_com_cci.png}
 		\end{figure}
 		
 	\end{frame}
-		
+	
+	% Função de Informação do Teste	
 	\begin{frame}
 			
 			\frametitle{Função de Informação do Teste}
@@ -361,7 +425,7 @@
 			
 	\end{frame}	
 		
-		
+	% Função de Informação do Teste	- gráfico
 	\begin{frame}
 		
 		\frametitle{Função de Informação do Teste}
@@ -371,41 +435,23 @@
 		\end{figure}
 		
 	
-	
-		
-		
+			
 		
 	\end{frame}
 	
 	\begin{frame}
 		
-		\frametitle{Pressupostos dos Modelos Unidimensionais}
-		\begin{center}
-			Pressupostos dos Modelos Unidimensionais:
-		\end{center}
+		\frametitle{Suposições do modelo TRI}
+	
 		\begin{itemize}
-			\item<1-> \textbf{Unidimensionalidade:} Pressupões que o teste mede a mesma variável latente.
 			
-			\item<1-> \textbf{Independência:} Respostas entre itens e indivíduos deve ser independentes.
+			\item<1-> Apenas os traços latentes e os parâmetros são necessários para modelar a probabilidade dos indivíduos.
+						
+			\item<1-> Em modelos unidimensionais, apenas uma dimensão do traço latente e necessária, ou seja, o teste mede a mesma variável latente. (\textbf{Unidimensionalidade})
+			
+			\item<1-> Respostas entre itens e indivíduos são independentes \textbf{Independência}.
 	
 		\end{itemize}
-		
-	\end{frame}
-	
-	\begin{frame}
-		
-		\frametitle{Estimação dos Parâmetros}
-		\begin{center}
-			Para estimação dos itens, existem 3 situações:
-		\end{center}
-		\begin{enumerate}
-			\item<1-> Habilidade $\theta_j$ é conhecida e deseja-se estimar os parâmetros dos itens
-			$ (a_i, b_i, c_i) $ .
-			
-			\item<1-> Os Parâmetros dos itens são conhecidos e deseja-se estimar a habilidade.
-			
-			\item<1-> Tanto as habilidades quantos os parâmetros dos Itens são desconhecidos.
-		\end{enumerate}
 		
 	\end{frame}
 	
@@ -439,13 +485,33 @@
 		
 		\frametitle{Estimação dos Parâmetros }
 		
-		Considerando a 1ª Situação, onde $ \boldsymbol{\theta} $ é conhecido, dados os pressupostos de independência e unidimensionalidade. A verossimilhança de  $ \boldsymbol{\zeta} $ pode ser escrita como:
+		Em geral, temos as respostas do instrumento $U_{ij}$ e desejamos estimar tanto $\boldsymbol{\zeta}$ quanto $\boldsymbol{\theta}$.
+		
+		Para estimação conjunta, Birnbaum (1968), propôs um processo vai e volta.\newline
+		
+		\begin{enumerate}
+			\item Inicia com uma estimativa grosseira de $\boldsymbol{\theta}$ considerando que $\boldsymbol{\zeta}$ é conhecido.
+			\item Estima-se $\boldsymbol{\zeta}$ com $\boldsymbol{\theta}$ conhecido (estimado na primeira etapa).\newline 
+		\end{enumerate} 
+		
+		O Processo é repetido até a convergência dos parâmetros.
+		
+	\end{frame}
+	
+	\begin{frame}
+		
+		\frametitle{Estimação dos Parâmetros }
+		
+		\begin{center}
+			\textbf{Estimador de Máxima Verossimilhança (EMV)}
+		\end{center}
+		
+		Considerando  $ \boldsymbol{\theta} $ conhecido, dados as suposições de independência e unidimensionalidade. A verossimilhança de  $ \boldsymbol{\zeta} $ pode ser escrita como:
 		\[
 		L(\boldsymbol{\zeta}) =  \prod_{j=1}^{n}\prod_{i=1}^{I}P(U_{ij} = u_{ji}|\theta_j) = \prod_{j=1}^{n}\prod_{i=1}^{I}P_{ji}^{u_{ji}}Q_{ji}^{1-u_{ji}}
 		\]
-		
-		
-	\end{frame}
+			
+   \end{frame}
 	
 	\begin{frame}
 		
@@ -471,20 +537,20 @@
 		\end{center}
 
 			
-	\end{frame}
+\end{frame}
 	
 	\begin{frame}
 		
 		\frametitle{Estimação dos Parâmetros }
 		
-		Na situação inversa,  onde $\boldsymbol{\zeta}$ é conhecido e deseja-se estimar $ \theta_j $, o EMV de $\theta_j$, é equivalente a solução da equação
+		Considerando $\boldsymbol{\zeta}$, o EMV de $\theta_j$, é equivalente a solução da equação
 		$\dfrac{\partial~log~ L(\boldsymbol{\theta})}{\partial \theta_j} = 0$ .
 		A equação de estimação é dada por:\newline \newline
 		
 		
 		$ \theta_j : D\sum_{i=1}^{I}{a_i(1-c_i)(u_{ji}-P_{ji})W_{ji}} = 0 $ \newline \newline
 		
-		Os EMV para $ \boldsymbol{\zeta}_i$ e $\theta_j$ não possuem soluções explicitas, por isso é necessário o uso de métodos interativos,  como o algoritmo Newton-Raphson e o método de ``Scoring" de Fisher.
+		Os EMV para $ \boldsymbol{\zeta}_i$ e $\theta_j$ não possuem soluções explicitas, por isso é necessário o uso de métodos interativos de integração numérica.
 		
 	\end{frame}
 	
@@ -492,36 +558,23 @@
 		
 		\frametitle{Estimação dos Parâmetros }
 		
-		Estimação Conjunta: Birnbaum (1968), propôs um processo vai e volta.\newline
+		\begin{center}
+			\textbf{Estimador de Máxima Verossimilhança Marginal (EMVM)}
+		\end{center}
 		
-		\begin{enumerate}
-			\item Inicia com uma estimativa grosseira de $\boldsymbol{\theta}$ considerando que $\boldsymbol{\zeta}$ é conhecido.
-			\item Estima-se $\boldsymbol{\zeta}$ com $\boldsymbol{\theta}$ conhecido (estimado na primeira etapa).\newline 
-		\end{enumerate} 
+					
+		Para isso, assume-se que os respondentes são uma amostra de uma população cuja a habilidade segue uma determinada função de densidade $g(\theta|\boldsymbol{\eta})$, onde $\boldsymbol{\eta}$ é o vetor de parâmetros da distribuição da habilidade, no caso de uma distribuição normal padrão $\boldsymbol{\eta} = (\mu = 0, \sigma = 1) $. Usando a independência entre indivíduos a probabilidade associada ao vetor de respostas $\boldsymbol{U}$, pode ser escrito como:
 		
-		O Processo é repetido até a convergência dos parâmetros.
+		\[
+		P(\boldsymbol{u}_{..}|\boldsymbol{\zeta}) = \prod_{j=1}^{n}P(\boldsymbol{u}_{j.}|\boldsymbol{\zeta}, \boldsymbol{\eta})
+		\]
 		
-	\end{frame}
-	
-	\begin{frame}
 		
-		\frametitle{Estimação dos Parâmetros }
 		
-		Além do método de EMV, existem outros, como:
-		
-		\begin{itemize}
-			
-			\item Estimação de Máxima Verossimilhança Marginal (EMVM)
-			
-			\item Estimação Bayesiana
-			
-		\end{itemize}
-		
-	
 		
 	\end{frame}
 	\begin{comment}
-		conteúdo...\begin{frame}
+		\begin{frame}
 			
 			\frametitle{Estimação dos Parâmetros }
 			
@@ -536,114 +589,130 @@
 		\end{frame}
 	\end{comment}
 	
-	\begin{frame}
+\begin{frame}
 		
-		\frametitle{Teoria Clássica dos Testes}
+		\frametitle{Avaliação do Modelo}
 		
-		A \textbf{Teoria clássica dos testes} é a teoria que antecede o TRI, 
-		com cálculos mais simples, onde é o foco é o teste como um todo.
+	   \begin{center}
+	   	\textbf{Teste Razão de verossimilhança} 
+	   	\hfill
+	   \end{center}
 		
-	\end{frame}		
-	
-	\begin{frame}
-		
-		\frametitle{Teoria Clássica dos Testes}
-		\begin{center}
-			\textbf{Coeficiente Ponto Bisserial}
-		\end{center}
-		O coeficiente ponto bisserial representa uma métrica que avalia a relação entre o desempenho em um item e o desempenho geral na prova.
-		Auxiliando na identificação de questões que podem apresentar problemas, como respostas incorretas no gabarito.
+		A razão de verossimilhança é calculada como a diferença entre os logaritmos das verossimilhanças dos dois modelos
 		
 		\[
-			r_{bis} = \frac{\bar{X}_p - \bar{X}_t}{S_t}
-			\sqrt{\frac{p_i}{1 - p_i}}
+		\lambda = -2 (\text{log} L_0 - \text{log} L_1)
 		\]
-			
-	
-		onde:
 		
+		onde $L_0$ representa a Verossimilhança do modelo restrito e
+		$L_1$ verossimilhança do modelo completo, Este teste segue uma distribuição assintoticamente qui-quadrado $(\chi^2$).
 		
-		$ \bar{X}_p :$ média dos escores dos examinados que responderam ao item corretamente;
-		
-		$ \bar{X}_t :$  média global dos escores;
-		
-		$ S_t :$  desvio padrão do teste;
-		\end{frame}
+	\end{frame}	
+
+\begin{frame}
 	
-	
-	\begin{frame}
-	
-	\frametitle{Teoria Clássica dos Testes}
+	\frametitle{Avaliação do Modelo}
+
 	\begin{center}
-		\textbf{\textit{Alpha} de Cronbach}
+		\textbf{Teste Razão de verossimilhança} 
+		\hfill
 	\end{center}
-		Para avaliar a unidimensionalidade.
 	
-	
-	\[
-		\alpha = \frac{k}{k-1}(1 - \frac{\sum_{i=1}^{k}{s^2_i}}{s_T^2})
-	\]
-	
-	
-	$k$ é o numero de itens do teste;
-	
-	${s_i^2}$ a variância do item;
-	
-	${s_T^2}$ a variância total do teste.
-	
+	Hipóteses:\\
+	\hfill 
 
-	\end{frame}
-
+	$H_0$: o modelo restrito é suficiente para explicar os dados.\\
+	$H_1$: o modelo completo, com mais parâmetros, proporciona um ajuste significativamente melhor.\\
+	\hfill
 	
+	Se o valor de $\lambda$ for grande o suficiente, rejeita-se a hipótese nula em favor do modelo completo. 
 	
+\end{frame}
 	
-	\begin{frame}
-	
-	\frametitle{Teoria Clássica dos Testes}
-	
+\begin{frame}
+		
+		\frametitle{Avaliação do Modelo}
+		
 		\begin{center}
-		\textbf{\textit{Alpha} de Cronbach}
+			\textbf{Estatística M$_2$} 
+			\hfill
 		\end{center}
-	
-		O coeficiente calcula consistência no intervalo de 0 a 1, sendo quanto mais próximo de 1 maior a consistência, para Pasquali (2003), valores em torno de 0,8 são considerados razoáveis.
 		
-	\end{frame}
+	A estatística (M$_2$) é parte de uma família de estatísticas de informação limitada, denominada M$_r$, desenvolvida para avaliar modelos TRI.
+	A estatística M$_2$ é particularmente útil porque utiliza momentos de ordem 2 em vez da tabela de contingência completa, o que a torna mais adequada para modelos TRI.
+	\cite{maydeu2006limited} demonstraram que, especialmente quando $r=2$, a estatística M$_2$ apresenta desempenho superior em comparação com estatísticas de informação completa. 
 		
-	\begin{frame}
-		
-		\frametitle{Escalas de habilidade}
-		
-		\begin{figure}
-			\includegraphics[width=10cm,height=7cm]{escala.jpg}
-		\end{figure}	
-	
-	\end{frame}
-	
+\end{frame}		
 
-	\begin{frame}
-		\frametitle{Itens Âncoras}
-		\begin{enumerate}
-			\item Ser respondido corretamente por pelo menos 65\% dos respondentes com aquele nível de habilidade.
+\begin{frame}
+	
+	\frametitle{Avaliação do Modelo}
+	
+	\begin{center}
+		\textbf{Estatística M$_2$} 
+		\hfill
+	\end{center}
+	
+		Para avaliar a qualidade do modelo, são consideradas as hipóteses:
+		\[
+		\begin{cases}
+			H_0: \boldsymbol{\pi} = \boldsymbol{\pi}(\boldsymbol{\theta}) \\
 			
-			\[
-			P(U = 1| \theta = Z ) \geq 0,65
-			\]
-			
-			\item Ser respondido corretamente por no máximo 50\% dos respondentes que estão em um nível abaixo.
-			
-			\[
-			P(U = 1| \theta = Y ) < 0,50
-			\]
-			
-			\item A diferença entre a proporção de respondentes de diferentes níveis deve ser de pelo menos 30\%.
-			
-			\[
-			P(U = 1| \theta = Z ) - P(U = 1| \theta = Y ) \geq  0,30
-			\]
-			
-			
-		\end{enumerate}
-	\end{frame}
+			H_1: \boldsymbol{\pi} \neq \boldsymbol{\pi}(\boldsymbol{\theta})
+		\end{cases}
+		\]
+
+	Ou seja, avalia-se se o vetor de probabilidade populacional $\boldsymbol{\pi}$ surge do modelo paramétrico $\boldsymbol{\pi}(\boldsymbol{\theta})$ contra a alternativa de que o modelo está incorreto \cite{maydeu2006limited}.
+	
+\end{frame}	
+
+\begin{frame}
+	
+	\frametitle{Avaliação do Modelo}
+	
+	\begin{center}
+		\textbf{RMSEA} 
+		\hfill
+	\end{center}
+	
+	O RMSEA (índice de raiz quadrada média do erro de aproximação) é um índice de ajuste absoluto que mede a discrepância média entre o modelo especificado e os dados observados. O valor do RMSEA varia de 0 a 1, sendo que quanto mais próximo a 0, melhor o modelo \cite{kline2016principles}.
+	
+\end{frame}	
+
+\begin{frame}
+	
+	\frametitle{Avaliação do Modelo}
+	
+	\begin{center}
+		\textbf{RMSEA} 
+		\hfill
+	\end{center}
+		 \cite{maydeu2014assessing} propôs a estatística de informação limitada RMSEA$_{2}$ para aplicações em modelos TRI, na qual utiliza momentos bivariados e é estimado através do M$_2$. O RMSEA$_2$ pode ser estimado por:
+		
+		\[
+		\hat{\epsilon}_2 = \sqrt{Max\left(\frac{\hat{M_{2}} - df_{2}}
+			{N \times df_{2}}, 0 \right) } ,
+		\]
+	
+\end{frame}	
+
+\begin{frame}
+	
+	\frametitle{Avaliação do Modelo}
+	
+	\begin{center}
+		\textbf{TLI e CFI} 
+		\hfill
+	\end{center}
+	
+	Outro método para avaliar o modelo são os índices TLI (\textit{Tucker–Lewis Index}) e CFI (\textit{Comparative Fit Index}).
+	
+	 O TLI, ou Índice Tucker-Lewis, compara o modelo estimado com um modelo teórico nulo e visa determinar se todos os indicadores estão associados a um único fator latente.
+	 Já o CFI, ou Índice de Ajuste Comparativo, é um indicador adicional utilizado para comparar modelos alternativos. 
+	 
+	 Ambos os índices sugerem um bom ajuste quando seus valores se aproximam de 1 \cite{hair2009multivariada}.
+\end{frame}
+
 	%---------------------------------------------------------
 	\section{Metodologia}
 	
@@ -653,13 +722,12 @@
 		
 		\begin{center}	Dados:	\end{center}
 		
-		Os dados utilizados serão de uma aplicação de um simulado realizado pela empresa TRIeduc	Inteligência Educacional, o simulado abrange as áreas de conhecimento:\\ 
-		Linguagens, Ciências Humanas,
-		Matemática e Ciências da Natureza, onde cada prova conta com 45 questões. \pause
-		
-		\begin{center}	Valores Faltantes:	\end{center}
-		
-		Serão analisadas apenas as provas com todas as respostas, excluindo as com questões em branco.
+		Os dados utilizados foram de um simulado online de Ciências Humanas aplicado pela empresa de tecnologia educacional estuda.com
+		30 itens abertos de provas variadas.\\
+		\pause
+		Os dados foram dicotomizados em 1 (certo) e 0 (errado).zz
+		\pause
+		O simulado teve um total de 1055 respondentes, sendo que desses, foram analisados 664	responderam a prova inteira.
 
 	\end{frame}
 	
@@ -672,18 +740,487 @@
 		- \textbf{ltm} (RIZOPOULOS, 2006).\\ \pause
 		
 		\begin{center}	Critério de avaliação:	\end{center}
-		Será avaliado o Akaike Information Criterion (AIC) e o Deviance Information Criterion (DIC)	para selecionar o melhor modelo. Segundo esses critérios, o modelo com o menor valores de AIC e DIC
-		se ajustam melhor aos dados.
+		
+		O teste de razão de verossimilhança foi usado para verificar se a adição de parâmetros melhora o modelo. Para avaliar o ajuste do modelo foi utilizada a estatística M$_2$ proposta por \cite{maydeu2005limited}. 
+		Além disso foram avaliados os índices RMSEA, TLI e CFI.
+
+	\end{frame}
+	%---------------------------------------------------------
+	\section{Resultados}
+	
+	\begin{frame}
+		
+	\frametitle{Teoria Clássica dos Testes}
+		
+	\begin{figure}[H]
+	%	\caption{Distribuição do total de acertos do simulado.}
+		\includegraphics[width=10cm,height=6cm]{hist_acertos.png}
+	\end{figure}
+		
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{Índices TCT - Parte 1}
+		
+		\begin{table}[H]
+			\centering
+			\scriptsize % reduz o tamanho da fonte
+			\caption{Índices TCT (Itens 1 a 15)}
+			\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}cccccc@{}}
+				\hline
+				\textbf{Item} & \makecell{\textbf{\% Erro}} & \makecell{\textbf{\% Acerto}} & \makecell{\textbf{Discriminação} \\ \textbf{($D_i$)}} & \makecell{\textbf{Ponto} \\ \textbf{Bisserial}} & \makecell{\textbf{Cronbach} \\ \textbf{Excluindo item}} \\ 
+				\hline
+				1  & 32,2\% & 67,8\% & 0,552 & 0,468 & 0,730 \\ 
+				2  & 56,0\% & 44,0\% & 0,394 & 0,319 & 0,741 \\ 
+				3  & 49,4\% & 50,6\% & 0,551 & 0,468 & 0,730 \\ 
+				4  & 21,5\% & 78,5\% & 0,464 & 0,486 & 0,729 \\ 
+				5  & 61,0\% & 39,0\% & 0,507 & 0,415 & 0,734 \\ 
+				6  & 63,7\% & 36,3\% & 0,367 & 0,317 & 0,740 \\ 
+				7  & 48,6\% & 51,4\% & 0,523 & 0,431 & 0,733 \\ 
+				8  & 41,4\% & 58,6\% & 0,402 & 0,358 & 0,738 \\ 
+				9  & 73,9\% & 26,1\% & 0,307 & \textbf{0,290} & 0,741 \\ 
+				10 & 23,0\% & 77,0\% & 0,390 & 0,402 & 0,734 \\ 
+				11 & 11,9\% & 88,1\% & 0,366 & 0,488 & 0,731 \\ 
+				12 & 32,8\% & 67,2\% & 0,564 & 0,507 & 0,727 \\ 
+				13 & 54,1\% & 45,9\% & 0,541 & 0,449 & 0,731 \\ 
+				14 & 61,0\% & 39,0\% & 0,358 & \textbf{0,299} & 0,742 \\ 
+				15 & 86,1\% & 13,9\% & \textbf{0,155} & \textbf{0,205} & 0,744 \\ 
+				\hline
+			\end{tabular*}
+		\end{table}
+	\end{frame}
+	
+\begin{frame}
+		\frametitle{Índices TCT - Parte 2}
+		
+		\begin{table}[H]
+			\centering
+			\scriptsize % reduz o tamanho da fonte
+			\caption{Índices TCT (Itens 16 a 30)}
+			\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}cccccc@{}}
+				\hline
+				\textbf{Item} & \makecell{\textbf{\% Erro}} & \makecell{\textbf{\% Acerto}} & \makecell{\textbf{Discriminação} \\ \textbf{($D_i$)}} & \makecell{\textbf{Ponto} \\ \textbf{Bisserial}} & \makecell{\textbf{Cronbach} \\ \textbf{Excluindo item}} \\ 
+				\hline
+				16 & 24,4\% & 75,6\% & 0,441 & 0,431 & 0,733 \\ 
+				17 & 25,0\% & 75,0\% & 0,399 & 0,399 & 0,735 \\ 
+				18 & 22,4\% & 77,6\% & 0,423 & 0,439 & 0,732 \\ 
+				19 & 19,4\% & 80,6\% & 0,391 & 0,431 & 0,733 \\ 
+				20 & 20,8\% & 79,2\% & \textbf{0,297} & 0,306 & 0,740 \\ 
+				21 & 8,1\%  & 91,9\% & \textbf{0,242} & 0,450 & \textbf{0,734}\\ 
+				22 & 65,7\% & 34,3\% & \textbf{0,241} & \textbf{0,235} & \textbf{0,745} \\ 
+				23 & 49,2\% & 50,8\% & 0,429 & 0,357 & 0,738 \\ 
+				24 & 22,1\% & 77,9\% & 0,307 & 0,336 & 0,738 \\ 
+				25 & 61,1\% & 38,9\% & 0,399 & 0,350 & 0,738 \\ 
+				26 & 51,1\% & 48,9\% & 0,390 & 0,305 & 0,742 \\ 
+				27 & 85,8\% & 14,2\% & \textbf{0,000} & \textbf{0,006} &\textbf{0,753} \\ 
+				28 & 77,0\% & 23,0\% & \textcolor{red}{\textbf{-0,068}} & \textcolor{red}{\textbf{-0,061}} & \textbf{0,760} \\ 
+				29 & 57,5\% & 42,5\% & 0,389 & 0,324 & 0,740 \\ 
+				30 & 87,5\% & 12,5\% & \textbf{0,078} &\textbf{0,119} & \textbf{0,747} \\ 
+				\hline
+				\textbf{Total} &&&&& 0,744 \\
+				\hline
+			\end{tabular*}
+		\end{table}
+	\end{frame}
+		
+	
+	
+	\begin{frame}
+		
+		\frametitle{Teoria Clássica dos Testes}
+		
+			
+			Observado um aumento no alfa de Cronbach ao excluir os itens:\\
+			21, 22, 27, 28 e 30.
+			
+			Itens com Ponto bisserial abaixo de 0,3:\\
+			28, 27, 30, 15, 22, 9 e 14
+			
+			Itens com Discriminação Clássica abaixo de 0,3:\\
+			28, 27, 30, 15, 22, 21 e 20
+%		\begin{table}[ht]
+%	\centering
+%	\caption{Classificação do item de acordo com a discriminação clássica.}			
+
+%			 \resizebox{\textwidth}{!}{%
+%			\begin{tabular}{lc}
+%				\hline
+%				\textbf{Classificação}  & \textbf{Itens}  \\ 
+%				\hline
+%				Item bom  & 1, 3, 4, 5, 7, 8, 12, 13, 16, 18 e 23.  \\ 
+%				\hline
+%				Item bom, mas sujeito a aprimoramento & 
+%				2, 6, 9, 10, 11, 14, 17, 19, 23, 24, 25, 26 e 29\\ 
+%				\hline
+%				Item marginal, sujeito a reelaboração & 20, 21 e 22\\ 
+%				\hline
+%				Item deficiente, que deve ser rejeitado &  15, 27, 28 e 30\\ 
+%				\hline
+%			\end{tabular}%
+%		}
+%		\end{table}
+
+		
+	\end{frame}
+	
+	\begin{frame}
+		
+		\frametitle{Teoria Clássica dos Testes}
+		
+	\begin{table}[H]
+		\centering
+		\caption{Distribuição ideal dos itens por ID.}
+		\resizebox{\textwidth}{!}{%
+		\begin{tabular}{lcccc}
+			\hline
+			\textbf{Faixa} & 
+			\makecell{\textbf{Total} \\ \textbf{Itens}} & 
+			\makecell{\textbf{Distribuição} \\ \textbf{Esperada}} & 
+			\makecell{\textbf{Distribuição} \\ \textbf{Obtida}}  & \textbf{Itens} \\ 
+			\hline
+			\textbf{I} & 3 & 10\% &  10,0\% & 11, 19 e 21\\ 
+			\hline
+			\textbf{II} & 9 & 20\% &  30,0\% & 1, 4, 10, 12, 16, 17, 18, 20 e 24 \\
+			\hline
+			\textbf{III} & 8 & 40\% & 26,7\% & 2, 3, 7, 8, 13, 23, 26 e 29 \\ 
+			\hline
+			\textbf{IV}& 7 & 20\% & 23,3\%  & 5, 6, 9, 14, 22, 25 e 28\\ 
+			\hline
+			\textbf{V} & 3 & 10\% & 10,0\% & 15, 27 e 30\\ 
+			\hline
+		\end{tabular}%
+	}
+	
+	
+	\end{table}
+	\end{frame}
+	
+	\begin{frame}
+	
+	\begin{figure}
+		\caption{Distribuição da dificuldade clássica dos itens.}
+		\includegraphics[width=10cm]{../dificuldade_tct.png}
+	\end{figure}
+
+		
+	\end{frame}
+	
+	
+	
+	
+	
+	\begin{frame}
+		
+		\frametitle{Análise TRI - Avaliação do Modelo}
+		
+		\begin{center}
+			\textbf{Avaliação do Modelo}
+		\end{center}
+		
+		\begin{table}
+			\centering
+			\caption{Teste Razão de verossimilhança.}
+			\begin{tabular}{lcccc}
+				\hline
+				\textbf{Modelo} &  \textbf{ log-verossimilhança }& $\boldsymbol{\chi^2}$ & \textbf{df} & \textbf{p-valor }\\ 
+				\hline
+				\textbf{1PL} \textbf{(1,b,0)} &  -10991,57 &  &  &  \\ 
+				\hline
+				\textbf{2PL} \textbf{(a,b,0)} & -10768,56 & 446,01 & 29 & 0,000 \\ 
+				\hline
+				\textbf{3PL} \textbf{(a,b,c)} & -10741,91 & 53,29 & 30 & 0,006 \\ 
+				\hline
+			\end{tabular}\\
+		\end{table}
+		
+	O modelo bidimensional também foi testado, porém não obteve convergência dos estimadores.
 		
 	\end{frame}
 	
 
+\begin{frame}
+	
+	\frametitle{Análise TRI - Avaliação do Modelo}
+	
+	\begin{center}
+		\textbf{Avaliação do Modelo}
+	\end{center}
+	
+	
+	\begin{table}
+		\centering
+		\caption{Teste de adequação do modelo.}
+		\begin{tabular}{lcccccc}
+			\hline
+			\textbf{Modelo} & \textbf{M2}& \textbf{df} & \textbf{p-valor} & \textbf{RMSEA} & \textbf{TLI} & \textbf{CFI} \\ 
+			\hline 
+			\textbf{1PL} & 1167 & 434 & 0,0000 & 0,0504 & 0,81 & 0,81 \\ 
+		\hline	\textbf{2PL} & 485 & 405 & 0,0036 & 0,0173 & 0,98 & 0,98 \\ 
+		\hline	\textbf{3PL} & 371 & 375 & 0,5502 & 0,0000 & 1,00 & 1,00 \\ 
+			\hline
+		\end{tabular}
+	\end{table}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Análise TRI - Modelo 3PL}
+	\scriptsize % reduz o tamanho da fonte para caber no slide
+	\begin{table}[H]
+		\centering
+		\caption{Parâmetros do modelo 3PL}
+		\begin{tabular*}{0.95\textwidth}{@{\extracolsep{\fill}}cccc|cccc}
+			\hline
+			\textbf{Item} & \textbf{a$_i$} & \textbf{b$_i$} & \textbf{c$_i$} & \textbf{Item} &  \textbf{a$_i$} & \textbf{b$_i$} & \textbf{c$_i$} \\ 
+			\hline
+			1 & 1,94 & -0,17 & 0,27 & 16 & 1,19 & -0,91 & 0,18 \\ 
+			2 & 3,08 & 1,17 & 0,34 & 17 & 1,00 & -1,31 & 0,00 \\ 
+			3 & 1,47 & 0,30 & 0,14 & 18 & 1,20 & -1,29 & 0,01 \\ 
+			4 & 1,50 & -1,16 & 0,02 & 19 & 1,36 & -1,38 & 0,00 \\ 
+			5 & 1,12 & 0,77 & 0,08 & 20 & 0,68 & -2,14 & 0,01 \\ 
+			6 & 0,60 & 1,23 & 0,04 & 21 & 2,46 & -1,74 & 0,00 \\ 
+			7 & 0,92 & 0,06 & 0,04 & 22 & 0,32 & 2,20 & 0,01 \\ 
+			8 & 0,62 & -0,60 & 0,00 & 23 & 0,68 & -0,04 & 0,00 \\ 
+			9 & 0,98 & 2,00 & 0,12 & 24 & 0,73 & -1,91 & 0,00 \\ 
+			10 & 1,44 & -0,44 & 0,40 & 25 & 1,83 & 1,15 & 0,23 \\ 
+			11 & 2,16 & -1,52 & 0,00 & 26 & 0,51 & 0,10 & 0,00 \\ 
+			12 & 1,34 & -0,70 & 0,00 & \textbf{\textcolor{red}{27}} & \textbf{\textcolor{red}{-1,16}} & -3,45 & 0,11 \\ 
+			13 & 1,80 & 0,61 & 0,19 & \textbf{\textcolor{red}{28}} & \textbf{\textcolor{red}{-0,46}} & -2,76 & 0,00 \\ 
+			14 & 0,48 & 1,01 & 0,01 & 29 & 0,87 & 0,93 & 0,14 \\ 
+			15 & 0,54 & 3,63 & 0,01 & 30 & 3,21 & 2,22 & 0,10 \\ 
+			\hline
+		\end{tabular*}
+	\end{table}
+\end{frame}
+
+
+	
+\begin{frame}
+		
+		\frametitle{Análise TRI - Modelo 3PL}
+		
+		\begin{figure}
+			\includegraphics[width=10cm]{../TCCfigura01.png}
+		\end{figure}
+		
+	\end{frame}
+	
+	\begin{frame}
+		
+		\frametitle{Análise TRI - Modelo 3PL}
+		
+		\begin{figure}
+			\includegraphics[width=12cm]{../item27.png}
+		\end{figure}
+		
+	\end{frame}
+	
+	\begin{frame}
+		
+	\frametitle{Análise TRI - Modelo 3PL}
+		
+		\begin{figure}
+				\includegraphics[width=10cm]{../alternativas2_item27.png}
+		\end{figure}
+		
+	\end{frame}
+	
+
+	\begin{frame}
+	
+	\frametitle{Análise TRI - Modelo 3PL}
+	
+	\begin{figure}
+		\includegraphics[width=10cm]{../alternativas2_item28.png}
+	\end{figure}
+	
+	\end{frame}
+	%--------------------------------------------------------------
+	\begin{frame}
+		
+	 \frametitle{Teoria de Resposta ao Item}
+		
+		m22
+		
+	\end{frame}	
+	
+	
+% Slide 1
+\begin{frame}
+	\frametitle{Análise TRI - Modelo 3PL}
+	
+	\begin{table}[ht]
+		\centering
+			\caption{Parâmetros do modelo 3PL - 2º Ajuste}
+		\scriptsize % reduz o tamanho da fonte para caber melhor
+		\begin{tabular}{ccccc}
+			\hline
+			\textbf{Item} & \textbf{a} & \textbf{b} & \textbf{c} & \textbf{Informação Máxima} \\ 
+			\hline 
+			22 & 0,32 & 2,12 & 0,01 & 0,03 \\ 
+			14 & 0,49 & 0,98 & 0,00 & 0,06 \\ 
+			15 & 0,53 & 3,68 & 0,00 & 0,06 \\ 
+			26 & 0,51 & 0,10 & 0,00 & 0,07 \\ 
+			6  & 0,59 & 1,23 & 0,04 & 0,08 \\ 
+			8  & 0,62 & -0,60 & 0,00 & 0,10 \\ 
+			23 & 0,67 & -0,04 & 0,00 & 0,11 \\ 
+			20 & 0,68 & -2,16 & 0,00 & 0,11 \\ 
+			24 & 0,72 & -1,92 & 0,00 & 0,13 \\ 
+			29 & 0,90 & 0,93 & 0,14 & 0,15 \\ 
+			\hline
+		\end{tabular}%
+	\end{table}
+	
+\end{frame}
+
+% Slide 2
+\begin{frame}
+	\frametitle{Análise TRI - Modelo 3PL}
+	
+	\begin{table}[ht]
+		\centering
+			\caption{Parâmetros do modelo 3PL - 2º Ajuste}
+		\scriptsize % reduz o tamanho da fonte para caber melhor
+		\begin{tabular}{ccccc}
+			\hline
+			\textbf{Item} & \textbf{a} & \textbf{b} & \textbf{c} & \textbf{Informação Máxima} \\ 
+			\hline 
+			28 & 0,86 & -1,06 & 0,00 & 0,18 \\ 
+			7  & 0,96 & 0,14 & 0,07 & 0,20 \\ 
+			9  & 1,02 & 2,01 & 0,13 & 0,20 \\ 
+			3  & 1,49 & 0,32 & 0,15 & 0,42 \\ 
+			12 & 1,33 & -0,70 & 0,00 & 0,44 \\ 
+			19 & 1,37 & -1,37 & 0,00 & 0,47 \\ 
+			25 & 1,83 & 1,15 & 0,23 & 0,54 \\ 
+			1  & 1,88 & -0,22 & 0,25 & 0,54 \\ 
+			13 & 1,77 & 0,59 & 0,18 & 0,55 \\ 
+			4  & 1,50 & -1,18 & 0,00 & 0,56 \\ 
+			11 & 2,13 & -1,53 & 0,00 & 1,13 \\ 
+			2  & 2,96 & 1,18 & 0,34 & 1,14 \\ 
+			21 & 2,50 & -1,73 & 0,00 & 1,56 \\ 
+			30 & 3,41 & 2,18 & 0,10 & 2,37 \\ 
+			\hline
+		\end{tabular}%
+	\end{table}
+	
+\end{frame}
+
+	
+	\begin{frame}
+		
+		\frametitle{Análise TRI - Modelo 3PL}
+		\begin{figure}
+				\caption{Curva de informação dos itens.}
+				\includegraphics[width=10cm]{../info_itens.png}
+		\end{figure}
+	
+	\end{frame}	
+	
+	\begin{frame}
+		
+		\frametitle{Análise TRI - Modelo 3PL - Informação do teste}
+		\begin{figure}
+			\caption{Curva de informação e erro padrão do teste.}
+	  	    \includegraphics[width=10cm]{../info_modelo2.png}
+		\end{figure}
+		
+	\end{frame}	
+	
+	\begin{frame}
+		
+		\frametitle{Análise TRI - Habilidade}
+		\begin{figure}
+			\caption{Distribuição da habilidade e curva de informação do teste.}
+		    \includegraphics[width=10cm]{../habilidade_info.png}
+		\end{figure}
+		
+	\end{frame}	
+	
+	\begin{frame}
+		
+	\frametitle{Comparação TCT e TRI}
+		\begin{figure}
+			\caption{Relação entre o número de acertos e a habilidade estimada pela TRI}
+			\includegraphics[width=10cm]{../acertos_habilidade.png}
+		\end{figure}
+		
+	\end{frame}	
+	
+\begin{frame}
+	\frametitle{Comparação TCT e TRI}
+	
+	\begin{table}[!hbt]
+		\centering
+		\scriptsize % diminui o tamanho da fonte
+		\label{exemplo-10acertos}
+		\begin{tabular*}{0.85\textwidth}{@{\extracolsep{\fill}}lccc@{}}
+			\hline
+			& \textbf{Vetor de Respostas} & $\boldsymbol{\hat{\theta}}$ & \textbf{Acertos} \\ 
+			\hline
+			1 & 00000000010110010110001011010 & -2,18 & 10 \\ 
+			2 & 10100000011010000010001001110 & -1,60 & 10 \\ 
+			3 & 01001001100011001001001100000 & -1,57 & 10 \\ 
+			4 & 11100000010010100010100001100 & -1,53 & 10 \\ 
+			5 & 00101001100010100001100001100 & -1,24 & 10 \\ 
+			6 & 10011001110110010000000000100 & -1,19 & 10 \\ 
+			7 & 11110100100010000010011000000 & -1,19 & 10 \\ 
+			8 & 11110001100000010001000100100 & -1,13 & 10 \\ 
+			9 & 10110011000101000000000101100 & -1,12 & 10 \\ 
+			10 & 11101011010000010000100000100 & -1,09 & 10 \\ 
+			11 & 01111100000000001100100001100 & -1,09 & 10 \\ 
+			12 & 10101001100101001100010000000 & -1,08 & 10 \\ 
+			13 & 00101001101010001011010000000 & -1,04 & 10 \\ 
+			14 & 00111100001110000011000100000 & -1,01 & 10 \\ 
+			15 & 10111000101010101000010000000 & -0,92 & 10 \\ 
+			16 & 11110101110000100000100000000 & -0,91 & 10 \\ 
+			17 & 01111100001110110000000000000 & -0,91 & 10 \\ 
+			18 & 11111110110000010000000000000 & -0,86 & 10 \\ 
+			19 & 10111110110000001000000010000 & -0,85 & 10 \\ 
+			20 & 10111101110000100000000010000 & -0,83 & 10 \\ 
+			21 & 10111111010110000000000000000 & -0,75 & 10 \\ 
+			\hline
+		\end{tabular*}
+	\end{table}
+\end{frame}
+
+
+\begin{frame}
+	
+	\frametitle{Comparação TCT e TRI}
+	\begin{figure}
+		\includegraphics[width=07cm]{../item30.png}
+	\end{figure}
+	
+\end{frame}	
+
+
+\begin{frame}
+	
+	\frametitle{Comparação TCT e TRI}
+	\begin{figure}
+		\includegraphics[width=10cm]{../tct_item30.png}
+	\end{figure}
+	
+\end{frame}	
+
+\begin{frame}
+	
+	\frametitle{Comparação TCT e TRI}
+	\begin{figure}
+		\includegraphics[width=10cm]{../tri_item30.png}
+	\end{figure}
+	
+\end{frame}	
+
+	
+	\section{Conclusão}
 	
 	\section{Referências}
 	
+	
 	%---------------------------------------------------------
 	\begin{frame}
-		\frametitle{Referências}
+	\frametitle{Referências}
 	ANDRADE, D. F. de; TAVARES, H. R.; VALLE, R. da C. Teoria da resposta ao item: conceitos e	aplicações. ABE, Sao Paulo, 2000. \newline	
 	
 		

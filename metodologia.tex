@@ -19,61 +19,13 @@ Na Teoria Clássica dos Testes (TCT), foram avaliados o alfa de Cronbach para me
 
 \section{Análise TRI}
 
-Na análise da Teoria de Resposta ao Item (TRI), foi utilizado o software R, especificamente o pacote mirt \cite{mirt} versão 1.42, que implementa métodos para estimar parâmetros de modelos logísticos de um, dois e três parâmetros (1PL, 2PL e 3PL).
+Na análise da Teoria de Resposta ao Item (TRI), foi utilizado o software R \cite{r}, especificamente o pacote mirt \cite{mirt} versão 1.42 que, segundo \citeonline{edy2014}, usa estimativas de máxima verossimilhança marginal utilizando o algoritmo EM delineado por \citeonline{bock1981}, que utiliza grades de integração retangulares para estimar parâmetros dos itens. Além o pacote mirt foi usado para estimar as habilidades, utilizando o método EAP (Expected\textit{ A Posteriori}).
 
-
-Os modelos foram ajustados por máxima verossimilhança, utilizando o algoritmo EM delineado por \citeonline{bock1981}, que utiliza grades de integração retangulares \cite{mirt2024}. 
-As habilidades foram estimadas com a função \textit{fscores} do pacote mirt \cite{mirt}, utilizando o método EAP.
+O teste de razão de verossimilhança foi usado para verificar se a adição de parâmetros melhora o modelo. Para avaliar o ajuste do modelo foi utilizada a estatística M$_2$ proposta por \citeonline{maydeu2005limited}. Além disso foram avaliados os índices RMSEA, TLI e CFI.
 
 \begin{comment}
 	Inicialmente, foram ajustados modelos de 1, 2 e 3 parâmetros logísticos para os itens do teste, visando avaliar a qualidade dos itens e a adequação dos modelos aos dados. O modelo de 1 parâmetro (1PL) estima apenas a dificuldade dos itens, enquanto o modelo de 2 parâmetros (2PL) incorpora a discriminação, e o modelo de 3 parâmetros (3PL) adiciona o parâmetro de acerto casual.
-\end{comment}
 
-
-
-
-\section{Avaliação do Modelo}
-
-O teste de razão de verossimilhança foi usado para verificar se a adição de parâmetros melhora o modelo. A razão de verossimilhança é calculada como a diferença entre os logaritimos das verossimilhanças dos dois modelos
-
-\[
-	\lambda = -2 (\text{log} L_0 - \text{log} L_1)
-\]
-
-onde $L_0$ representa a Verossimilhança do modelo restrito e
-$L_1$ verossimilhança do modelo completo, Este teste segue uma distribuição qui-quadrado $(\chi^2$) com graus de liberdade iguais à diferença no número de parâmetros entre os dois modelos. O teste avalia duas hipóteses: a hipótese nula ($H_0$) de que o modelo restrito é suficiente para explicar os dados, e a hipótese alternativa ($H_1$) de que o modelo completo, com mais parâmetros, proporciona um ajuste significativamente melhor. Se o valor de $\lambda$ for grande o suficiente, rejeita-se a hipótese nula em favor do modelo completo \cite{casella2010inferencia}. 
-
-Na avaliação de ajuste de modelos TRI, um aspecto a ser considerado é a adequação do modelo aos dados observados. \citeonline{cai2013limited} destacaram a importância desse processo, ressaltando a necessidade de métodos adequados para avaliar a adequação dos modelos aos dados observados. Recentemente, os testes de adequação de informações limitadas têm recebido maior atenção na literatura de psicometria. Esses testes utilizam tabelas marginais de ordem inferior em vez da tabela de contingência completa, tornando-os mais eficientes computacionalmente e menos sensíveis a problemas de convergência \cite{maydeu2014assessing}.
-
-Para avaliar a qualidade do modelo, são consideradas as hipóteses:
-\[
-\begin{cases}
-H_0: \boldsymbol{\pi} = \boldsymbol{\pi}(\boldsymbol{\theta}) \\
-
-H_1: \boldsymbol{\pi} \neq \boldsymbol{\pi}(\boldsymbol{\theta})
-\end{cases}
-\]
-
-Ou seja, avalia-se se o vetor de probabilidade populacional $\boldsymbol{\pi}$ surge do modelo paramétrico $\boldsymbol{\pi}(\boldsymbol{\theta})$ contra a alternativa de que o modelo está incorreto \cite{maydeu2006limited}.
-
-Neste trabalho, utilizaremos a estatística M$_2$ proposta por \citeonline{maydeu2005limited} para avaliar o ajuste do modelo. Essa estatística é parte de uma família de estatísticas de informação limitada, denominada M$_r$, desenvolvida para avaliar modelos TRI. A estatística M$_2$ é particularmente útil porque utiliza momentos de ordem 2 em vez da tabela de contingência completa, o que a torna mais adequada para modelos TRI. \citeonline{maydeu2006limited} demonstraram que, especialmente quando $r=2$, a estatística M$_2$ apresenta desempenho superior em comparação com estatísticas de informação completa. 
-
-
-
-O RMSEA (índice de raiz quadrada média do erro de aproximação) é um índice de ajuste absoluto que mede a discrepância média entre o modelo especificado e os dados observados. O valor do RMSEA varia de 0 a 1, sendo que quanto mais próximo a 0, melhor o modelo \cite{kline2016principles}. \citeonline{maydeu2014assessing} propôs a estatística de informação limitada RMSEA$_{2}$ para aplicações em modelos TRI, na qual utiliza momentos bivariados e é estimado através do M$_2$. O RMSEA$_2$ pode ser estimado por:
-
-\[
-	\hat{\epsilon}_2 = \sqrt{Max\left(\frac{\hat{M_{2}} - df_{2}}
-		{N \times df_{2}}, 0 \right) } ,
-\]
-
-\noindent onde $df_2$ equivale ao grau de liberdade para o momento $r = 2$.
-
-
-
-Outro método para avaliar o modelo são os índices TLI (\textit{Tucker–Lewis Index}) e CFI (\textit{Comparative Fit Index}). O TLI, ou Índice Tucker-Lewis, compara o modelo estimado com um modelo teórico nulo e visa determinar se todos os indicadores estão associados a um único fator latente. Já o CFI, ou Índice de Ajuste Comparativo, é um indicador adicional utilizado para comparar modelos alternativos. Ambos os índices sugerem um bom ajuste quando seus valores se aproximam de 1 \cite{hair2009multivariada}.
-
-\begin{comment}
 	Outro método método para avaliar o modelo são os índices TLI  (\textit{Tucker–Lewis Index}) e CFI (\textit{Comparative Fit Index}), TLI significa Índice Tucker-Lewis e CFI significa Índice de Ajuste Comparativo. O TLI  compara o modelo estimado com um modelo teórico nulo e visa determinar se todos os indicadores são
 	associados a um único fator latente, o CFI é um indicador adicional que serve para comparar modelos alternativos \cite{boruchovitch2017dark}. Ambos os indicadores indicam modelos com bom ajustes quando seu valor próximos de 1 \cite{hair2009multivariada}). 
 
@@ -123,9 +75,6 @@ Além disso, foram = avaliado o Akaike Information Criterion (AIC), criado por A
 \end{table}
 
 
-\end{comment}
-
-
 \subsection{Unidimensionalidade e Independência}
 
 Conforme destacado por \citeonline{pasquali2003},  ``se os índices de adequação indicarem que o modelo utilizado é adequado, então fica demonstrado que o item é unidimensional'' . Assim, o pressuposto de unidimensionalidade será verificado com base no índice de adequação do modelo M$_2$ de \citeonline{maydeu2006limited}. 
@@ -133,3 +82,5 @@ Conforme destacado por \citeonline{pasquali2003},  ``se os índices de adequaç�
 
 Segundo \citeonline{de2000teoria}, ``a unidimensionalidade implica independência local'' (apud \cite{hambleton1991}). Portanto, tanto a unidimensionalidade quanto a independência local serão consideradas atendidas se o índice de adequação do modelo M$_2$ for satisfatório.
 
+
+\end{comment}

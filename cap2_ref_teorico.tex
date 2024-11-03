@@ -3,11 +3,11 @@
 \section{Teoria do Traço Latente}
 
 
- A avaliação de características subjacentes, também conhecidas como variáveis latentes, constitui uma parte intrínseca da compreensão e mensuração de fenômenos complexos, que não podem ser diretamente observados ou medidos. Questões como a avaliação de níveis de conhecimento, aptidões ou estados emocionais, como a depressão, exemplificam situações que não podem ser medidas diretamente. A necessidade de quantificar essas características subjacentes tem impulsionado o desenvolvimento da Teoria do Traço Latente \cite{pasquali2003fundamentos}. A variável latente é comumente conhecida por diversos termos, tais como: variável hipotética, fator, construto, conceito, estrutura psíquica, traço cognitivo, traço latente, processo cognitivo, processo mental, estrutura mental, nota, escore, habilidade, aptidão, componente cognitivo, tendência, proficiência, entre outros.
+ A avaliação de características subjacentes, também conhecidas como variáveis latentes, constitui uma parte intrínseca da compreensão e mensuração de fenômenos complexos, que não podem ser diretamente observados ou medidos. Questões como a avaliação de níveis de conhecimento, aptidões ou estados emocionais, como a depressão, exemplificam situações que não podem ser medidas diretamente. A necessidade de quantificar essas características subjacentes tem impulsionado o desenvolvimento da Teoria do Traço Latente \cite{pasquali2003fundamentos}. A variável latente é comumente conhecida por diversos termos, tais como: variável hipotética, fator, construto, conceito, estrutura psíquica, traço cognitivo, traço latente, processo cognitivo, processo mental, estrutura mental, habilidade, aptidão, componente cognitivo, tendência, proficiência, nível sócio econômico, satisfação, entre outros.
 
 O conceito de "Teoria do Traço Latente" engloba uma classe de modelos matemáticos e traços subjacentes não diretamente observáveis. A TRI e a TCT são duas das maneira pela quais a Teoria do Traço latente é aplicado, especificamente no contexto de avaliações e testes, para estimar desempenho e habilidade \cite{pasquali2018}.
 
-\section{Teoria Clássica dos Testes}
+\section{Teoria Clássica dos Testes (TCT)}
 
 Diferente da TRI onde o foco está no Item, na TCT, o todo é mais importante, o escore bruto é a pontuação direta obtida em um teste. É uma medida simples que não leva em consideração as diferenças na dificuldade dos itens ou o comportamento dos respondentes em itens específicos. A TCT pode ser útil para uma análise prévia do instrumento de avaliação e dos itens \cite{pasquali1996}.
 
@@ -18,22 +18,20 @@ Diferente da TRI onde o foco está no Item, na TCT, o todo é mais importante, o
  Neste trabalho, são aplicados alguns procedimentos da Teoria Clássica dos Testes, incluindo a análise da Correlação Ponto-Bisserial e do Coeficiente Alfa de Cronbach.
 \end{comment}
 
-\subsection{Dificuldade}
+\subsection{Índice de Dificuldade (ID$_i$)}
 
-Conforme \citeonline{pasquali1996}, em testes de aptidão, a dificuldade de um item é descrita pela porcentagem (ou proporção) de participantes que respondem corretamente, variando de 0 a 1, sendo quanto mais próximo de 1, mais acertos o item teve, portanto mais fácil o item é. O valor do $ID_i$ está diretamente relacionado à média de acertos do item no teste e é calculado  pela fórmula: 
+Conforme \citeonline{pasquali1996}, em testes de aptidão, a dificuldade de um item é descrita pela porcentagem (ou proporção), variando de 0 a 1, sendo quanto mais próximo de 1, mais difícil o item teve. O valor do $ID_i$ é calculado  pela fórmula: 
 
 \[
 	ID_i =\dfrac{A_i}{n} 
 \]
-onde $A_i$ é o total de itens corretos e $n$ é o total de respostas. 
+onde $A_i$ é o total de respostas incorretas no item e $n$ é o total de respostas ao item. 
 
 \begin{comment}
 O calculo do índice de dificuldade é importante pois permite conhecer a distribuição do grau de dificuldade das questões que segundo \citeonline{pasquali2003}, para que uma avaliação educacional tenha um nível de dificuldade ideal, os índices devem seguir uma distribuição próxima à curva normal, com itens fáceis, médios e difíceis.
 \end{comment}
 
-O calculo do índice de dificuldade é importante pois permite conhecer a distribuição do grau de dificuldade das questões, \citeonline{pasquali1996} uma avaliação educacional tenha um nível de dificuldade ideal, itens fáceis, médios e difíceis, seguindo a tabela \ref{tabela-class-ID}
-
-O cálculo do índice de dificuldade permite avaliar a distribuição do grau de dificuldade das questões, assegurando que uma avaliação educacional tenha uma variedade equilibrada de itens. Conforme destaca \citeonline{pasquali1996}, uma prova ideal deve conter uma mistura adequada de itens fáceis, médios e difíceis. A tabela \ref{tabela-class-ID} apresenta a distribuição esperada dos itens por faixa de acertos, sugerindo como  uma avaliação bem construída deve ser.
+O cálculo do índice de dificuldade permite avaliar a distribuição do grau de dificuldade das questões, assegurando que uma avaliação educacional tenha uma variedade equilibrada de itens.  Uma prova ideal deve conter uma mistura adequada de itens fáceis, médios e difíceis. \citeonline{pasquali1996} propôs uma distribuição da prova, considerando apenas a dificuldade, conforme a tabela \ref{tabela-class-ID}.
 
 
 \begin{table}[H]
@@ -42,17 +40,17 @@ O cálculo do índice de dificuldade permite avaliar a distribuição do grau de
 		\label{tabela-class-ID}
 		\begin{tabular}{ccc}
 			\hline
-			\textbf{Faixa} & \textbf{\% de Acertos}  &	  \textbf{Distribuição Esperada}   \\ 
+			\textbf{Faixa} & \textbf{ID}  &	  \textbf{Distribuição Esperada}   \\ 
 			\hline
-			\textbf{I}  & 0 a 20 & 10\%   \\ 
+			\textbf{I}  & 0 a 0,2 & 10\%   \\ 
 			\hline
-			\textbf{II} & 20 a 40 &  20\%   \\
+			\textbf{II} & 0,2 a 0,4 &  20\%   \\
 			\hline
-			\textbf{III} & 40 a 60 &  40\%   \\ 
+			\textbf{III} & 0,4 a 0,6 &  40\%   \\ 
 			\hline
-			\textbf{IV} & 60 a 80 &  20\%   \\ 
+			\textbf{IV} & 0,6 a 0,8 &  20\%   \\ 
 			\hline
-			\textbf{V} & 80 a 100 & 10\%   \\ 
+			\textbf{V} & 0,8 a 1 & 10\%   \\ 
 			\hline
 		\end{tabular}\\
 		\vspace*{0.5cm}
@@ -61,22 +59,42 @@ O cálculo do índice de dificuldade permite avaliar a distribuição do grau de
 
 \subsection{Discriminação}
 
-Na TCT, há diferentes formas de avaliar a discriminação de um item, que é a capacidade do item de diferenciar entre indivíduos com diferentes níveis de habilidade. Um dos métodos mais comuns é o índice de correlação ponto bisserial, que mede a relação entre o acerto no item e a pontuação total na prova. Outro método usado é discriminação clássica, que é baseada na diferença nas proporções de acertos entre os grupos de alto e baixo desempenho.
+Na TCT, há diferentes formas de avaliar a discriminação de um item, que é a capacidade do item de diferenciar entre indivíduos com diferentes níveis de habilidade. Um dos índices mais comuns é o índice de correlação ponto bisserial, que mede a relação entre o acerto no item e a pontuação total na prova. Outro índice usado é o índice discriminação clássica, que é baseada na diferença nas proporções de acertos entre os grupos de alto e baixo desempenho.
 
 \subsubsection{Índice de Discriminação Clássico}
 
-O Índice de Discriminação Clássico ($D_i$) avalia a distribuição de respostas entre dois grupos: o grupo de alto e o grupo de baixo escore.
+O Índice de Discriminação Clássico ($D_i$) de um item é calculado a partir da distribuição de respostas entre dois grupos: o grupo de alto e o grupo de baixo escore.
 O índice pode ser calculado por: 
 
-\[D_i =  ACIM_i - ABAI_i\] onde $ACIM_i$ representa a proporção de acertos do grupo superior, no qual é formado pelos 27\% maiores escores e $ACIM_i$   representa a proporção de acertos do grupo inferior, no qual é formado pelos 27\% menores escores. 
+\[D_i =  ACIM_i - ABAI_i\] onde $ACIM_i$ representa a proporção de acertos do item no grupo superior, no qual é formado por 27\% dos escores superiores e $ABAI_i$   representa a proporção de acertos do grupo inferior, no qual é formado pelos 27\% menores escores. 
 
- O índice $D_i$ varia de -1 a 1 e é calculado como a diferença entre as proporções de respostas apresentadas pelo grupo superior e pelo grupo inferior. Espera-se um valor positivo para a resposta correta, indicando que o grupo superior selecionou mais frequentemente a resposta correta do que o grupo inferior, o que é um indicativo de qualidade do item  \cite{de1983consideraccoes}. 
+ O índice $D_i$ varia de -1 a 1 e é calculado ao item, como a diferença entre as proporções de respostas apresentadas pelo grupo superior e pelo grupo inferior. Espera-se um valor positivo para a resposta correta, indicando que o grupo superior selecionou mais frequentemente a resposta correta do que o grupo inferior, o que é um indicativo de qualidade do item  \cite{de1983consideraccoes}. Segundo \citeonline{rabelo2013}, em geral, recomenda-se a seguinte classificação para D$_i$:
 
+\begin{table}[!htb]
+	\centering
+		\caption{Classificação do item de acordo com a discriminação clássica.}
+		\label{class-disc-classica}
+		\begin{tabular}{lc}
+			\hline
+		\textbf{D$_i$}  &	\textbf{Classificação}    \\ 
+			\hline
+		\textbf{Maior que 0,4 }&  Item bom    \\ 
+			\hline
+			\textbf{Entre 0,3 e 0,4 }&  Item bom, mas sujeito a aprimoramento  \\ 
+			\hline
+			\textbf{Entre 0,2 e 0,3} & Item marginal, sujeito a reelaboração  \\ 
+			\hline
+		\textbf{Menor que 0,2} & Item deficiente, que deve ser rejeitado   \\ 
+			\hline
+		\end{tabular}\\
+				\vspace*{0.5cm}
+		\small{\textbf{Fonte:} \citeonline{rabelo2013}, p.136}
+\end{table}
 
 
 \subsubsection{Correlação Ponto Bisserial}
 
-O coeficiente bisserial é uma métrica que avalia a correlação entre uma variável dicotômica e uma quantitativa, ou seja, no caso de avaliações, avalia relação entre o desempenho em um item e o desempenho geral na prova \cite{BORGATTO2012}. Ele desempenha um papel importante na análise preliminar dos itens, auxiliando na identificação de questões que podem apresentar problemas, como respostas incorretas no gabarito \cite{de2000teoria}.
+O coeficiente bisserial é uma métrica que avalia a correlação entre uma variável dicotômica e uma quantitativa, ou seja, no caso de avaliações, avalia relação entre o desempenho em um item e o desempenho geral na prova \cite{BORGATTO2012}. Ele desempenha um papel importante na análise preliminar dos itens, auxiliando na identificação de questões que podem apresentar problemas, como itens mal formulados \cite{de2000teoria}.
 
 A Correlação Bisserial por pontos é indicada quando os itens são dicotômicos, representada pela equação:
 
@@ -103,8 +121,7 @@ O valor do ponto bisserial de um item oscila de -1 a 1. \cite{pasquali2003} reco
 
 \subsection{Alpha de Cronbach}
 
-A avaliação da consistência interna, ou seja, a medida em que as respostas dos participantes em um conjunto de itens, que teoricamente avaliam a mesma habilidade, traço ou construto. 
-Para avaliar essa consistência, é comum recorrer a métodos que examinam a correlação entre os itens \cite{souza2017}. Nesse contexto, destacam-se o coeficiente \textit{alpha} de Cronbach, introduzido por Cronbach (1951), este método é umas das ferramentas estatísticas para a avaliação da confiabilidade de instrumentos de medida. Ele auxilia  a determinar se os itens realmente estão medindo o mesmo construto, já que uma alta consistência entre eles sugere que estão alinhados na mensuração da habilidade desejada.
+A avaliação da consistência interna do questionário, ou seja, se um conjunto de itens avaliam a mesma habilidade, traço ou construto. Para avaliar essa consistência, é comum recorrer a métodos que examinam a correlação entre os itens \cite{souza2017}. Nesse contexto, o coeficiente \textit{alpha} de Cronbach, introduzido por Cronbach (1951), este método é umas das ferramentas estatísticas para a avaliação da confiabilidade de instrumentos de medida. Ele auxilia  a determinar se os itens realmente estão medindo o mesmo construto, já que uma alta consistência entre eles sugere que estão alinhados na mensuração da habilidade desejada.
 
 O coeficiente \textit{Alpha} de Cronbach ($\alpha$) pode ser medido por meio da seguinte equação:
 
@@ -117,27 +134,24 @@ ${s_T^2}$ a variância total do teste.
 
 O coeficiente calcula consistência no intervalo de 0 a 1, sendo que quanto mais próximo de 1 maior a consistência, para \citeonline{pasquali2003}, valores entre 0,7 e 0,9 são considerados bons, acima de 0,9 indica itens repetitivos.
 
-\section{Teoria de Resposta ao Item}
+\section{Teoria de Resposta ao Item (TRI)}
 
-A TRI é um conjunto de modelos matemáticos que procuram representar a probabilidade de um indivíduo dar uma certa resposta a um item, com função do parâmetros desses itens e do traço latente, chamada de Theta ($\theta$), do respondente \cite{de2000teoria}. A TRI considera o dado conjunto de respostas ($\textbf{U}$) de um determinado teste como um elemento capaz de fornecer estimativas para a habilidade $\theta$ avaliada. \cite{baker2001}
-
-A escolha do modelo vai depender da natureza dos itens, do questionário, de qual e quantas variáveis latentes que se pretende medir. Na educação, na maioria das vezes, a variável latente medida é o conhecimento do aluno em determinada área, para isso utiliza-se testes com itens de múltipla escolha, que posteriormente será dicotomizado em certo e errado, por isso, será usado modelos para itens dicotômicos. 
+A TRI é um conjunto de modelos matemáticos que procuram representar a probabilidade de um indivíduo dar uma certa resposta a um item, em função do parâmetros desses itens e do traço latente, chamada de Theta ($\theta$), do respondente \cite{de2000teoria}. A TRI considera o dado conjunto de respostas ($\textbf{U}$) de um determinado teste como um elemento capaz de fornecer estimativas para a habilidade $\theta$ avaliada. \cite{baker2001}
 
 
-
-
+A escolha do modelo vai depender da natureza dos itens (dicotômicos ou politômicos) do questionário, de qual e quantas variáveis latentes que são necessárias para medir variação dos dados. Na educação a variável latente medida é o conhecimento do aluno em determinada área, para isso, muitas vezes utiliza-se testes com itens de múltipla escolha, que posteriormente será dicotomizado em certo e errado, por isso, a seguir serão apresentados os modelos dicotômicos unidimensionais. 
 
 \section{Modelos Unidimensionais para Itens Dicotômicos}
 
 \subsection{Modelo Logístico de 1 parâmetro}
 
-O modelo de \citeonline{rasch1960}, também conhecido como Modelo Logístico de 1 Parâmetro (1PL), é um dos modelos mais simples dentro da TRI. Ele pressupõe que a probabilidade de um indivíduo acertar um item depende apenas da diferença entre a habilidade do indivíduo ($\theta$) e a dificuldade do item ($b_i$). Esse modelo não considera parâmetros de discriminação ou acerto casual, assumindo que todos os itens possuem o mesmo poder de discriminação.
+O modelo de \citeonline{rasch1960}, também conhecido como Modelo Logístico de 1 Parâmetro (1PL), é um dos modelos mais simples dentro da TRI. Ele pressupõe que a probabilidade de um indivíduo acertar um item depende apenas da habilidade do indivíduo j ($\theta_j$) e a dificuldade do item ($b_i$). Esse modelo não considera parâmetros de discriminação ou acerto casual, assumindo que todos os itens possuem o mesmo poder de discriminação, ou seja, é igual a 1 para todos os itens.
 
 
 A equação que representa a probabilidade de um indivíduo $ j $ com habilidade $ \theta_j $ dar uma resposta correta para o item $ i $ é representada por:
 
 \[
-	 P({U_i}_j = 1|{\theta}_j) =
+	 P({U_i}_j = 1|{\theta}_j, b_i) =
 	\frac{1}{1+e^{-D(\theta_j - b_i)}}
 \]
  
@@ -152,9 +166,9 @@ com $i = 1, 2, ..., I $ e $ j = 1,2, ... , n $, onde:
 
 \noindent $ b_i $ representa o parâmetro de dificuldade do $i$-ésimo item.
 
-\noindent $ D $ é uma constante fixada em 1,702, introduzida para que a função forneça resultados parecidos ao da curva normal.
+\noindent $ D $ é uma constante fixada em 1,702, introduzida para que a função forneça resultados muito próximos ao da curva normal.
 
-A \autoref{fig:rasch} representa um exemplo de curva característica do Item para o modelo de 1 parâmetro, neste exemplo, o valor da dificuldade ($b_i$) é igual a 2.
+A \autoref{fig:rasch} representa um exemplo de curva característica do Item para o modelo de 1 parâmetro, neste exemplo, o valor da dificuldade ($b_i$) é igual a 2. Quanto mais à direita, maior a dificuldade do item.
 
 \begin{figure}[H]
 	\centering
@@ -179,8 +193,8 @@ O valor b = 2 é o ponto de inflexão da curva e para o modelo 1PL significa que
 
 \subsection{Modelo Logístico de 2 parâmetros}
 
-O Modelo Logístico de 2 Parâmeros, também conhecido como o Modelo de Birnbaum é uma extensão do Modelo de Rasch.
-Desenvolvido por Allan \citeonline{birnbaum1968}, o modelo de 2PL conta com 2 Parâmetros Logísticos: dificuldade e discriminação, a segunda refere-se ao quanto o item diferencia respondentes de habilidades diferentes.
+O Modelo Logístico de 2 Parâmeros é uma extensão do Modelo de Rasch.
+Desenvolvido por Allan \citeonline{birnbaum1968}, o modelo de 2PL conta com 2 parâmetros: dificuldade e discriminação, a segunda refere-se ao quanto o item diferencia respondentes de habilidades diferentes.
 
 A fórmula associada ao modelo de 2 parâmetros é a seguinte:
 
@@ -197,9 +211,9 @@ com $i = 1, 2, ..., I $ e $ j = 1,2, ... , n $, onde:
 
 \noindent $ a_i $ representa o parâmetro de discriminação do $i$-ésimo item.\\
 
- A diferença entre o Modelo 1PL e o Modelo 2PL está no fato de que o Modelo de 1PL pressupõe que todos os itens diferenciam igualmente, ou seja, que $a_i = 1$.
+O Modelo de 1PL é mais restrito que o 2PL, pois pressupõe que todos os itens diferenciam igualmente, ou seja, que $a_i = 1$.
  
-A \autoref{fig:2PL} é um exemplo de uma curva característica do item onde o parâmetro $a_i$ pode variar, neste caso, vale 1,8.
+A \autoref{fig:2PL} é um exemplo de uma curva característica do item onde o parâmetro $a_i$ pode variar. Quanto maior o valor de $a$ maior a inclinação da reta. O valor de $a_i$ é proporcional à reta tangente da curva quando $\theta = b$, que é a inclinação da curva no ponto de inflexão \cite{juscelia2012}.
 
 
 \begin{figure}[H]
@@ -276,11 +290,11 @@ onde:
 
 \noindent $I_i(\theta) $ representa a informação fornecida pelo item $i$ no nível de habilidade $\theta$;\\
 
-\noindent $P_i(\theta) = P(U_{ij} = 1| \theta) $ e $ Q_i(\theta) = 1 - P_i(\theta) $ \\
+\noindent $P_i(\theta_j) = P(U_{ij} = 1| \theta) $ e $ Q_i(\theta_j) = 1 - P_i(\theta_j) $ \\
 
-Valores maiores de $a_i$ significam que o item discrimina melhor, gerando uma maior quantidade de informação, especialmente ao redor do ponto em que $\theta$ se aproxima de $b_i$. A equação \ref{eq:info_item} mostra que a quantidade de informação é diretamente proporcional ao quadrado de $a_i$, ou seja, quanto maior o valor de $a_i$, maior será a informação fornecida pelo item em uma dada habilidade $\theta$.
+Valores maiores de $a_i$ significam que o item discrimina melhor, gerando uma maior quantidade de informação, especialmente ao redor do ponto em que $\theta_j$ se aproxima de $b_i$. A equação \ref{eq:info_item} mostra que a quantidade de informação é diretamente proporcional ao quadrado de $a_i$, ou seja, quanto maior o valor de $a_i$, maior será a informação fornecida pelo item em uma dada habilidade $\theta$.
 
-A figura \ref{fig:fii} ilustra a função de informação para um item com $b_i = -2$, observa-se que a informação também é maior quando $\theta$ se aproxima de $b_i$, nesse exemplo, a informação é maior quando $\theta$ se aproxima de $-2$.
+A figura \ref{fig:fii} ilustra a função de informação para um item com $b_i = 0$, observa-se que a informação também é maior quando $\theta$ se aproxima de $b_i$, nesse exemplo, a informação é maior quando $\theta$ se aproxima de $0$.
 
 \begin{figure}[H]
 	\centering
@@ -303,13 +317,13 @@ A figura \ref{fig:fii} ilustra a função de informação para um item com $b_i 
 A informação do teste é obtida pela soma das informações fornecidas pelos itens que compõem a prova \cite{de2000teoria}. Ou seja:
 
 \begin{equation}\label{eq:info_teste}
-I(\theta) = \sum_{i=1}^{I}I_i(\theta)
+I(\theta_j) = \sum_{i=1}^{I}I_i(\theta_j)
 \end{equation}
 
- O erro-padrão de estimação é calculado como o inverso da raiz quadrada da informação (I) sobre a variável latente ($\theta$), conforme a seguinte fórmula:
+ O erro-padrão de estimação é calculado como o inverso da raiz quadrada da informação (I) sobre a variável latente ($\theta_j$), conforme a seguinte fórmula:
 
 \[
-EP(\theta) = \dfrac{1}{\sqrt{I(\theta)}}
+EP(\theta_j) = \dfrac{1}{\sqrt{I(\theta_j)}}
 \]
 
 
@@ -335,19 +349,16 @@ A função de informação do teste é uma medida útil pois permite analisar o 
 
 
 
-\subsection{Pressupostos dos Modelos Unidimensionais}
+\subsection{Suposições de modelos TRI}
 
-Os 3 modelos citados anteriormente são unidimensionais e possuem dois pressupostos principais, na qual os itens de um teste ou simulado devem ser elaborados de forma que atendam esses requisitos. 
 
-\begin{itemize}
-	
-\item  Unidimensionalidade
+Os modelos de resposta ao item apresentam suposições específicas sobre os dados. Primeiro, é necessário que apenas os traços latentes e os parâmetros dos itens sejam suficientes para modelar a probabilidade de resposta dos indivíduos, garantindo que variáveis externas não afetem as respostas.  No caso dos modelos unidimensionais, assume-se que uma única dimensão do traço latente é suficiente para modelar essa probabilidade (unidimensionalidade). Além disso, supõe-se que o tempo disponível para responder o instrumento é suficiente \cite{caio2010}.
 
-Pressupõe que os itens que compõe um teste estão medindo apenas uma traço latente, ou seja, deve haver apenas uma aptidão capaz de realizar os itens do teste. Isso implica que a probabilidade de resposta correta depende apenas da habilidade latente $\theta$ e dos parâmetros do item, sem considerar outras habilidades latentes \cite{pasquali1996}.
 
-\item  Independência Local
+Em outras palavras Unidimensionalidade implica que há apenas uma competência ou aptidão predominante envolvida na resolução dos itens do teste. Isso implica que a probabilidade de resposta correta depende apenas da habilidade latente $\theta$ e dos parâmetros do item, sem considerar outras habilidades latentes \cite{pasquali1996}.
 
-Este postulado implica que os itens são respondidos de forma independente para um dado $\theta$. Em outras palavras, as respostas a um item não são afetadas pelas respostas a outros itens após controlar a habilidade latente do indivíduo, assim como diferentes indivíduos do teste são independentes entre si. Isso implica que a probabilidade para respondentes com uma habilidade dada, a probabilidade de resposta a um conjunto de itens é igual aos produtos das probabilidades das respostas do respondente em cada item \cite{pasquali1996}. Matematicamente, isso pode ser expresso como:
+
+Além disso tem a independência local, este postulado implica que os itens são respondidos de forma independente para um dado $\theta$. Em outras palavras, as respostas a um item não são afetadas pelas respostas a outros itens após controlar a habilidade latente do indivíduo, assim como diferentes indivíduos do teste são independentes entre si. Isso implica que a probabilidade para respondentes com uma habilidade dada, a probabilidade de resposta a um conjunto de itens é igual aos produtos das probabilidades das respostas do respondente em cada item \cite{pasquali1996}. Matematicamente, isso pode ser expresso como:
 
 
 \[
@@ -358,17 +369,17 @@ Este postulado implica que os itens são respondidos de forma independente para 
  = \prod_{i=1}^{I}P(U_{ij} = 1|\theta_j) 
 \]
 
-\end{itemize}
+
 \section{Estimação dos Parâmetros}
 
+Um dos desafios do TRI é a estimação dos parâmetros, exitem diversos métodos para tal finalidade, no geral, temos 3 situações:  Habilidade é conhecida e deseja-se estimar os parâmetros dos itens; Os parâmetros dos itens são desconhecidos e deseja-se estimar a habilidade; Ambos os parâmetros são desconhecidos \cite{de2000teoria}.  Nesse contexto, as notações utilizadas para representar os parâmetros a serem estimados são as seguintes:\\
 
 
-Um dos desafios do TRI é a estimação dos parâmetros, no geral, temos 3 situações:  (i) Habilidade é conhecida e deseja-se estimar os parâmetros dos itens; (ii) Os parâmetros dos itens são desconhecidos e deseja-se estimar a habilidade; (iii) Ambos os parâmetros são desconhecidos \cite{de2000teoria}.  Nesse contexto, as notações utilizadas para representar os parâmetros a serem estimados são as seguintes:\\
+\noindent $ \boldsymbol{\theta} = (\theta_1, \cdots, \theta_n) $  representa o vetor de habilidades dos $n$ indivíduos,
 
+\noindent $ \boldsymbol{\zeta} = (\boldsymbol{\zeta}_1, \cdots, \boldsymbol{\zeta}_I) $ o conjunto de parâmetros dos itens e
 
-\noindent $ \boldsymbol{\theta} = (\theta_1, \cdots, \theta_n) $  representa o vetor de habilidades dos $n$ indivíduos e
-
-\noindent $ \boldsymbol{\zeta} = (\boldsymbol{\zeta}_1, \cdots, \boldsymbol{\zeta}_I) $ o conjunto de parâmetros dos itens.
+\noindent $ \boldsymbol{\zeta_i} = (a_i, a_i, c_i) $ são os parâmetros do item $i$.
 
 \[ \textbf{U}_{n\times I} =  
 \begin{bmatrix}
@@ -397,11 +408,10 @@ P(U_{ji} = u_{ji}|\theta_j, \zeta_i) = P(U_{ji} = 1|\theta_j, \zeta_i)^{u_{ji}}
 P(U_{ji} = 0|\theta_j, \zeta_i)^{1 - u_{ji}} = P_{ji}^{u_{ji}}Q_{ji}^{1-u_{ji}}
 \end{equation}
 
-Existem diferentes métodos de estimação de parâmetros na TRI, como a máxima verossimilhança, que maximiza a função de verossimilhança dos dados, a máxima verossimilhança marginal, métodos Bayesianos, que utilizam distribuições prévias, etc.
 
 \subsection{Estimador de Máxima Verossimilhança (EMV)}
 
-Considerando a situação (i), onde $ \boldsymbol{\theta} $ é conhecido, dados os pressupostos de independência e unidimensionalidade da TRI e pela equação (\ref{eq:bern}). A função de verossimilhança de  $ \boldsymbol{\zeta} $ pode ser escrita como:
+Considerando a situação onde $ \boldsymbol{\theta} $ é conhecido, dados os pressupostos de independência e unidimensionalidade da TRI e pela equação (\ref{eq:bern}). A função de verossimilhança de  $ \boldsymbol{\zeta} $ pode ser escrita como:
 \[
 L(\boldsymbol{\zeta}) =  \prod_{j=1}^{n}\prod_{i=1}^{I}P(U_{ij} = u_{ji}|\theta_j, \zeta_i) = \prod_{j=1}^{n}\prod_{i=1}^{I}P_{ji}^{u_{ji}}Q_{ji}^{1-u_{ji}}
 \]
@@ -411,8 +421,8 @@ Os Estimadores de Máxima Verossimilhança (EMV) para $ \boldsymbol{\zeta}_i = (
 
 \[
 \begin{aligned}
-	\hat{a_i}: & \ D(1 - c_i)\sum_{j=1}^{n}(u_{ji} - P_{ji})(\theta_j - b_i)W_{ij} = 0, \\
-	\hat{b_i}: & \ -Da_i(1 - c_i)\sum_{j=1}^{n}(u_{ji} - P_{ji})W_{ij} = 0, \\
+	\hat{a_i}: & \ D(1 - c_i)\sum_{j=1}^{n}(u_{ji} - P_{ji})(\theta_j - b_i)W_{ij} = 0, \\[1em]
+	\hat{b_i}: & \ -Da_i(1 - c_i)\sum_{j=1}^{n}(u_{ji} - P_{ji})W_{ij} = 0, \\[1em]
 	\hat{c_i}: & \ \sum_{j=1}^{n}(u_{ji} - P_{ji})\frac{W_{ij}}{P^*_{ij}} = 0
 \end{aligned}
 \]
@@ -427,6 +437,31 @@ Os Estimadores de Máxima Verossimilhança (EMV) para $ \boldsymbol{\zeta}_i = (
 \\
 \noindent $W_{ij} = \dfrac{P^*_{ij}Q^*_{ij}}{P_{ij}Q_{ij}} $ ;\\
 
+
+
+
+Considerando $\boldsymbol{\zeta}$ conhecido, o EMV para $ \theta_j $,  é dado por:
+
+
+\[ \hat{\theta_j} : D\sum_{i=1}^{I}{a_i(1-c_i)(u_{ji}-P_{ji})W_{ji}} = 0  \] 
+
+O desenvolvimento detalhado pode ser encontrado pelo leitor no livro de \citeonline{de2000teoria}.
+
+Os Estimadores de Máxima Verossimilhança (EMV) de $ \boldsymbol{\zeta} $ e $ \boldsymbol{\theta} $ requerem um método iterativo para sua estimação, uma vez que não possuem uma solução direta. Podem ser utilizados diversos métodos para essa finalidade como Newton-Raphoson, \textit{Scoring} de Fisher, Algoritmo EM, entre outros.
+
+\begin{comment}
+ \citeonline{de2000teoria}. Sendo assim, considerando $\boldsymbol{\hat{\zeta}}^{(t)}_{i}$
+uma estimativa de $\boldsymbol{\hat{\zeta}}$ na iteração $t$, o procedimento de
+Newton-Raphson é dado por:\\
+
+\noindent $ \boldsymbol{\hat{\zeta}}^{(t+1)}_{i} = \boldsymbol{\hat{\zeta}}^{(t)}_{i} + [\bold{H}(\boldsymbol{\hat{\zeta}}^{(t)})]^{-1}\bold{h}({\boldsymbol{\hat{\zeta}}^{(t)}})
+$, onde $\bold{H}$ representa a matriz Hessiana.\\
+
+Na situação que tanto $ \boldsymbol{\hat{\zeta}} $ quanto $ \boldsymbol{\theta} $ são desconhecidos, é a situação mais comum, e requer uma estimação conjunta de ambos.
+Para tal finalidade, \citeonline{birnbaum1968}, propôs um algoritmo onde os parâmetros são estimados individualmente, usando um do métodos iterativos citados anteriormente.
+O processo é dividido em dois estágios. Inicia-se com um chute inicial, uma estimativa grosseira de $ \boldsymbol{\theta} $ considerando que $ \boldsymbol{\zeta} $ é conhecido, após estimada a habilidade, a segunda parte consiste em estimar $ \boldsymbol{\zeta} $ considerando $ \boldsymbol{\theta} $ (estimado na primeira etapa) como conhecido. Esse processo \textit{vai} e \textit{volta} é repetido até a convergência de ambos os parâmetros.
+	
+	\subsection{Quadratura}
 Os parâmetros dos itens também podem ser estimados em forma de quadratura, onde a distribuição da habilidade latente ($\theta$) é aproximada por um conjunto de pontos de quadratura ($\theta_k$)  e pesos $A_k$, $k = 1, \dots, q$ associados. Esses pontos e pesos,  são usados para calcular a função de verossimilhança em relação à habilidade, permitindo a estimativa dos parâmetros sem a necessidade de integrar analiticamente a distribuição de habilidade contínua.
 
 \[
@@ -437,43 +472,77 @@ Os parâmetros dos itens também podem ser estimados em forma de quadratura, ond
 \end{aligned}
 \]
 
+\end{comment}
+\subsection{Estimação de Máxima Verossimilhança Marginal (EMVM)}
 
+Proposto por \citeonline{bock1970} este método estima os parâmetros dos itens e as habilidades dos respondentes em duas etapas, levando em consideração as margens das distribuições das habilidades dos respondentes. É útil quando o número de indivíduos é grande, apresentando vantagens computacionais.
 
-Na situação (ii), onde $\boldsymbol{\zeta}$ é conhecido, o EMV para $ \theta_j $,  é dado por:\\
+A proposta desse método é realizar a estimação em duas etapas: inicialmente, os parâmetros dos itens são estimados, e depois as habilidades dos indivíduos. Como as habilidades não são diretamente observáveis, é necessário aplicar uma técnica que permita remover a dependência direta da verossimilhança em relação às habilidades, facilitando assim o processo de estimação \cite{de2000teoria}.
 
+Para isso, assume-se que os respondentes são uma amostra de uma população cuja a habilidade segue uma determinada função de densidade $g(\theta|\boldsymbol{\eta})$, onde $\boldsymbol{\eta}$ é o vetor de parâmetros da distribuição da habilidade, no caso de uma distribuição normal padrão $\boldsymbol{\eta} = (\mu = 0, \sigma = 1) $. Usando a independência entre indivíduos a probabilidade associada ao vetor de respostas $\boldsymbol{U}$, pode ser escrito como:
 
-\[ \hat{\theta_j} : D\sum_{i=1}^{I}{a_i(1-c_i)(u_{ji}-P_{ji})W_{ji}} = 0  \] 
+\[
+P(\boldsymbol{u}_{..}|\boldsymbol{\zeta}) = \prod_{j=1}^{n}P(\boldsymbol{u}_{j.}|\boldsymbol{\zeta}, \boldsymbol{\eta})
+\]
 
-O desenvolvimento detalhado pode ser encontrado pelo leitor no livro de \citeonline{de2000teoria}.
-
-Os Estimadores de Máxima Verossimilhança (EMV) de $ \boldsymbol{\zeta} $ e $ \boldsymbol{\theta} $ requerem um método iterativo para sua estimação, uma vez que não possuem uma solução direta. Em geral, a estimação dos parâmetros é através do método de Newton-Raphoson, mas também podem ser utilizados os métodos de \textit{Scoring} de Fisher ou o Algoritmo EM para essa finalidade.
+A equações de estimação usando EMVM para $ \boldsymbol{\zeta}_i$, são:\\
 
 \begin{comment}
- \citeonline{de2000teoria}. Sendo assim, considerando $\boldsymbol{\hat{\zeta}}^{(t)}_{i}$
-uma estimativa de $\boldsymbol{\hat{\zeta}}$ na iteração $t$, o procedimento de
-Newton-Raphson é dado por:\\
 
-\noindent $ \boldsymbol{\hat{\zeta}}^{(t+1)}_{i} = \boldsymbol{\hat{\zeta}}^{(t)}_{i} + [\bold{H}(\boldsymbol{\hat{\zeta}}^{(t)})]^{-1}\bold{h}({\boldsymbol{\hat{\zeta}}^{(t)}})
-$, onde $\bold{H}$ representa a matriz Hessiana.\\
+\[
+\hat{a}_i : D(1-c_i)\sum_{j=1}^{s}r_j
+\int_{\mathbb{R}}\left[(u_{ji} - P_i)(\theta - b_i)W_i\right] g_j^*(\theta)d\theta = 0,
+\]
+
+\[
+\hat{b}_i : -Da_i(1-c_i)\sum_{j=1}^{s}r_j
+\int_{\mathbb{R}}\left[(u_{ji} - P_i)W_i \right] g_j^*(\theta)d\theta = 0,
+\]
+
+\[
+\hat{c}_i : \sum_{j=1}^{s}r_j \int_{\mathbb{R}}
+\left[(u_{ji}  - P_i)\frac{W_i}{P^*_i}\right]
+g_j^*(\theta)d\theta = 0
+\]
 \end{comment}
 
 
-Na situação (iii), na qual tanto $ \boldsymbol{\hat{\zeta}} $ quanto $ \boldsymbol{\theta} $ são desconhecidos, é a situação mais comum, e requer uma estimação conjunta de ambos.
-Para tal finalidade, \citeonline{birnbaum1968}, propôs um algoritmo onde os parâmetros são estimados individualmente, usando um do métodos iterativos citados anteriormente.
-O processo é dividido em dois estágios. Inicia-se com um chute inicial, uma estimativa grosseira de $ \boldsymbol{\theta} $ considerando que $ \boldsymbol{\zeta} $ é conhecido, após estimada a habilidade, a segunda parte consiste em estimar $ \boldsymbol{\zeta} $ considerando $ \boldsymbol{\theta} $ (estimado na primeira etapa) como conhecido. Esse processo \textit{vai} e \textit{volta} é repetido até a convergência de ambos os parâmetros.
+\[
+\begin{aligned}
+	\hat{a}_i & : D(1 - c_i) \sum_{j=1}^{s} r_j
+	\int_{\mathbb{R}} \left[(u_{ji} - P_i)(\theta - b_i)W_i\right] g_j^*(\theta) \, d\theta = 0, \\[1em]	
+	\hat{b}_i & : -D a_i (1 - c_i) \sum_{j=1}^{s} r_j
+	\int_{\mathbb{R}} \left[(u_{ji} - P_i)W_i \right] g_j^*(\theta) \, d\theta = 0, \\[1em]	
+	\hat{c}_i & : \sum_{j=1}^{s} r_j \int_{\mathbb{R}}
+	\left[(u_{ji} - P_i)\frac{W_i}{P^*_i}\right]
+	g_j^*(\theta) \, d\theta = 0
+\end{aligned}
+\]
+
+onde:\\ 
+
+\(
+g^*_j(\theta) \equiv
+g(\theta|\boldsymbol{u}_{j.}, \boldsymbol{\zeta}, \boldsymbol{\eta}) =
+\dfrac{
+	P(\boldsymbol{u}_{j.}|\theta,\boldsymbol{\zeta})g(\theta|\boldsymbol{\eta})
+}{
+	P(\boldsymbol{u}_{j.}|\boldsymbol{\zeta}, \boldsymbol{\eta})
+}
+\)
 
 
-
-\begin{comment}
-Além do método de Estimação de Máxima Verossimilhança (EMV), existem outros métodos de estimação dos parâmetros, que são frequentemente utilizados em contextos de avaliação educacional, estes incluem:
-\end{comment}
 
 \subsection{Algoritmo EM}
 
 
-O algoritmo EM (Esperança-Maximizaçao) introduzido por \citeonline{dempster1977} é uma técnica utilizada particularmente para a estimação por máxima verossimilhança na presença de variáveis latentes, como a habilidade dos indivíduos ($\theta$), que não pode ser diretamente observada.  O foco está em ajustar os parâmetros dos itens de modo que o modelo melhore sua adequação aos dados.
+O algoritmo EM (Esperança-Maximizaçao) introduzido por \citeonline{dempster1977} é uma técnica utilizada particularmente para a estimação por máxima verossimilhança na presença de variáveis latentes, como a habilidade dos indivíduos ($\theta$), que não pode ser diretamente observada.  O foco está em ajustar os parâmetros dos itens de modo que o modelo melhore sua adequação aos dados \cite{de2000teoria}.
 
-Foi proposto por \citeonline{bock1981} para a estimação de máxima verossimilhança dos parâmetros de itens no contexto da TRI. O objetivo principal é estimar parâmetros dos itens na presença de variáveis não observáveis, como as habilidades latentes dos indivíduos ($\theta$). Neste contexto, $\boldsymbol{u}_{..}$ representa o vetor de dados incompletos (as respostas observadas), enquanto $\boldsymbol{u}_{..},\boldsymbol{\theta}$ constitui o vetor de dados completos (respostas observadas e as habilidades latentes). A função de densidade conjunta dos dados completos é denotada por $f(\boldsymbol{u}_{..}|\boldsymbol{\theta})$, e ela permite modelar o relacionamento entre as respostas dos indivíduos e suas habilidades não observadas \cite{de2000teoria}.
+Foi proposto por \citeonline{bock1981} para a estimação de máxima verossimilhança dos parâmetros de itens no contexto da TRI. O objetivo principal é estimar parâmetros dos itens na presença de variáveis não observáveis, como as habilidades latentes dos indivíduos ($\theta$)  \cite{de2000teoria}.
+
+\begin{comment}
+
+ Neste contexto, $\boldsymbol{u}_{..}$ representa o vetor de dados incompletos (as respostas observadas), enquanto $\boldsymbol{u}_{..},\boldsymbol{\theta}$ constitui o vetor de dados completos (respostas observadas e as habilidades latentes). A função de densidade conjunta dos dados completos é denotada por $f(\boldsymbol{u}_{..}|\boldsymbol{\theta})$, e ela permite modelar o relacionamento entre as respostas dos indivíduos e suas habilidades não observadas \cite{de2000teoria}.
 
 Seja $\boldsymbol{\hat{\zeta}}^{(k)}$ uma estimativa de $\boldsymbol{\zeta}$ na interação $t$, os passos E e M são:
 \begin{itemize}
@@ -484,6 +553,8 @@ Seja $\boldsymbol{\hat{\zeta}}^{(k)}$ uma estimativa de $\boldsymbol{\zeta}$ na 
 	
 	\item[] \textbf{Passo M:} 	Obter $\boldsymbol{\hat{\zeta}}^{(k+1)}$ que maximiza a função do Passo E.
 \end{itemize}
+
+
 
 Se os modelos de TRI fizerem parte da família exponencial de distribuições, como no caso do modelo de Rasch (1PL), o processo de estimação dos parâmetros seria relativamente simples. No entanto, como os modelos de 2 e 3 parâmetros não fazem parte dessa família, uma forma modificada do algoritmo EM deve ser aplicada para estimar os parâmetros \cite{de2000teoria}.
 
@@ -507,52 +578,10 @@ sendo:  \(
 	}{\sum_{k=1}^{q}P(\boldsymbol{u}_{j.}|\bar{\theta}_k)A_k}
 \)
 	
-\begin{comment}
-\subsection{Estimação de Máxima Verossimilhança Marginal (EMVM)}
-
- Proposto por \citeonline{bock1970} este método estima os parâmetros dos itens e as habilidades dos respondentes em duas etapas, levando em consideração as margens das distribuições das habilidades dos respondentes. É útil quando o número de indivíduos é grande, apresentando vantagens computacionais.
- 
- A proposta desse método é realizar a estimação em duas etapas: inicialmente, os parâmetros dos itens são estimados, e depois as habilidades dos indivíduos. Como as habilidades não são diretamente observáveis, é necessário aplicar uma técnica que permita remover a dependência direta da verossimilhança em relação às habilidades, facilitando assim o processo de estimação \cite{de2000teoria}.
- 
-Para isso, assume-se que os respondentes são uma amostra de uma população cuja a habilidade segue uma determinada função de densidade $g(\theta|\boldsymbol{\eta})$, onde $\boldsymbol{\eta}$ é o vetor de parâmetros da distribuição da habilidade, no caso de uma distribuição normal padrão $\boldsymbol{\eta} = (\mu = 0, \sigma = 1) $. Usando a independência entre indivíduos a probabilidade associada ao vetor de respostas $\boldsymbol{U}$, pode ser escrito como:
-
-\[
-	P(\boldsymbol{u}_{..}|\boldsymbol{\zeta}) = \prod_{j=1}^{n}P(\boldsymbol{u}_{j.}|\boldsymbol{\zeta}, \boldsymbol{\eta})
-\]
-
-A equações de estimação usando EMVM para $ \boldsymbol{\zeta}_i$, são:\\
-
- \[
-	 \hat{a}_i : D(1-c_i)\sum_{j=1}^{s}r_j
-	 \int_{\mathbb{R}}\left[(u_{ji} - P_i)(\theta - b_i)W_i\right] g_j^*(\theta)d\theta = 0,
-\]
- 
-\[
-	 \hat{b}_i : -Da_i(1-c_i)\sum_{j=1}^{s}r_j
-	 \int_{\mathbb{R}}\left[(u_{ji} - P_i)W_i \right] g_j^*(\theta)d\theta = 0,
-\]
- 
-\[
- 	\hat{c}_i : \sum_{j=1}^{s}r_j \int_{\mathbb{R}}
- 	\left[(u_{ji}  - P_i)\frac{W_i}{P^*_i}\right]
- 	 g_j^*(\theta)d\theta = 0
-\]
-
-onde:\\ 
-
-\(
-	g^*_j(\theta) \equiv
-	g(\theta|\boldsymbol{u}_{j.}, \boldsymbol{\zeta}, \boldsymbol{\eta}) =
-	\dfrac{
-		P(\boldsymbol{u}_{j.}|\theta,\boldsymbol{\zeta})g(\theta|\boldsymbol{\eta})
-		}{
-		P(\boldsymbol{u}_{j.}|\boldsymbol{\zeta}, \boldsymbol{\eta})
-		}
-\)
+\end{commen
 
 
 
-\end{comment}
 \subsection{Estimação Bayesiana}
 
 A abordagem bayesiana, proposta por \citeonline{mislevy1986} é usada para estimar os parâmetros da TRI com base na distribuição \textit{a priori} dos parâmetros. Ela incorpora informações prévias sobre os parâmetros e atualiza essas informações com base nas respostas dos participantes. O ENEM e utiliza o método EAP (\textit{Expected a Posteriori}) para estimar as habilidades dos participantes \cite{inep2021}.
@@ -591,7 +620,6 @@ As transformações da habilidade de uma escala padrão para a escala ENEM é da
 \]
 
 
-\begin{comment}
 \begin{itemize}
 	
 	\item Habilidade	
@@ -616,12 +644,12 @@ c_{\text{ENEM}} = c_z
 \]
 
 \end{itemize}
-\end{comment}
+
 
 
 A escala utilizada para os parâmetros de habilidade ($\theta$) e dos itens é flexível, pois o que realmente importa é a ordem relativa entre esses parâmetros \cite{de2000teoria}. Essa ordenação determina as relações entre as habilidades dos indivíduos e as características dos itens, e se mantém consistente independentemente da escala adotada. Ao transformar a escala padrão normal para a escala utilizada pelo ENEM, a hierarquia dos indivíduos em termos de habilidade e a dificuldade dos itens permanecem as mesmas, facilitando a interpretação sem alterar as conclusões essenciais da análise.
 
-\begin{comment}
+
 
 \section{Itens Âncoras}
 
@@ -652,6 +680,50 @@ O conceito de "item âncora" refere-se a um item específico em um teste ou aval
 \end{comment}
 
 
+\section{Avaliação do Modelo}
+
+\subsection{Teste Razão de verossimilhança}
+
+ A razão de verossimilhança é calculada como a diferença entre os logaritimos das verossimilhanças dos dois modelos
+
+\[
+\lambda = -2 (\text{log} L_0 - \text{log} L_1)
+\]
+
+onde $L_0$ representa a Verossimilhança do modelo restrito e
+$L_1$ verossimilhança do modelo completo, Este teste segue uma distribuição assintoticamente qui-quadrado $(\chi^2$) com graus de liberdade iguais à diferença no número de parâmetros entre os dois modelos. O teste avalia duas hipóteses: a hipótese nula ($H_0$) de que o modelo restrito é suficiente para explicar os dados, e a hipótese alternativa ($H_1$) de que o modelo completo, com mais parâmetros, proporciona um ajuste significativamente melhor. Se o valor de $\lambda$ for grande o suficiente, rejeita-se a hipótese nula em favor do modelo completo \cite{casella2010inferencia}. 
+
+\subsection{Estatística M$_2$}
+
+Na avaliação de ajuste de modelos TRI, um aspecto a ser considerado é a adequação do modelo aos dados observados. \citeonline{cai2013limited} destacaram a importância desse processo, ressaltando a necessidade de métodos adequados para avaliar a adequação dos modelos aos dados observados. Recentemente, os testes de adequação de informações limitadas têm recebido maior atenção na literatura de psicometria. Esses testes utilizam tabelas marginais de ordem inferior em vez da tabela de contingência completa, tornando-os mais eficientes computacionalmente e menos sensíveis a problemas de convergência \cite{maydeu2014assessing}.
+
+Para avaliar a qualidade do modelo, são consideradas as hipóteses:
+\[
+\begin{cases}
+	H_0: \boldsymbol{\pi} = \boldsymbol{\pi}(\boldsymbol{\theta}) \\
+	
+	H_1: \boldsymbol{\pi} \neq \boldsymbol{\pi}(\boldsymbol{\theta})
+\end{cases}
+\]
+
+Ou seja, avalia-se se o vetor de probabilidade populacional $\boldsymbol{\pi}$ surge do modelo paramétrico $\boldsymbol{\pi}(\boldsymbol{\theta})$ contra a alternativa de que o modelo está incorreto \cite{maydeu2006limited}.
+
+Essa estatística (M$_2$) é parte de uma família de estatísticas de informação limitada, denominada M$_r$, desenvolvida para avaliar modelos TRI. A estatística M$_2$ é particularmente útil porque utiliza momentos de ordem 2 em vez da tabela de contingência completa, o que a torna mais adequada para modelos TRI. \citeonline{maydeu2006limited} demonstraram que, especialmente quando $r=2$, a estatística M$_2$ apresenta desempenho superior em comparação com estatísticas de informação completa. 
+
+\subsection{RMSEA}
+
+O RMSEA (índice de raiz quadrada média do erro de aproximação) é um índice de ajuste absoluto que mede a discrepância média entre o modelo especificado e os dados observados. O valor do RMSEA varia de 0 a 1, sendo que quanto mais próximo a 0, melhor o modelo \cite{kline2016principles}. \citeonline{maydeu2014assessing} propôs a estatística de informação limitada RMSEA$_{2}$ para aplicações em modelos TRI, na qual utiliza momentos bivariados e é estimado através do M$_2$. O RMSEA$_2$ pode ser estimado por:
+
+\[
+\hat{\epsilon}_2 = \sqrt{Max\left(\frac{\hat{M_{2}} - df_{2}}
+	{N \times df_{2}}, 0 \right) } ,
+\]
+
+\noindent onde $df_2$ equivale ao grau de liberdade para o momento $r = 2$.
+
+\subsection{TLI e CFI}
+
+Outro método para avaliar o modelo são os índices TLI (\textit{Tucker–Lewis Index}) e CFI (\textit{Comparative Fit Index}). O TLI, ou Índice Tucker-Lewis, compara o modelo estimado com um modelo teórico nulo e visa determinar se todos os indicadores estão associados a um único fator latente. Já o CFI, ou Índice de Ajuste Comparativo, é um indicador adicional utilizado para comparar modelos alternativos. Ambos os índices sugerem um bom ajuste quando seus valores se aproximam de 1 \cite{hair2009multivariada}.
 
 
 
