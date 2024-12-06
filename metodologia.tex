@@ -1,27 +1,25 @@
 \chapter{METODOLOGIA}
-
 \section{Dados}
 
-Os dados utilizados são  de uma aplicação realizada na plataforma digital estuda.com de um simulado de ciências humanas. O simulado é realizado online e gratuitamente pela plataforma da empresa. 
-A prova contém um total de 30 itens, sendo que 16 deles são provenientes de instituições de ensino públicas (UEA, UFPR, UNICENTRO, UFMS, IFPR, ESPCEX, UFSCAR, UFAL, UFMS, UPE e UNCISAL) , 9 de instituições de ensino particulares (FAAP, PUC-PR, FGV-RJ, EMESCAM, PUC-RIO, UNIFESO, FASM e FAMECA), e 5 itens são do ENEM.
+Os dados analisados neste trabalho foram obtidos a partir de uma aplicação realizada na plataforma digital Estuda.com, que disponibiliza simulados gratuitos a cada 15 dias, acessíveis a qualquer pessoa interessada, especialmente estudantes que se preparam para o ENEM ou vestibulares. Os simulados são elaborados com itens de domínio público extraídos de diferentes provas.
 
+O simulado analisado neste estudo contém 30 itens, dos quais 16 são provenientes de instituições públicas (UEA, UFPR, UNICENTRO, UFMS, IFPR, ESPCEX, UFSCAR, UFAL, UFMS, UPE e UNCISAL), 9 de instituições privadas (FAAP, PUC-PR, FGV-RJ, EMESCAM, PUC-RIO, UNIFESO, FASM e FAMECA), e 5 itens do ENEM.
 
-As provas em que os respondentes deixaram de responder uma ou mais questões foram excluídas da análise. A prova teve um total de 1055 respondentes, sendo que desses, foram analisados 664 responderam a prova inteira.
+Foram excluídas da análise as respostas dos respondentes que deixaram de responder uma ou mais questões. No total, o simulado contou com 1.055 participantes, mas apenas 664 foram incluídos na análise, por terem respondido a todas os questões.
 
 %Para análises, será utilizado o R \cite{r} com auxílio dos %pacotes \textit{mirt} \cite{mirt} e \textit{ltm} \cite{ltm}.
 
 
 \section{Análise TCT}
 
-Na Teoria Clássica dos Testes (TCT), foram avaliados o alfa de Cronbach para medir a consistência interna do teste, além de analisar a variação desse coeficiente ao excluir cada item, com o objetivo de avaliar a contribuição individual dos itens para a consistência geral. Foram também calculadas a correlação ponto bisserial ($r_{bis}$), que relaciona o desempenho no item com a pontuação total, a discriminação clássica, que mede a capacidade do item de diferenciar entre indivíduos de diferentes níveis de habilidade, e a porcentagem de acertos, que indica a dificuldade do item. As análises foram realizadas utilizando o pacote \textit{ltm} \cite{ltm} do R \cite{r}.
+Na TCT, foram avaliados o alfa de Cronbach para medir a consistência interna do teste, além de analisar a variação desse coeficiente ao excluir cada item, com o objetivo de avaliar a contribuição individual dos itens para a consistência geral. Foram também calculadas a correlação ponto bisserial ($r_{bis}$), que relaciona o desempenho no item com a pontuação total, a discriminação clássica, que mede a capacidade do item de diferenciar entre indivíduos de diferentes níveis de habilidade, e a porcentagem de acertos, que indica a dificuldade do item. As análises foram realizadas utilizando o pacote \textit{ltm} \cite{ltm} do R \cite{r}.
 
 
 
 \section{Análise TRI}
 
-Na análise da Teoria de Resposta ao Item (TRI), foi utilizado o software R \cite{r}, especificamente o pacote mirt \cite{mirt} versão 1.42 que, segundo \citeonline{edy2014}, usa estimativas de máxima verossimilhança marginal utilizando o algoritmo EM delineado por \citeonline{bock1981}, que utiliza grades de integração retangulares para estimar parâmetros dos itens. Além o pacote mirt foi usado para estimar as habilidades, utilizando o método EAP (Expected\textit{ A Posteriori}).
-
-O teste de razão de verossimilhança foi usado para verificar se a adição de parâmetros melhora o modelo. Para avaliar o ajuste do modelo foi utilizada a estatística M$_2$ proposta por \citeonline{maydeu2005limited}. Além disso foram avaliados os índices RMSEA, TLI e CFI.
+Na análise da TRI, foi utilizado o software R \cite{r}, especificamente o pacote mirt \cite{mirt} versão 1.42 que, segundo \citeonline{edy2014}, usa estimativas de máxima verossimilhança marginal utilizando o algoritmo EM delineado por \citeonline{bock1981}, que utiliza grades de integração retangulares para estimar parâmetros dos itens. Além o pacote mirt foi usado para estimar as habilidades, utilizando o método EAP (Expected\textit{ A Posteriori}).
+Para selecionar o melhor modelo, o teste de razão de verossimilhança foi usado para verificar se a adição de parâmetros melhora o modelo. Para avaliar o ajuste do modelo foi utilizada a estatística M$_2$ proposta por \citeonline{maydeu2005limited}. Além disso foram avaliados os índices RMSEA$_2$, TLI e CFI.
 
 \begin{comment}
 	Inicialmente, foram ajustados modelos de 1, 2 e 3 parâmetros logísticos para os itens do teste, visando avaliar a qualidade dos itens e a adequação dos modelos aos dados. O modelo de 1 parâmetro (1PL) estima apenas a dificuldade dos itens, enquanto o modelo de 2 parâmetros (2PL) incorpora a discriminação, e o modelo de 3 parâmetros (3PL) adiciona o parâmetro de acerto casual.

@@ -16,41 +16,78 @@
 \usepackage{array, multicol, multirow, makecell} 
 \usepackage{graphicx, wrapfig, lscape, rotating, float, booktabs} 
 \usepackage[usenames,dvipsnames,svgnames,table]{xcolor} 
+
 \usepackage{tabularx} 
 \usepackage{tabulary} 
 \usepackage[T1]{fontenc}
 \usepackage{placeins}
 \usepackage{pdfpages}
+\usepackage{fancyhdr}
+\usepackage{etoolbox}
+\usepackage{textcase}
+\usepackage[utf8]{inputenc}
 
-% No seu documento
+\renewcommand{\cftchapterdotsep}{1.5} %cap�tulo
+\renewcommand{\cftsectiondotsep}{1.5} % se��o
+\renewcommand{\cftsubsectiondotsep}{1.5} % subse��o
+
+% Ajustar o tamanho da fonte dos cap�tulos e se��es
+\renewcommand{\ABNTEXchapterfont}{\fontseries{b}\selectfont}
+\renewcommand{\ABNTEXchapterfontsize}{\large} % Tamanho dos t�tulos dos cap�tulos
+\renewcommand{\ABNTEXsectionfontsize}{\large} % Tamanho dos t�tulos das se��es
+
+% Colocando t�tulos em negrito no sum�rio
+\renewcommand{\cftchapterfont}{\bfseries}  % Negrito para cap�tulos
+\renewcommand{\cftsectionfont}{\bfseries}  % Negrito para se��es
+\renewcommand{\cftsubsectionfont}{\bfseries}  % Negrito para subse��es
+
+% Pontinhos em negrito
+\renewcommand{\cftchapterleader}{\bfseries\cftdotfill{\cftchapterdotsep}} % Pontinhos em negrito para captulos
+\renewcommand{\cftsectionleader}{\bfseries\cftdotfill{\cftsectiondotsep}} % Pontinhos em negrito para sees
+\renewcommand{\cftsubsectionleader}{\bfseries\cftdotfill{\cftsubsectiondotsep}} % Pontinhos em negrito para subses
+
+% Numerao de pinas em negrito
+\renewcommand{\cftchapterpagefont}{\bfseries} % Negrito para nmeros de pginas de captulos
+\renewcommand{\cftsectionpagefont}{\bfseries} % Negrito para meros de pginas de sees
+\renewcommand{\cftsubsectionpagefont}{\bfseries} % Negrito para nmeros de pginas de subsees
+
+
+% Redefine capítulos para usar o estilo 'nocontent'
+\preto{\chapter}{\pagestyle{nocontent}}
+
+
+
 \FloatBarrier  % Isso força as figuras a não passarem para a próxima seção
 
 
-
 % Pacotes de citações
-\usepackage[brazilian,hyperpageref]{backref}	 % Paginas com as citações na bibl
-\usepackage[alf]{abntex2cite}	% Citações padrão ABNT
-% Configurações do pacote backref
-% Usado sem a opção hyperpageref de backref
-\renewcommand{\backrefpagesname}{Citado na(s) pagina(s):}
+%\usepackage[brazilian,hyperpageref]{backref}	 % Paginas com as citações na bibl
+
+
+%\renewcommand{\backrefpagesname}{Citado na(s) pagina(s):}
 % Texto padrão antes do número das páginas
-\renewcommand{\backref}{}
+%\renewcommand{\backref}{}
 % Define os textos da citação
-\renewcommand*{\backrefalt}[4]{
-	\ifcase #1 %
-		Nenhuma citação no texto.%
-	\or
-		Citado na página #2.%
-	\else
-		Citado #1 vezes nas páginas #2.%
-	\fi}%
+%\renewcommand*{\backrefalt}[4]{
+%	\ifcase #1 %
+%	Nenhuma citação no texto.%
+%	\or
+%	Citado na página #2.%
+%	\else
+%	Citado #1 vezes nas páginas #2.%
+%	\fi}%
 % ---
+
+\usepackage[alf]{abntex2cite} % Pacote para citações no estilo ABNT
+
+
+\renewcommand{\cite}[1]{(\citeauthoronline{#1}, \citeyear{#1})} 
+
+
 
 % Recuo da primeira linha de cada parágrafo
 \setlength{\parindent}{1.25cm}
-
 \setlength\afterchapskip{1.5\baselineskip}
-
 
 \makeatletter
 \hypersetup{
@@ -65,8 +102,13 @@
 \makeatother
 
 
+
+
 \setlength\cftpartnumwidth{\cftparagraphnumwidth}
 \setlength\cftchapternumwidth{\cftparagraphnumwidth}
+
+
+
 
 % Pontinhos em negrito
 \renewcommand{\cftchapterleader}{\bfseries\cftdotfill{\cftchapterdotsep}} % Pontinhos em negrito para cap�tulos
@@ -92,22 +134,78 @@
 \renewcommand*{\cftsubsubsectionfont}{\bfseries}
 \renewcommand*{\cftparagraphfont}{\bfseries}
 
-\makeatother
+%\renewcommand{\cftchapterdotsep}{\cftdotsep} % Define o espaço entre título e número no sumário
+\renewcommand{\cftchapterdotsep}{1.5} %capítulo
+\renewcommand{\cftsectiondotsep}{1.5} % seção
+\renewcommand{\cftsubsectiondotsep}{1.5} % subseção
 
+
+% Ajustar o tamanho da fonte dos capítulos e seções
 \renewcommand{\ABNTEXchapterfont}{\fontseries{b}\selectfont}
-\renewcommand{\ABNTEXchapterfontsize}{\normalsize}
-\renewcommand{\ABNTEXsectionfontsize}{\normalsize}
-\renewcommand{\contentsname}{\centering{SUMÁRIO}}
-\pdfbookmark[0]{\contentsname}{toc}
-\renewcommand{\cftchaptername}{\hspace{0em}}
-\makeindex
+\renewcommand{\ABNTEXchapterfontsize}{\large} % Tamanho dos títulos dos capítulos
+\renewcommand{\ABNTEXsectionfontsize}{\large} % Tamanho dos títulos das seções
 
+% Colocando títulos em negrito no sumário
+\renewcommand{\cftchapterfont}{\bfseries}  % Negrito para capítulos
+\renewcommand{\cftsectionfont}{\bfseries}  % Negrito para seções
+\renewcommand{\cftsubsectionfont}{\bfseries}  % Negrito para subseções
+
+% Pontinhos em negrito
+\renewcommand{\cftchapterleader}{\bfseries\cftdotfill{\cftchapterdotsep}} % Pontinhos em negrito para capítulos
+\renewcommand{\cftsectionleader}{\bfseries\cftdotfill{\cftsectiondotsep}} % Pontinhos em negrito para seções
+\renewcommand{\cftsubsectionleader}{\bfseries\cftdotfill{\cftsubsectiondotsep}} % Pontinhos em negrito para subseções
+
+% Numeração de páginas em negrito
+\renewcommand{\cftchapterpagefont}{\bfseries} % Negrito para números de páginas de capítulos
+\renewcommand{\cftsectionpagefont}{\bfseries} % Negrito para números de páginas de seções
+\renewcommand{\cftsubsectionpagefont}{\bfseries} % Negrito para números de páginas de subseções
+
+
+
+\setlength{\parindent}{1.25cm}
+\setlength\afterchapskip{1.5\baselineskip}
+
+% Ajustar a largura das numerações e o recuo
+\setlength\cftpartnumwidth{\cftparagraphnumwidth}
+\setlength\cftchapternumwidth{\cftparagraphnumwidth}
+\setlength\cftsectionnumwidth{\cftparagraphnumwidth}
+\setlength\cftsubsectionnumwidth{\cftparagraphnumwidth}
+\setlength\cftsubsubsectionnumwidth{\cftparagraphnumwidth}
+\setlength\cftsectionindent{0pt}
+\setlength\cftsubsectionindent{0pt}
+\setlength\cftsubsubsectionindent{0pt}
+\setlength\cftparagraphindent{0pt}
+\renewcommand*{\cftsectionfont}{\bfseries}
+\renewcommand*{\cftsubsectionfont}{\bfseries}
+\renewcommand*{\cftsubsubsectionfont}{\bfseries}
+\renewcommand*{\cftparagraphfont}{\bfseries}
+
+
+% Define o estilo de página com numeração no canto superior direito
+\fancypagestyle{fancy}{
+	\fancyhf{} % Limpa todos os cabeçalhos e rodapés
+	\fancyhead[R]{\footnotesize{\thepage}} % Ajusta o tamanho da fonte da numeração da página para normalsize
+	\renewcommand{\headrulewidth}{0pt} % Remove a linha horizontal do cabeçalho
+}
+
+% Define o estilo de página para remover título de capítulo e seção com numeração no canto superior direito
+\fancypagestyle{nocontent}{
+	\fancyhf{} % Limpa todos os cabeçalhos e rodapés
+	\fancyhead[R]{\normalsize{\thepage}} % Ajusta o tamanho da fonte da numeração da página para normalsize
+	\renewcommand{\headrulewidth}{0pt} % Remove a linha horizontal do cabeçalho
+	\renewcommand{\chaptermark}[1]{\markboth{}{}}
+	\renewcommand{\sectionmark}[1]{\markright{}}
+}
 \nobibintoc
+
+
 \pagestyle{plain}
 
 \input{info_tcc.tex}
 
 \begin{document}
+
+
 %Estilo dos titulos dos capitulos
 \chapterstyle{book}
 % ----------------------------------------------------------
@@ -115,11 +213,15 @@
 % ----------------------------------------------------------
 \include{capa}
 \include{contra}
+\include{catalografica}
 \include{aprova}
 %\include{dedicatoria}
 %\include{agradecimentos}
 %\include{epigrafe}
+
 \include{resumo}
+
+
 % inserir lista de ilustrações
 \pdfbookmark[0]{\listfigurename}{lof}
 \renewcommand{\listfigurename}{\centering\textbf{LISTA DE FIGURAS}}
@@ -133,18 +235,38 @@
 \listoftables*
 \cleardoublepage
 % inserir o sumario
-\newpage
-\pdfbookmark[0]{\contentsname}{toc}
-\tableofcontents*
-\cleardoublepage
+
+
+
+% Define o estilo nocontent
+\fancypagestyle{nocontent}{
+	\fancyhf{} % Limpa todos os cabeçalhos e rodapés
+	\fancyhead[R]{\normalsize{\thepage}} % Numeração no canto superior direito
+	\renewcommand{\headrulewidth}{0pt} % Remove linha horizontal do cabeçalho
+}
+
 % ----------------------------------------------------------
 % ELEMENTOS TEXTUAIS
 % ----------------------------------------------------------
-\textual
+\cleardoublepage
+
+\renewcommand{\contentsname}{\centering{SUMÁRIO}}
+\pdfbookmark[0]{\contentsname}{toc}
+\tableofcontents*
+
+\cleardoublepage
+% Iniciar a numeração a partir da página de introdução
+
+%\setcounter{page}{10} 
+
+\pagestyle{fancy} % Aplica o estilo 'fancy' para numeração a partir da introdução
+
+\mainmatter
 \include{cap1}
 \include{cap2_ref_teorico}
 \include{metodologia}
 \include{resultados}
+\pagestyle{fancy}
 \include{conclusao}
 %\include{cronograma}
 %\include{referencias}
@@ -153,15 +275,13 @@
 % ----------------------------------------------------------
 % ELEMENTOS POS-TEXTUAIS
 % ----------------------------------------------------------
-\postextual
-\addtocontents{toc}{\protect\vspace{-22pt}}
 
-\renewcommand{\bibname}{REFERÊNCIAS}
+%\addtocontents{toc}{\protect\vspace{-22pt}}
+
+\addcontentsline{toc}{chapter}{\hspace{4.94em}REFERÊNCIAS} % Ajusta o alinhamento no sumário
+\thispagestyle{nocontent}
 \bibliography{referencias}
-%Apendices
-%\renewcommand{\apendicesname}{APÊNDICE}
-%\include{apendices}
-\renewcommand{\anexosname}{ANEXOS}
-\include{anexos}
+
+\input{anexos.tex}
 
 \end{document} 

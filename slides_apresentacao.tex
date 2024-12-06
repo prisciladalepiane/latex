@@ -6,11 +6,13 @@
 \usecolortheme{default}
 \usepackage{multirow}
 \usepackage{makecell}
+\usepackage[brazilian,hyperpageref]{backref}	 % Paginas com as citações na bibl
+\usepackage[alf]{abntex2cite}
 %------------------------------------------------------------
 %This block of code defines the information to appear in the
 %Title page
 \title[TRI] %optional
-{m}
+{Aplicação da Teoria de Resposta ao Item em um simulado de Ciências Humanas}
 
 \subtitle{Trabalho de Conclusão do Curso}
 
@@ -55,80 +57,108 @@
 	\frame{\titlepage}
 
 	
-	\section{Introdução}
+\section{Introdução}
 	
-		\begin{frame}
+	\begin{frame}
 		
 		\frametitle{Introdução}
-		\begin{columns}
-			
-			\column{0.6\textwidth}
-			
+
 			\begin{center}
-				\textbf{Variável Latente}
+				\textbf{Introdução}
 			\end{center}
 			
-			Em muitas situações de medição na psicometria, existe uma variável de interesse que não pode ser medida diretamente. Esta variável é denominada \textbf{latente}. \newline  Por exemplo, como medir a inteligência?
+		
+			Em situações da psicometria existe uma variável de interesse que não pode ser medida diretamente. Esta variável é denominada \textbf{latente}.\newline \newline
+			Pode ser chamada de: traço latente, variável hipotética, fator,  \textbf{habilidade}, aptidão, tendência, \textbf{proficiência}, satisfação, entre outros.
 			
-	
-
-			
-			\column{0.4\textwidth}
+			 		
 			
 			\begin{figure}
 			%	\includegraphics[width=5cm,height=5cm]{medida.jpg}
 			\end{figure}
-			
-			
-		\end{columns}
 
 		
-		
-\end{frame}
+ \end{frame}
+
 	%---------------------------------------------------------
-	\begin{frame}
+
+\begin{frame}
 		
 		\frametitle{Introdução}
-		\begin{columns}
+
 		
-		\column{0.6\textwidth}
-		
-		Na educação, em geral, precisamos avaliar o conhecimento do alunos, por isso a variável latente pode ser chamada de \textbf{habilidade} ou \textbf{proeficiência}.
-		A habilidade é uma representação abstrata e não observável do conhecimento.	\newline\newline
+		Na educação, precisamos avaliar o conhecimento do alunos, por isso a variável latente pode ser chamada de \textbf{habilidade} ou \textbf{proficiência}. \newline
+		A habilidade é uma representação abstrata do conhecimento.	\newline\newline
 		Pode ser estimada por meio de avaliações, chamadas também de instrumentos.
 
-		\column{0.4\textwidth}
+
 		
 		\begin{figure}
 		%	\includegraphics[width=5cm,height=5cm]{medida.jpg}
 		\end{figure}	
 		
-		\end{columns}
 			
 \end{frame}
 	%---------------------------------------------------------
+	
+		%\begin{columns}
+		
+		%\column{0.6\textwidth}
 \begin{frame}
 	
 	\frametitle{Introdução}
-	\begin{columns}
+
 		
-		\column{0.6\textwidth}
+		Um \textbf{instrumento} se refere ao teste, prova ou questionário que possui um conjunto de itens que são usados para medir uma habilidade ou traço específico dos respondentes. \newline
+
 		
-		Um \textbf{instrumento} se refere ao teste ou conjunto de itens que são usados para medir uma habilidade ou traço específico dos respondentes. Cada \textbf{item} nesse instrumento é projetado para medir algo específico e contribui para a avaliação geral da proficiência do indivíduo nesse traço ou habilidade. \newline
+		 Cada \textbf{item} nesse instrumento deve contribuir para a avaliação geral da proficiência do indivíduo nesse traço ou habilidade. \newline 
 		
-		A estimação precisa da habilidade depende da qualidade do instrumento.
+		A estimação precisa do traço latente depende da qualidade do instrumento como um todo e dos itens que o compõem.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Introdução}
+	2 abordagens para se trabalhar com testes e questionários:
+	
+	
+	\begin{itemize}
+		\item Teoria Clássica dos testes (TCT)
 		
-		\column{0.4\textwidth}
-		
-		\begin{figure}
-			%\includegraphics[width=4.4cm,height=7cm]{inst.jpg}
-		\end{figure}	
-		
-	\end{columns}
+		\item Teoria de Resposta ao Item (TRI)
+	\end{itemize}	
+	
+	
+	
 	
 \end{frame}
 
+\begin{frame}
+	
+	\frametitle{Introdução}
+	
+	\begin{center}
+			\textbf{Teoria de Resposta ao Item (TRI)}
+	\end{center}
+	
+	 Atualmente, todas as provas no INEP Instituto Nacional de Estudos e Pesquisas Educacionais utilizam TRI, como:\\
+	 
+	 
+	 - \textbf{SAEB}: Sistema de Avaliação da Educação Básica; \\
+	 
+	 - \textbf{ENCCEJA}: Exame Nacional para Certificação de Competências de Jovens e Adultos;\\
+	 
+	 - \textbf{SARESP}: Sistema de Avaliação de Rendimento Escolar do Estado de São Paulo; \\
+	 
+	 - \textbf{ENEM}: Exame Nacional do Ensino Médio.
+		
+	
+\end{frame}
 
+\begin{frame}
+    O estado de Mato Grosso faz avaliação da educação com TRI pelo CAED/UFJF (Centro de Políticas Públicas e Avaliação da Educação), para avaliar e aumentar os índices do IDEB (Índice de Desenvolvimento da Educação Básica) no estado.
+\end{frame}
 	
 	%---------------------------------------------------------
 \begin{frame}
@@ -136,13 +166,14 @@
 		\begin{center}
 		\textbf{Objetivo Geral}	
 		\end{center}
+
 		
 			O objetivo geral é analisar a qualidade dos itens que compõe um simulado de Ciências Humanas (instrumento) e estimar a habilidade dos respondentes (traço latente).
 			
 
-	\end{frame}
+\end{frame}
 	%---------------------------------------------------------
-	\begin{frame}
+\begin{frame}
 		\frametitle{Objetivos Específicos}
 		\begin{center}
 			\textbf{Objetivos Específicos}	
@@ -153,7 +184,7 @@
 			\item<2-> Analisar a qualidade dos Itens e da prova utilizando a TCT e a TRI. 
 			\item<3-> Determinar se os itens que compõem a prova são adequados para estimar a habilidade.
 		\end{itemize}
-	\end{frame}
+\end{frame}
 	
 	%--------------------------------------------------
 	
@@ -165,8 +196,13 @@
 		
 		\frametitle{Teoria Clássica dos Testes}
 		
-		A \textbf{Teoria clássica dos testes} é a teoria que antecede o TRI, 
-		com cálculos mais simples, onde é o foco é o teste como um todo.
+		\begin{center}
+			\textbf{Teoria clássica dos testes (TCT)}
+		\end{center}
+		
+		A TCT é a teoria que antecede o TRI, com cálculos mais simples, com a desvantagem da dependência dos respondentes. \newline
+		Na TCT a habilidade do respondente é definido pela soma das questões certas, sendo que todos os itens tem o mesmo peso na nota.
+	
 		
 	\end{frame}		
 	
@@ -194,7 +230,7 @@
 			\textbf{Coeficiente Ponto Bisserial}
 		\end{center}
 		O coeficiente ponto bisserial representa uma métrica que avalia a relação entre o desempenho em um item e o desempenho geral na prova.
-		Auxiliando na identificação de questões que podem apresentar problemas, como respostas incorretas no gabarito.
+	
 		
 		\[
 		r_{bis} = \frac{\bar{X}_p - \bar{X}_t}{S_t}
@@ -212,14 +248,33 @@
 		$ S_t :$  desvio padrão do teste;
 	\end{frame}
 	
+	\begin{frame}
+		
+			\frametitle{Teoria Clássica dos Testes}
+		\begin{center}
+			\textbf{Índice de Discriminação Clássico ($D_i$)}
+		\end{center}
+		
+		\[D_i =  ACIM_i - ABAI_i\]  \\ 
+		
+		\hspace{0.5in}
+		
+		 $ACIM_i:$ proporção de acertos do item no grupo superior, no qual é formado por 27\% dos escores superiores. \\ 
+		
+		\hspace{0.5in}
+		 
+		 $ABAI_i:$ proporção de acertos do grupo inferior, no qual é formado pelos 27\% menores escores. 
+		
+	\end{frame}
+	
 	
 	\begin{frame}
 		
 		\frametitle{Teoria Clássica dos Testes}
 		\begin{center}
-			\textbf{\textit{Alpha} de Cronbach}
+			\textbf{Alpha de Cronbach}
 		\end{center}
-		Para avaliar se um conjunto de itens avaliam a mesma habilidade.
+		Para avaliar a consistência interna do teste.
 		
 		
 		\[
@@ -276,9 +331,9 @@
 		
 	
 		\begin{itemize}
-			\item<1-> Quantas variáveis latentes se pretende medir;
-			\item<1-> Formato dos Itens (Dicotômicos, Múltipla escolha);
-			\item<1-> Número de parâmetros a serem estimados.
+			\item<1-> Quantas variáveis latentes são necessárias;
+			\item<1-> Formato dos Itens (Dicotômicos, Politômicos);
+
 		    
 		\end{itemize}
 	\end{frame}
@@ -288,36 +343,17 @@
 		
 		\frametitle{Modelos Unidimensionais para Itens dicotômicos}
 		
-		Modelos unidimensionais assumem que a probabilidade de um indivíduo responder corretamente a um item depende de um único traço latente (habilidade) que se deseja medir. Serão apresentados 3 modelos para casos de itens dicotômicos. 
+		\begin{center}
+			\textbf{Modelos Unidimensionais para Itens dicotômico}
+		\end{center}
 		
+		Serão apresentados 3 modelos unidimensionais para casos de itens dicotômicos. 
+		
+		Modelos unidimensionais assumem que a probabilidade de um indivíduo responder corretamente a um item depende de um único traço latente (habilidade) que se deseja medir. 
 		
 
 	\end{frame}
 	
-	\begin{frame}
-		
-		\frametitle{Modelos Unidimensionais para Itens dicotômicos }
-		
-		\begin{center}
-			\textbf{Denotações:}
-		\end{center}
-		
-		$ \boldsymbol{\theta} = (\theta_1, \cdots, \theta_n) \rightarrow $  vetor de habilidades dos $n$ indivíduos; \newline
-		
-		$ \boldsymbol{\zeta} = (\boldsymbol{\zeta}_1, \cdots, \boldsymbol{\zeta}_I) \rightarrow $ conjunto de parâmetros dos itens.\newline
-		
-		$ \textbf{U}_{n\times I} =  
-		\begin{bmatrix}
-			u_{11} & u_{12} & \cdots & u_{1I} \\
-			u_{21} & u_{22} & \cdots & u_{2I} \\
-			\vdots & \vdots & \ddots & \vdots\\
-			u_{n1} & u_{n2} & \cdots & u_{nI}
-		\end{bmatrix} \rightarrow
-		$ Matriz de respostas
-		
-		
-		
-	\end{frame}
 	
 	% Modelo 1PL
 	\begin{frame}
@@ -388,7 +424,7 @@
 		\begin{itemize}
 			\item<1-> Maior o valor de $a_i$;
 			\item<1-> Menor o valor de $c_i$;
-			\item<1-> Quando $b_i$ se aproxima de $\theta_j$.
+			\item<1-> Quando $\theta_j$  se aproxima de $b_i$.
 			
 		\end{itemize}
 		%$P_i(\theta) = P(U_{ij} = 1| \theta) $ e\\ $ Q_i(\theta) = 1 - P_i(\theta) $
@@ -411,6 +447,10 @@
 	\begin{frame}
 			
 			\frametitle{Função de Informação do Teste}
+			
+		\begin{center}
+				\textbf{Função de Informação do Teste}
+		\end{center}
 		
 		Obtida pela soma das informações fornecidas pelos itens que compõem a prova.	
 			\[
@@ -439,27 +479,56 @@
 		
 	\end{frame}
 	
+	% Suposições
 	\begin{frame}
 		
 		\frametitle{Suposições do modelo TRI}
 	
 		\begin{itemize}
 			
-			\item<1-> Apenas os traços latentes e os parâmetros são necessários para modelar a probabilidade dos indivíduos.
+			\item<1-> Apenas os traços latentes e os parâmetros são necessários para modelar a probabilidade.
 						
-			\item<1-> Em modelos unidimensionais, apenas uma dimensão do traço latente e necessária, ou seja, o teste mede a mesma variável latente. (\textbf{Unidimensionalidade})
+			\item<1-> Em modelos unidimensionais, apenas uma dimensão do traço latente e necessária, ou seja, o teste mede a mesma variável latente (\textbf{Unidimensionalidade}).
 			
-			\item<1-> Respostas entre itens e indivíduos são independentes \textbf{Independência}.
+			\item<1-> Respostas entre itens e indivíduos são independentes (\textbf{Independência}).
 	
 		\end{itemize}
 		
 	\end{frame}
 	
 	
-
+    % ESTIMAÇÃO DE PARÂMETROS
+    
+    \begin{frame}
+    	
+    	\frametitle{Estimação dos parâmetros }
+    	
+    	\begin{center}
+    		\textbf{Denotações:}
+    	\end{center}
+    	
+    	$ \boldsymbol{\theta} = (\theta_1, \cdots, \theta_n) \rightarrow $  vetor de habilidades dos $n$ indivíduos; \newline
+    	
+    	$ \boldsymbol{\zeta} = (\boldsymbol{\zeta}_1, \cdots, \boldsymbol{\zeta}_I) \rightarrow $ conjunto de parâmetros dos itens.\newline
+    	
+    	$ \textbf{U}_{n\times I} =  
+    	\begin{bmatrix}
+    		u_{11} & u_{12} & \cdots & u_{1I} \\
+    		u_{21} & u_{22} & \cdots & u_{2I} \\
+    		\vdots & \vdots & \ddots & \vdots\\
+    		u_{n1} & u_{n2} & \cdots & u_{nI}
+    	\end{bmatrix} \rightarrow
+    	$ Matriz de respostas
+    	
+    	
+    	
+    \end{frame}
+    
+    
 	\begin{frame}
 		
-		\frametitle{Estimação dos Parâmetros }
+		
+		\frametitle{Estimação dos Parâmetros}
 		
 		A variável $U_{ji}$ é uma variável dicotômica com distribuição Bernoulli, sendo:
 		
@@ -481,22 +550,6 @@
 	
 	\end{frame}
 	
-	\begin{frame}
-		
-		\frametitle{Estimação dos Parâmetros }
-		
-		Em geral, temos as respostas do instrumento $U_{ij}$ e desejamos estimar tanto $\boldsymbol{\zeta}$ quanto $\boldsymbol{\theta}$.
-		
-		Para estimação conjunta, Birnbaum (1968), propôs um processo vai e volta.\newline
-		
-		\begin{enumerate}
-			\item Inicia com uma estimativa grosseira de $\boldsymbol{\theta}$ considerando que $\boldsymbol{\zeta}$ é conhecido.
-			\item Estima-se $\boldsymbol{\zeta}$ com $\boldsymbol{\theta}$ conhecido (estimado na primeira etapa).\newline 
-		\end{enumerate} 
-		
-		O Processo é repetido até a convergência dos parâmetros.
-		
-	\end{frame}
 	
 	\begin{frame}
 		
@@ -513,22 +566,24 @@
 			
    \end{frame}
 	
+		
+	
 	\begin{frame}
 		
-		\frametitle{Estimação dos Parâmetros }
+		\frametitle{Estimação dos Parâmetros}
 		
 		Após calcular os valores que maximizam a verossimilhança, ou seja, a solução de: $\dfrac{\partial~log~ L(\boldsymbol{\zeta})}{\partial \boldsymbol{\zeta_i}} = 0$ , são encontrados os EMV para $ \boldsymbol{\zeta}_i = (a_i, b_i , c_i )$:\newline
 		
 		$
-		a_i: D(1 - c_i)\sum_{j=1}^{n}(u_{ji} - P_{ji})(\theta_j - b_i)W_{ij} = 0
+		\hat{a_i}: D(1 - c_i)\sum_{j=1}^{n}(u_{ji} - P_{ji})(\theta_j - b_i)W_{ij} = 0
 		$\newline
 		
 		$
-		b_i: -Da_i(1 - c_i)\sum_{j=1}^{n}(u_{ji} - P_{ji})W_{ij} = 0
+		\hat{b_i}: -Da_i(1 - c_i)\sum_{j=1}^{n}(u_{ji} - P_{ji})W_{ij} = 0
 		$\newline
 		
 		$ 
-		c_i: \sum_{j=1}^{n}(u_{ji} - P_{ji})\frac{W_{ij}}{P^*_{ij}} = 0
+		\hat{c_i}: \sum_{j=1}^{n}(u_{ji} - P_{ji})\frac{W_{ij}}{P^*_{ij}} = 0
 		$  \newline
 		
 		\begin{center} onde: \space
@@ -539,6 +594,7 @@
 			
 \end{frame}
 	
+
 	\begin{frame}
 		
 		\frametitle{Estimação dos Parâmetros }
@@ -548,9 +604,9 @@
 		A equação de estimação é dada por:\newline \newline
 		
 		
-		$ \theta_j : D\sum_{i=1}^{I}{a_i(1-c_i)(u_{ji}-P_{ji})W_{ji}} = 0 $ \newline \newline
+		$ \hat{\theta_j} : D\sum_{i=1}^{I}{a_i(1-c_i)(u_{ji}-P_{ji})W_{ji}} = 0 $ \newline \newline
 		
-		Os EMV para $ \boldsymbol{\zeta}_i$ e $\theta_j$ não possuem soluções explicitas, por isso é necessário o uso de métodos interativos de integração numérica.
+		Os EMV para $ \boldsymbol{\zeta}_i$ e $\theta_j$ não possuem soluções explicitas, por isso é necessário o uso de métodos interativos.
 		
 	\end{frame}
 	
@@ -558,22 +614,63 @@
 		
 		\frametitle{Estimação dos Parâmetros }
 		
+		Em geral, temos as respostas do instrumento $U_{ij}$ e desejamos estimar tanto $\boldsymbol{\zeta}$ quanto $\boldsymbol{\theta}$.
+		
+		Para estimação conjunta, Birnbaum (1968), propôs um processo vai e volta.\newline
+		
+		\begin{enumerate}
+			\item Inicia com uma estimativa grosseira de $\boldsymbol{\theta}$ considerando que $\boldsymbol{\zeta}$ é conhecido.
+			\item Estima-se $\boldsymbol{\zeta}$ com $\boldsymbol{\theta}$ conhecido (estimado na primeira etapa).\newline 
+		\end{enumerate} 
+		
+		O Processo é repetido até a convergência dos parâmetros.
+		
+	\end{frame}	
+	
+	
+	
+	% EMV Marginal
+	\begin{frame}
+		\frametitle{Estimação dos Parâmetros}
+			
 		\begin{center}
-			\textbf{Estimador de Máxima Verossimilhança Marginal (EMVM)}
+			\textbf{Outros Métodos de estimação}
 		\end{center}
+			
 		
-					
-		Para isso, assume-se que os respondentes são uma amostra de uma população cuja a habilidade segue uma determinada função de densidade $g(\theta|\boldsymbol{\eta})$, onde $\boldsymbol{\eta}$ é o vetor de parâmetros da distribuição da habilidade, no caso de uma distribuição normal padrão $\boldsymbol{\eta} = (\mu = 0, \sigma = 1) $. Usando a independência entre indivíduos a probabilidade associada ao vetor de respostas $\boldsymbol{U}$, pode ser escrito como:
-		
-		\[
-		P(\boldsymbol{u}_{..}|\boldsymbol{\zeta}) = \prod_{j=1}^{n}P(\boldsymbol{u}_{j.}|\boldsymbol{\zeta}, \boldsymbol{\eta})
-		\]
-		
-		
+		\begin{itemize}
+			\item Maxima Verossimilhança Marginal: 
+			\item Bayesiana
+		\end{itemize}
 		
 		
 	\end{frame}
-	\begin{comment}
+
+	
+
+%  \begin{frame}
+		
+%	\frametitle{Estimação dos Parâmetros - EMVM}
+%					
+%	A equações de estimação usando EMVM para $ \boldsymbol{\zeta}_i$, são:\\
+%	
+%
+%\[
+%\begin{aligned}
+%	\hat{a}_i & : D(1 - c_i) \sum_{j=1}^{s} r_j
+%	\int_{\mathbb{R}} \left[(u_{ji} - P_i)(\theta - b_i)W_i\right] g_j^*(\theta) \, d\theta = 0, \\[1em]	
+%	\hat{b}_i & : -D a_i (1 - c_i) \sum_{j=1}^{s} r_j
+%	\int_{\mathbb{R}} \left[(u_{ji} - P_i)W_i \right] g_j^*(\theta) \, d\theta = 0, \\[1em]	
+%	\hat{c}_i & : \sum_{j=1}^{s} r_j \int_{\mathbb{R}}
+%	\left[(u_{ji} - P_i)\frac{W_i}{P^*_i}\right]
+%	g_j^*(\theta) \, d\theta = 0
+%\end{aligned}
+%\]
+%		
+%\end{frame}
+	
+	
+\begin{comment}
 		\begin{frame}
 			
 			\frametitle{Estimação dos Parâmetros }
@@ -635,12 +732,11 @@
 		
 		\begin{center}
 			\textbf{Estatística M$_2$} 
-			\hfill
 		\end{center}
 		
-	A estatística (M$_2$) é parte de uma família de estatísticas de informação limitada, denominada M$_r$, desenvolvida para avaliar modelos TRI.
-	A estatística M$_2$ é particularmente útil porque utiliza momentos de ordem 2 em vez da tabela de contingência completa, o que a torna mais adequada para modelos TRI.
-	\cite{maydeu2006limited} demonstraram que, especialmente quando $r=2$, a estatística M$_2$ apresenta desempenho superior em comparação com estatísticas de informação completa. 
+	A estatística (M$_2$) é parte de uma família de estatísticas de informação limitada, denominada M$_r$, desenvolvida para avaliar modelos TRI. \newline 
+	A estatística M$_2$ é particularmente útil porque utiliza momentos de ordem 2 em vez da tabela de contingência completa, o que a torna mais adequada para modelos TRI. \newline 
+	Maydeu e Joe (2006)  demonstraram que, especialmente quando $r=2$, a estatística M$_2$ apresenta desempenho superior em comparação com estatísticas de informação completa. 
 		
 \end{frame}		
 
@@ -650,7 +746,6 @@
 	
 	\begin{center}
 		\textbf{Estatística M$_2$} 
-		\hfill
 	\end{center}
 	
 		Para avaliar a qualidade do modelo, são consideradas as hipóteses:
@@ -662,56 +757,28 @@
 		\end{cases}
 		\]
 
-	Ou seja, avalia-se se o vetor de probabilidade populacional $\boldsymbol{\pi}$ surge do modelo paramétrico $\boldsymbol{\pi}(\boldsymbol{\theta})$ contra a alternativa de que o modelo está incorreto \cite{maydeu2006limited}.
+	Ou seja, avalia-se se o vetor de probabilidade populacional $\boldsymbol{\pi}$ surge do modelo paramétrico $\boldsymbol{\pi}(\boldsymbol{\theta})$ contra a alternativa de que o modelo está incorreto.
 	
 \end{frame}	
 
 \begin{frame}
 	
 	\frametitle{Avaliação do Modelo}
-	
-	\begin{center}
-		\textbf{RMSEA} 
-		\hfill
-	\end{center}
-	
-	O RMSEA (índice de raiz quadrada média do erro de aproximação) é um índice de ajuste absoluto que mede a discrepância média entre o modelo especificado e os dados observados. O valor do RMSEA varia de 0 a 1, sendo que quanto mais próximo a 0, melhor o modelo \cite{kline2016principles}.
-	
-\end{frame}	
 
-\begin{frame}
-	
-	\frametitle{Avaliação do Modelo}
-	
-	\begin{center}
-		\textbf{RMSEA} 
-		\hfill
-	\end{center}
-		 \cite{maydeu2014assessing} propôs a estatística de informação limitada RMSEA$_{2}$ para aplicações em modelos TRI, na qual utiliza momentos bivariados e é estimado através do M$_2$. O RMSEA$_2$ pode ser estimado por:
+	\begin{itemize}
+		\item \textbf{RMSEA:} (índice de raiz quadrada média do erro de aproximação) é um índice de ajuste absoluto que mede a discrepância média entre o modelo especificado e os dados observados. Varia de 0 a 1, sendo que quanto mais próximo a 0, melhor o modelo.
 		
-		\[
-		\hat{\epsilon}_2 = \sqrt{Max\left(\frac{\hat{M_{2}} - df_{2}}
-			{N \times df_{2}}, 0 \right) } ,
-		\]
+		\item \textbf{CFI:} (\textit{Tucker–Lewis Index})  compara o modelo estimado com um modelo teórico nulo e visa determinar se todos os indicadores estão associados a um único fator latente. 
+		
+		\item \textbf{CFI:} (\textit{Comparative Fit Index}), ou Índice de Ajuste Comparativo, é um indicador adicional utilizado para comparar modelos alternativos.
+		
+		
+	\end{itemize}
 	
 \end{frame}	
 
-\begin{frame}
-	
-	\frametitle{Avaliação do Modelo}
-	
-	\begin{center}
-		\textbf{TLI e CFI} 
-		\hfill
-	\end{center}
-	
-	Outro método para avaliar o modelo são os índices TLI (\textit{Tucker–Lewis Index}) e CFI (\textit{Comparative Fit Index}).
-	
-	 O TLI, ou Índice Tucker-Lewis, compara o modelo estimado com um modelo teórico nulo e visa determinar se todos os indicadores estão associados a um único fator latente.
-	 Já o CFI, ou Índice de Ajuste Comparativo, é um indicador adicional utilizado para comparar modelos alternativos. 
-	 
-	 Ambos os índices sugerem um bom ajuste quando seus valores se aproximam de 1 \cite{hair2009multivariada}.
-\end{frame}
+
+
 
 	%---------------------------------------------------------
 	\section{Metodologia}
@@ -722,12 +789,14 @@
 		
 		\begin{center}	Dados:	\end{center}
 		
-		Os dados utilizados foram de um simulado online de Ciências Humanas aplicado pela empresa de tecnologia educacional estuda.com
-		30 itens abertos de provas variadas.\\
-		\pause
-		Os dados foram dicotomizados em 1 (certo) e 0 (errado).zz
-		\pause
-		O simulado teve um total de 1055 respondentes, sendo que desses, foram analisados 664	responderam a prova inteira.
+		\begin{itemize}
+			\item Os dados utilizados foram de um simulado online de Ciências Humanas aplicado pela empresa de tecnologia educacional estuda.com. \pause
+			\item 30 itens de domínio público provenientes de instituições de ensino públicas e privadas. \pause
+			\item Os dados foram dicotomizados em 1 (certo) e 0 (errado). \pause
+			\item O simulado teve um total de 1055 respondentes, sendo que desses, foram analisados 664	responderam a prova inteira. \pause
+		\end{itemize}
+		
+		
 
 	\end{frame}
 	
@@ -735,16 +804,40 @@
 		
 		\frametitle{Metodologia}
 		\begin{center}	Programas e pacotes: \end{center}
-		Software R (R Core Team, 2022) com auxílio dos pacotes: \\
-		- \textbf{mirt} (CHALMERS, 2012)\\
-		- \textbf{ltm} (RIZOPOULOS, 2006).\\ \pause
+		Software R (R Core Team, 2022) com auxílio dos pacotes: \\ \pause
+		- \textbf{ltm} (RIZOPOULOS, 2006) para análise TCT.\\ \pause 
+		- \textbf{mirt} (CHALMERS, 2012) para análise TRI.\\
+		
+
+	\end{frame}
+	
+	\begin{frame}
+		
+		\frametitle{Metodologia}
+		\begin{center}	Estimação: \end{center}
+		
+		- Parâmetros: Máxima verossimilhança marginal Algoritmo EM delineado por Bock e Aitkin (1981).\\ \newline
+		
+		- As habilidades: o método EAP (\textit{Expected A posteriori}). 
+		
+	\end{frame}
+	
+	\begin{frame}
+		
 		
 		\begin{center}	Critério de avaliação:	\end{center}
 		
-		O teste de razão de verossimilhança foi usado para verificar se a adição de parâmetros melhora o modelo. Para avaliar o ajuste do modelo foi utilizada a estatística M$_2$ proposta por \cite{maydeu2005limited}. 
-		Além disso foram avaliados os índices RMSEA, TLI e CFI.
-
+		Para análise exploratória: \\
+		
+		O teste de razão de verossimilhança. \newline
+		
+		Para análise confirmatória:\\
+		
+		Teste M$_2$, RMSEA, TLI e CFI. \newline
+		
 	\end{frame}
+	
+	
 	%---------------------------------------------------------
 	\section{Resultados}
 	
@@ -825,19 +918,9 @@
 		
 	
 	
-	\begin{frame}
-		
-		\frametitle{Teoria Clássica dos Testes}
-		
+
 			
-			Observado um aumento no alfa de Cronbach ao excluir os itens:\\
-			21, 22, 27, 28 e 30.
-			
-			Itens com Ponto bisserial abaixo de 0,3:\\
-			28, 27, 30, 15, 22, 9 e 14
-			
-			Itens com Discriminação Clássica abaixo de 0,3:\\
-			28, 27, 30, 15, 22, 21 e 20
+
 %		\begin{table}[ht]
 %	\centering
 %	\caption{Classificação do item de acordo com a discriminação clássica.}			
@@ -861,7 +944,7 @@
 %		\end{table}
 
 		
-	\end{frame}
+
 	
 	\begin{frame}
 		
@@ -874,19 +957,19 @@
 		\begin{tabular}{lcccc}
 			\hline
 			\textbf{Faixa} & 
-			\makecell{\textbf{Total} \\ \textbf{Itens}} & 
+			\makecell{\textbf{ID} \\ \textbf{Itens}} & 
 			\makecell{\textbf{Distribuição} \\ \textbf{Esperada}} & 
 			\makecell{\textbf{Distribuição} \\ \textbf{Obtida}}  & \textbf{Itens} \\ 
 			\hline
-			\textbf{I} & 3 & 10\% &  10,0\% & 11, 19 e 21\\ 
+			\textbf{I} & 0 a 0,2 & 10\% &  10,0\% & 11, 19 e 21\\ 
 			\hline
-			\textbf{II} & 9 & 20\% &  30,0\% & 1, 4, 10, 12, 16, 17, 18, 20 e 24 \\
+			\textbf{II} & 0,2 a 0,4 & 20\% &  30,0\% & 1, 4, 10, 12, 16, 17, 18, 20 e 24 \\
 			\hline
-			\textbf{III} & 8 & 40\% & 26,7\% & 2, 3, 7, 8, 13, 23, 26 e 29 \\ 
+			\textbf{III} & 0,4 a 0,6 & 40\% & 26,7\% & 2, 3, 7, 8, 13, 23, 26 e 29 \\ 
 			\hline
-			\textbf{IV}& 7 & 20\% & 23,3\%  & 5, 6, 9, 14, 22, 25 e 28\\ 
+			\textbf{IV}& 0,6 a 0,8 & 20\% & 23,3\%  & 5, 6, 9, 14, 22, 25 e 28\\ 
 			\hline
-			\textbf{V} & 3 & 10\% & 10,0\% & 15, 27 e 30\\ 
+			\textbf{V} & 0,8 a 1 & 10\% & 10,0\% & 15, 27 e 30\\ 
 			\hline
 		\end{tabular}%
 	}
@@ -905,9 +988,7 @@
 		
 	\end{frame}
 	
-	
-	
-	
+
 	
 	\begin{frame}
 		
@@ -1005,15 +1086,6 @@
 		
 	\end{frame}
 	
-	\begin{frame}
-		
-		\frametitle{Análise TRI - Modelo 3PL}
-		
-		\begin{figure}
-			\includegraphics[width=12cm]{../item27.png}
-		\end{figure}
-		
-	\end{frame}
 	
 	\begin{frame}
 		
@@ -1025,24 +1097,51 @@
 		
 	\end{frame}
 	
+	\begin{frame}
+		
+		\frametitle{Análise TRI - Modelo 3PL}
+		
+		\begin{figure}
+			\includegraphics[width=12cm]{../item27.png}
+		\end{figure}
+		
+	\end{frame}
+	
 
 	\begin{frame}
 	
-	\frametitle{Análise TRI - Modelo 3PL}
-	
-	\begin{figure}
-		\includegraphics[width=10cm]{../alternativas2_item28.png}
-	\end{figure}
-	
+		\frametitle{Análise TRI - Modelo 3PL}
+		
+		\begin{figure}
+			\includegraphics[width=10cm]{../alternativas2_item28.png}
+		\end{figure}
+		
 	\end{frame}
+	
 	%--------------------------------------------------------------
-	\begin{frame}
-		
-	 \frametitle{Teoria de Resposta ao Item}
-		
-		m22
-		
-	\end{frame}	
+%	\begin{frame}
+%		
+%	 \frametitle{Teoria de Resposta ao Item}
+%		
+%		\begin{table}
+%			\centering
+%			\caption{Teste de adequação do 2 Ajuste.}
+%			\begin{tabular}{lcccccc}
+%				\hline
+%				\textbf{Modelo} &
+%				 \textbf{M}$_\textbf{2}$ &
+%				  \textbf{df} & 
+%				  \textbf{p-valor} & 
+%				  \textbf{RMSEA}  & 
+%				  \textbf{TLI} & 
+%				  \textbf{CFI} \\ 
+%				\hline 
+%				\textbf{3PL - 2 Ajuste} & 344 & 348 & 0,542 & 0,0000  & 1,00 & 1,00 \\ 
+%				\hline
+%			\end{tabular}
+%		\end{table}
+%		
+%	\end{frame}	
 	
 	
 % Slide 1
@@ -1067,6 +1166,8 @@
 			20 & 0,68 & -2,16 & 0,00 & 0,11 \\ 
 			24 & 0,72 & -1,92 & 0,00 & 0,13 \\ 
 			29 & 0,90 & 0,93 & 0,14 & 0,15 \\ 
+			28 & 0,86 & -1,06 & 0,00 & 0,18 \\ 
+			7  & 0,96 & 0,14 & 0,07 & 0,20 \\ 
 			\hline
 		\end{tabular}%
 	\end{table}
@@ -1085,8 +1186,6 @@
 			\hline
 			\textbf{Item} & \textbf{a} & \textbf{b} & \textbf{c} & \textbf{Informação Máxima} \\ 
 			\hline 
-			28 & 0,86 & -1,06 & 0,00 & 0,18 \\ 
-			7  & 0,96 & 0,14 & 0,07 & 0,20 \\ 
 			9  & 1,02 & 2,01 & 0,13 & 0,20 \\ 
 			3  & 1,49 & 0,32 & 0,15 & 0,42 \\ 
 			12 & 1,33 & -0,70 & 0,00 & 0,44 \\ 
@@ -1184,14 +1283,7 @@
 \end{frame}
 
 
-\begin{frame}
-	
-	\frametitle{Comparação TCT e TRI}
-	\begin{figure}
-		\includegraphics[width=07cm]{../item30.png}
-	\end{figure}
-	
-\end{frame}	
+
 
 
 \begin{frame}
@@ -1212,15 +1304,55 @@
 	
 \end{frame}	
 
+\begin{frame}
 	
-	\section{Conclusão}
+	\frametitle{Comparação TCT e TRI}
+	\begin{figure}
+		\includegraphics[width=07cm]{../item30.png}
+	\end{figure}
+	
+\end{frame}	
+
+	
+\section{Conclusão}
+	
+	\begin{frame}
+		\frametitle{Conclusão}
+		
+		\begin{itemize}
+		\item A prova mostrou-se deficiente tanto pela TCT quanto pela TRI.
+		\item O modelo de 3 parâmetros (3PL) mostrou-se o melhor ajuste, tanto pelo teste de razão de verossimilhança quanto pelos índices M2, TLI, CFI e RMSEA.
+		\end{itemize}
+		
+		
+	\end{frame}
+	
+		\begin{frame}
+		\frametitle{Conclusão}
+		
+		\begin{itemize}
+		
+			\item Itens com boa discriminação (ex.: itens 3, 5, 7, 12) recomendados para o banco de itens. Itens com discriminação baixa (ex.: itens 6, 8, 14...) não são recomendados sem revisão.
+			\item Itens problemáticos:\\
+			Item 28: gabarito incorreto, necessita correção.\\
+			Item 27: formulação confusa, com alternativas que levam a interpretações erradas.\\
+			\item  Melhor discriminação para habilidades abaixo da média (-1,9 a -0,7).
+			Lacuna de informação para habilidades medianas, recomendando-se a inclusão de itens nesse intervalo.\\		
+			
+		\end{itemize}
+		
+		
+	\end{frame}
+	
 	
 	\section{Referências}
+	
 	
 	
 	%---------------------------------------------------------
 	\begin{frame}
 	\frametitle{Referências}
+	
 	ANDRADE, D. F. de; TAVARES, H. R.; VALLE, R. da C. Teoria da resposta ao item: conceitos e	aplicações. ABE, Sao Paulo, 2000. \newline	
 	
 		
